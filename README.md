@@ -1,6 +1,6 @@
 # CDK Unsupported Property App
 
-https://d1upnzw71mlot9.cloudfront.net/
+[Web Page](https://d1upnzw71mlot9.cloudfront.net/)
 
 ## Description
 
