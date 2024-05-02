@@ -4,10 +4,19 @@ https://d1upnzw71mlot9.cloudfront.net/
 
 ## Description
 
-This page displays a list of unsupported properties in AWS CDK L2 constructs. For more details, visit this `materials`.
+This page displays a list of unsupported properties in AWS CDK L2 constructs. For more details, visit this [materials](https://speakerdeck.com/badmintoncryer/cdkkontoribiyutonozui-chu-nobi-woyue-eyou-jian-dan-issuenojian-tukefang).
 
-Note: The following example, where arguments are indirectly passed, is not currently supported. Although it might appear as unsupported, it is actually handled.
+Currently, only support direct inline props properly, and cases using the spread operator are <span className="text-red-500">not</span> supported.
+Even if they are actually supported in L2, they are still counted as unsupported properties.
 
+```ts
+// Supported
+new CfnConstruct(scope, 'Resource', {
+  hoge: 'hoge',
+  fuga: 123,
+});
+
+// Erroneously displayed as unsupported arguments
 const props = {
   hoge: 'hoge',
   fuga: 123,
@@ -16,3 +25,4 @@ const props = {
 new CfnConstruct(scope, 'Resource', {
   ...props,
 });
+```
