@@ -2,9 +2,9 @@ import missingProperties from "./missingProperties.json";
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-24 bg-black">
-			<h1 className="text-3xl font-bold mb-6">
-				AWS CDK L2 Constructs Unsupported Properties {""}
+		<main className="flex flex-col min-h-screen justify-between p-4 sm:p-24 bg-black">
+			<h1 className="text-xl sm:text-3xl font-bold mb-6 text-center">
+				AWS CDK L2 Constructs Unsupported Properties{" "}
 				<a
 					href="https://github.com/badmintoncryer"
 					className="text-blue-400 hover:text-blue-600"
@@ -14,9 +14,9 @@ export default function Home() {
 					@badmintoncryer
 				</a>
 			</h1>
-			<div className="container mx-auto px-4">
-				<div className="bg-gray-800 text-white p-6 rounded-lg shadow mb-6">
-					<p className="mb-4">
+			<div className="container mx-auto">
+				<div className="text-white p-4 rounded-lg shadow mb-6 bg-gray-800">
+					<p className="text-sm sm:text-base mb-4">
 						This page displays a list of unsupported properties in AWS CDK L2
 						constructs. For more details, visit{" "}
 						<a
@@ -29,13 +29,16 @@ export default function Home() {
 						</a>
 						.
 					</p>
-					<p className="mb-4">
-          Currently, only support direct inline props properly, and cases using the spread operator are <span className="text-red-500">not</span> supported.
-          Even if they are actually supported in L2, they are still counted as unsupported properties.
+					<p className="text-sm sm:text-base mb-4 italic">
+						Currently, only support direct inline props properly, and cases
+						using the spread operator are{" "}
+						<span className="text-red-500">not</span> supported. Even if they
+						are actually supported in L2, they are still counted as unsupported
+						properties.
 					</p>
-					<div className="flex flex-wrap justify-center items-start gap-4 p-5 bg-black">
-						<div className="flex-1 p-4 bg-gray-800 text-white rounded-lg">
-							<h2 className="text-lg font-bold text-blue-400 mb-2">
+					<div className="flex flex-col sm:flex-row justify-center items-start gap-4">
+						<div className="flex-1 p-4 bg-gray-800 rounded-lg">
+							<h2 className="text-base sm:text-lg font-bold text-blue-400 mb-2">
 								Direct Inline Props
 							</h2>
 							<pre className="whitespace-pre-wrap">
@@ -47,8 +50,8 @@ export default function Home() {
 								</code>
 							</pre>
 						</div>
-						<div className="flex-1 p-4 bg-gray-800 text-white rounded-lg">
-							<h2 className="text-lg font-bold text-red-400 mb-2">
+						<div className="flex-1 p-4 bg-gray-800 rounded-lg">
+							<h2 className="text-base sm:text-lg font-bold text-red-400 mb-2">
 								Spread operator Props (false positive)
 							</h2>
 							<pre className="whitespace-pre-wrap">
@@ -80,7 +83,7 @@ new CfnConstruct(scope, 'Resource', {
 							key={index}
 							className="mb-5 p-4 shadow-lg rounded-lg bg-gray-800"
 						>
-							<h2 className="text-2xl font-semibold text-white">
+							<h2 className="text-xl sm:text-2xl font-semibold text-white">
 								{item.module} - {item.name}
 							</h2>
 							<ul className="list-disc list-inside text-gray-300">
