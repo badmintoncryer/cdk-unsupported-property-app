@@ -29,14 +29,31 @@ export default function Home() {
 						</a>
 						.
 					</p>
-					<p className="italic mb-4">
-						Note: The following example, where arguments are indirectly passed,
-						is <span className="text-red-500">not</span> currently supported.
-						Although it might appear as unsupported, it is actually handled.
+					<p className="mb-4">
+          Currently, only support direct inline props properly, and cases using the spread operator are <span className="text-red-500">not</span> supported.
+          Even if they are actually supported in L2, they are still counted as unsupported properties.
 					</p>
-					<pre className="bg-gray-700 p-4 rounded">
-						<code>
-							{`const props = {
+					<div className="flex flex-wrap justify-center items-start gap-4 p-5 bg-black">
+						<div className="flex-1 p-4 bg-gray-800 text-white rounded-lg">
+							<h2 className="text-lg font-bold text-blue-400 mb-2">
+								Direct Inline Props
+							</h2>
+							<pre className="whitespace-pre-wrap">
+								<code>
+									{`new CfnConstruct(scope, 'Resource', {
+  hoge: 'hoge',
+  fuga: 123,
+});`}
+								</code>
+							</pre>
+						</div>
+						<div className="flex-1 p-4 bg-gray-800 text-white rounded-lg">
+							<h2 className="text-lg font-bold text-red-400 mb-2">
+								Spread operator Props (false positive)
+							</h2>
+							<pre className="whitespace-pre-wrap">
+								<code>
+									{`const props = {
   hoge: 'hoge',
   fuga: 123,
 };
@@ -44,8 +61,10 @@ export default function Home() {
 new CfnConstruct(scope, 'Resource', {
   ...props,
 });`}
-						</code>
-					</pre>
+								</code>
+							</pre>
+						</div>
+					</div>
 				</div>
 
 				{missingProperties

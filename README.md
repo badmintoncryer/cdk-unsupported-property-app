@@ -1,14 +1,18 @@
-# Welcome to your CDK TypeScript project
+# CDK Unsupported Property App
 
-This is a blank project for CDK development with TypeScript.
+https://d1upnzw71mlot9.cloudfront.net/
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Description
 
-## Useful commands
+This page displays a list of unsupported properties in AWS CDK L2 constructs. For more details, visit this `materials`.
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+Note: The following example, where arguments are indirectly passed, is not currently supported. Although it might appear as unsupported, it is actually handled.
+
+const props = {
+  hoge: 'hoge',
+  fuga: 123,
+};
+
+new CfnConstruct(scope, 'Resource', {
+  ...props,
+});
