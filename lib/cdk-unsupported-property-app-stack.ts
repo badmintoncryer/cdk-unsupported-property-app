@@ -7,6 +7,7 @@ import * as cloudfrontOrigins from "aws-cdk-lib/aws-cloudfront-origins";
 import * as iam from "aws-cdk-lib/aws-iam";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import * as s3deploy from "aws-cdk-lib/aws-s3-deployment";
+import { spawnSync } from 'child_process'
 
 const JSON_FILE_NAME = "missingProperties.json";
 
@@ -40,6 +41,20 @@ export class CdkUnsupportedPropertyAppStack extends cdk.Stack {
 			defaultBehavior: {
 				origin: origin,
 			},
+      errorResponses: [
+        {
+          ttl: cdk.Duration.seconds(300),
+          httpStatus: 403,
+          responseHttpStatus: 200,
+          responsePagePath: '/index.html'
+        },
+        {
+          ttl: cdk.Duration.seconds(300),
+          httpStatus: 404,
+          responseHttpStatus: 200,
+          responsePagePath: '/index.html'
+        }
+      ],
 		});
 
 		// Policy
@@ -85,6 +100,35 @@ export class CdkUnsupportedPropertyAppStack extends cdk.Stack {
       distribution,
       distributionPaths: ['/*'],
 		});
+
+    new s3deploy.BucketDeployment(this, 'DeployHtml', {
+      destinationBucket: bucket,
+      distribution,
+      distributionPaths: ['/*'],
+      sources: [
+        s3deploy.Source.asset('./', {
+          bundling: {
+            image: cdk.DockerImage.fromRegistry('node:20'),
+            local: {
+              tryBundle: (outputDir: string) => {
+                spawnSync('npm', ['--cwd', './frontend', 'run', 'build'], {
+                  stdio: 'inherit'
+                })
+                spawnSync('cp', ['./frontend/public/error.html', outputDir], {
+                  stdio: 'inherit',
+                  shell: true
+                })
+                spawnSync('mv', ['-f', './frontend/out/*', outputDir], {
+                  stdio: 'inherit',
+                  shell: true
+                })
+                return true
+              }
+            }
+          }
+        })
+      ]
+    });
 
 		new cdk.CfnOutput(this, "CloudfrontDomainName", {
       value: distribution.distributionDomainName,
