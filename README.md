@@ -2,6 +2,8 @@
 
 [Web Page](https://d1upnzw71mlot9.cloudfront.net/)
 
+Provides the web page of the result of [CDK Unsupported Property](https://github.com/badmintoncryer/cdk-unsupported-property).
+
 ## Description
 
 This page displays a list of unsupported properties in AWS CDK L2 constructs. For more details, visit this [materials](https://speakerdeck.com/badmintoncryer/cdkkontoribiyutonozui-chu-nobi-woyue-eyou-jian-dan-issuenojian-tukefang).
