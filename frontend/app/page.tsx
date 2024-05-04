@@ -90,7 +90,7 @@ export default function Home() {
 						</a>
 						.
 					</p>
-					<p className="text-sm sm:text-base mb-4 italic">
+					<p className="text-sm sm:text-base mb-4">
 						Currently, only support direct inline props properly, and cases
 						using the spread operator are{" "}
 						<span className="text-red-500">not</span> supported. Even if they
