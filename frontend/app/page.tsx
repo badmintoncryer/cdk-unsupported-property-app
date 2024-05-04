@@ -30,6 +30,12 @@ export default function Home() {
 		return acc;
 	}, initialData);
 
+  const buildTime = process.env.BUILD_TIME ? new Date(process.env.BUILD_TIME) : new Date(12345677890);
+  const formattedBuildTime = buildTime.toLocaleString('ja-JP', {
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', second: '2-digit'
+  });
+
 	return (
 		<main className="flex flex-col min-h-screen justify-between p-4 sm:p-24 bg-black">
 			<h1 className="text-xl sm:text-3xl font-bold mb-6 text-center">
@@ -43,6 +49,9 @@ export default function Home() {
 					@badmintoncryer
 				</a>
 			</h1>
+      <p className="text-sm sm:text-base text-center text-gray-400 mb-6">
+        Last Updated: {formattedBuildTime}
+      </p>
 			<div className="container mx-auto">
 				<div className="text-white p-4 rounded-lg shadow mb-6 bg-gray-800">
 					<div className="flex items-center justify-end">
