@@ -52,9 +52,7 @@ export default function Home() {
       <p className="text-sm sm:text-base text-center text-gray-400 mb-6">
         Last Updated: {formattedBuildTime}
       </p>
-			<div className="container mx-auto">
-				<div className="text-white p-4 rounded-lg shadow mb-6 bg-gray-800">
-					<div className="flex items-center justify-end">
+      <div className="flex items-center justify-end mb-6">
 						<label
 							htmlFor="toggle"
 							className="text-white text-sm sm:text-base mr-4"
@@ -76,7 +74,8 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-
+			<div className="container mx-auto">
+				<div className="text-white p-4 rounded-lg shadow mb-6 bg-gray-800">
 					<p className="text-sm sm:text-base mb-4">
 						This page displays a list of unsupported properties in AWS CDK L2
 						constructs. For more details, visit{" "}
