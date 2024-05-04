@@ -13,6 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::214794239830:role/GithubActionsDeployRole
+          aws-region: ap-northeast-1
+      - run: aws sts get-caller-identity
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
