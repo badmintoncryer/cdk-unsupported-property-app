@@ -1,4 +1,4 @@
-name: Deploy to AWS CDK
+name: Update Json
 
 on:
   schedule:
@@ -43,7 +43,7 @@ jobs:
 
       - name: create json
         run: |
-          git clone https://badmintoncryer/cdk-unsupported-property
+          git clone https://github.com/badmintoncryer/cdk-unsupported-property
           cd cdk-unsupported-property
           npm ci
           npm i -g ts-node
