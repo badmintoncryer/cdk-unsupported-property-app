@@ -28,6 +28,11 @@ jobs:
       - name: setup frontend
         run: cd frontend && npm ci
 
+      - name: add json
+        run: |
+          rm -f frontend/app/missingProperties.json
+          echo '{"missingProperties": {}}' > frontend/app/missingProperties.json
+
       # - name: build cdk
       #   run: |
       #     git clone https://github.com/aws/aws-cdk.git
