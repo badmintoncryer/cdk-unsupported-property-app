@@ -45,7 +45,7 @@ jobs:
         run: |
           git clone https://github.com/badmintoncryer/cdk-unsupported-property
           cd cdk-unsupported-property
-          npm ci
+          npm install
           npm i -g ts-node
           ts-node src/index.ts ../aws-cdk/packages/aws-cdk-lib
           mv missingProperties.json ../frontend/app/missingProperties.json
