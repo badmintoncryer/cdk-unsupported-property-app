@@ -48,6 +48,11 @@ jobs:
           ts-node src/index.ts ../aws-cdk/packages/aws-cdk-lib
           mv missingProperties.json ../frontend/app/missingProperties.json
 
+      - name: clean up
+        run: |
+          rm -rf aws-cdk
+          rm -rf cdk-unsupported-property
+
       - uses: peter-evans/create-pull-request@v5
         with:
           commit-message: Update missingProperties.json file
