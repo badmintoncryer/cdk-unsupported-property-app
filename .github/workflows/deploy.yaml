@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: setup frontend
-        run: cd frontend && npm ci && npm run build
+        run: cd frontend && npm ci
 
       - name: Deploy to AWS CDK
         run: npx cdk deploy --require-approval never

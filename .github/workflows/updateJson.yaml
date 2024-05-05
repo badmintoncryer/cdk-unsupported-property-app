@@ -49,5 +49,19 @@ jobs:
           npm i -g ts-node
           ts-node src/index.ts ../aws-cdk/packages/aws-cdk-lib
           mv missingProperties.json ../frontend/app/missingProperties.json
-          cd ../
-          npx cdk deploy --require-approval never
+
+      - name: Create and push branch
+        run: |
+          git config --global user.name 'badmintoncryer'
+          git config --global user.email 'malaysia.cryer@gmail.com'
+          git checkout -b update-missing-properties
+          git add frontend/app/missingProperties.json
+          git commit -m "Update missingProperties.json"
+          git push origin update-missing-properties
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: "Update missingProperties.json"
+          body: "Automatically update missingProperties.json and raise a pull request."
+          branch: "update-missing-properties"
