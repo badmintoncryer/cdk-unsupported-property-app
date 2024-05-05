@@ -33,7 +33,7 @@ jobs:
 
       - name: setup frontend
         run: cd frontend && npm ci
-      
+
       - name: build cdk
         run: |
           git clone https://github.com/aws/aws-cdk.git
@@ -49,6 +49,5 @@ jobs:
           npm i -g ts-node
           ts-node src/index.ts ../aws-cdk/packages/aws-cdk-lib
           mv missingProperties.json ../frontend/app/missingProperties.json
-
-      - name: Deploy to AWS CDK
-        run: npx cdk deploy --require-approval never
+          cd ../
+          npx cdk deploy --require-approval never
