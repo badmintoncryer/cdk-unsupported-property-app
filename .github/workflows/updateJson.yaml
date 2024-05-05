@@ -1,0 +1,54 @@
+name: Deploy to AWS CDK
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::214794239830:role/GithubActionsDeployRole
+          aws-region: ap-northeast-1
+      - run: aws sts get-caller-identity
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: setup frontend
+        run: cd frontend && npm ci
+      
+      - name: build cdk
+        run: |
+          git clone https://github.com/aws/aws-cdk.git
+          cd aws-cdk
+          yarn
+          npx lerna run build --scope=aws-cdk-lib --skip-nx-cache
+
+      - name: create json
+        run: |
+          git clone https://badmintoncryer/cdk-unsupported-property
+          cd cdk-unsupported-property
+          npm ci
+          npm i -g ts-node
+          ts-node src/index.ts ../aws-cdk/packages/aws-cdk-lib
+          mv missingProperties.json ../frontend/app/missingProperties.json
+
+      - name: Deploy to AWS CDK
+        run: npx cdk deploy --require-approval never
