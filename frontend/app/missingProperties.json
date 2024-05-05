@@ -41,13 +41,6 @@
     ]
   },
   {
-    "module": "aws-signer",
-    "name": "CfnSigningProfile",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
     "module": "aws-sns",
     "name": "CfnSubscription",
     "missingProps": [
@@ -61,6 +54,13 @@
     "missingProps": [
       "dataProtectionPolicy",
       "subscription",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-signer",
+    "name": "CfnSigningProfile",
+    "missingProps": [
       "tags"
     ]
   },
@@ -349,20 +349,20 @@
     ]
   },
   {
-    "module": "aws-kinesis",
-    "name": "CfnStream",
-    "missingProps": [
-      "streamModeDetails",
-      "tags"
-    ]
-  },
-  {
     "module": "aws-kms",
     "name": "CfnKey",
     "missingProps": [
       "bypassPolicyLockoutSafetyCheck",
       "multiRegion",
       "origin",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-kinesis",
+    "name": "CfnStream",
+    "missingProps": [
+      "streamModeDetails",
       "tags"
     ]
   },
@@ -532,41 +532,9 @@
     ]
   },
   {
-    "module": "aws-dynamodb",
-    "name": "CfnTable",
+    "module": "aws-ecr",
+    "name": "CfnRepository",
     "missingProps": [
-      "resourcePolicy",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-docdb",
-    "name": "CfnDBCluster",
-    "missingProps": [
-      "availabilityZones",
-      "copyTagsToSnapshot",
-      "restoreToTime",
-      "restoreType",
-      "snapshotIdentifier",
-      "sourceDbClusterIdentifier",
-      "storageType",
-      "tags",
-      "useLatestRestorableTime"
-    ]
-  },
-  {
-    "module": "aws-docdb",
-    "name": "CfnDBClusterParameterGroup",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-docdb",
-    "name": "CfnDBInstance",
-    "missingProps": [
-      "caCertificateIdentifier",
-      "certificateRotationRestart",
       "tags"
     ]
   },
@@ -693,9 +661,41 @@
     ]
   },
   {
-    "module": "aws-ecr",
-    "name": "CfnRepository",
+    "module": "aws-dynamodb",
+    "name": "CfnTable",
     "missingProps": [
+      "resourcePolicy",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-docdb",
+    "name": "CfnDBCluster",
+    "missingProps": [
+      "availabilityZones",
+      "copyTagsToSnapshot",
+      "restoreToTime",
+      "restoreType",
+      "snapshotIdentifier",
+      "sourceDbClusterIdentifier",
+      "storageType",
+      "tags",
+      "useLatestRestorableTime"
+    ]
+  },
+  {
+    "module": "aws-docdb",
+    "name": "CfnDBClusterParameterGroup",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-docdb",
+    "name": "CfnDBInstance",
+    "missingProps": [
+      "caCertificateIdentifier",
+      "certificateRotationRestart",
       "tags"
     ]
   },
@@ -705,16 +705,6 @@
     "missingProps": [
       "compliance",
       "evaluationModes"
-    ]
-  },
-  {
-    "module": "aws-codestarnotifications",
-    "name": "CfnNotificationRule",
-    "missingProps": [
-      "createdBy",
-      "eventTypeId",
-      "tags",
-      "targetAddress"
     ]
   },
   {
@@ -736,6 +726,16 @@
       "idTokenValidity",
       "refreshTokenValidity",
       "tokenValidityUnits"
+    ]
+  },
+  {
+    "module": "aws-codestarnotifications",
+    "name": "CfnNotificationRule",
+    "missingProps": [
+      "createdBy",
+      "eventTypeId",
+      "tags",
+      "targetAddress"
     ]
   },
   {
@@ -985,23 +985,6 @@
     ]
   },
   {
-    "module": "aws-applicationautoscaling",
-    "name": "CfnScalableTarget",
-    "missingProps": [
-      "suspendedState"
-    ]
-  },
-  {
-    "module": "aws-applicationautoscaling",
-    "name": "CfnScalingPolicy",
-    "missingProps": [
-      "resourceId",
-      "scalableDimension",
-      "serviceNamespace",
-      "stepScalingPolicyConfiguration"
-    ]
-  },
-  {
     "module": "aws-appmesh",
     "name": "CfnGatewayRoute",
     "missingProps": [
@@ -1048,6 +1031,23 @@
     "name": "CfnVirtualService",
     "missingProps": [
       "tags"
+    ]
+  },
+  {
+    "module": "aws-applicationautoscaling",
+    "name": "CfnScalableTarget",
+    "missingProps": [
+      "suspendedState"
+    ]
+  },
+  {
+    "module": "aws-applicationautoscaling",
+    "name": "CfnScalingPolicy",
+    "missingProps": [
+      "resourceId",
+      "scalableDimension",
+      "serviceNamespace",
+      "stepScalingPolicyConfiguration"
     ]
   },
   {
