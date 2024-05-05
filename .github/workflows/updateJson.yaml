@@ -28,31 +28,26 @@ jobs:
       - name: setup frontend
         run: cd frontend && npm ci
 
-      - name: add json
+      - name: build cdk
         run: |
-          rm -f frontend/app/missingProperties.json
-          echo '{"missingProperties": {}}' > frontend/app/missingProperties.json
+          git clone https://github.com/aws/aws-cdk.git
+          cd aws-cdk
+          yarn
+          npx lerna run build --scope=aws-cdk-lib --skip-nx-cache
 
-      # - name: build cdk
-      #   run: |
-      #     git clone https://github.com/aws/aws-cdk.git
-      #     cd aws-cdk
-      #     yarn
-      #     npx lerna run build --scope=aws-cdk-lib --skip-nx-cache
+      - name: create json
+        run: |
+          git clone https://github.com/badmintoncryer/cdk-unsupported-property
+          cd cdk-unsupported-property
+          npm install
+          npm i -g ts-node
+          ts-node src/index.ts ../aws-cdk/packages/aws-cdk-lib
+          mv missingProperties.json ../frontend/app/missingProperties.json
 
-      # - name: create json
-      #   run: |
-      #     git clone https://github.com/badmintoncryer/cdk-unsupported-property
-      #     cd cdk-unsupported-property
-      #     npm install
-      #     npm i -g ts-node
-      #     ts-node src/index.ts ../aws-cdk/packages/aws-cdk-lib
-      #     mv missingProperties.json ../frontend/app/missingProperties.json
-
-      # - name: clean up
-      #   run: |
-      #     rm -rf aws-cdk
-      #     rm -rf cdk-unsupported-property
+      - name: clean up
+        run: |
+          rm -rf aws-cdk
+          rm -rf cdk-unsupported-property
 
       - uses: peter-evans/create-pull-request@v5
         with:
