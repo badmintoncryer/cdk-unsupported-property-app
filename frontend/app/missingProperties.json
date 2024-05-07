@@ -539,6 +539,22 @@
     ]
   },
   {
+    "module": "aws-dynamodb",
+    "name": "CfnGlobalTable",
+    "missingProps": [
+      "writeOnDemandThroughputSettings"
+    ]
+  },
+  {
+    "module": "aws-dynamodb",
+    "name": "CfnTable",
+    "missingProps": [
+      "onDemandThroughput",
+      "resourcePolicy",
+      "tags"
+    ]
+  },
+  {
     "module": "aws-ec2",
     "name": "CfnClientVpnEndpoint",
     "missingProps": [
@@ -657,14 +673,6 @@
     "name": "CfnVolume",
     "missingProps": [
       "outpostArn",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-dynamodb",
-    "name": "CfnTable",
-    "missingProps": [
-      "resourcePolicy",
       "tags"
     ]
   },
