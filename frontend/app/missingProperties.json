@@ -27,20 +27,6 @@
     ]
   },
   {
-    "module": "aws-sqs",
-    "name": "CfnQueue",
-    "missingProps": [
-      "contentBasedDeduplication",
-      "deduplicationScope",
-      "fifoQueue",
-      "fifoThroughputLimit",
-      "kmsDataKeyReusePeriodSeconds",
-      "kmsMasterKeyId",
-      "sqsManagedSseEnabled",
-      "tags"
-    ]
-  },
-  {
     "module": "aws-sns",
     "name": "CfnSubscription",
     "missingProps": [
@@ -539,22 +525,6 @@
     ]
   },
   {
-    "module": "aws-dynamodb",
-    "name": "CfnGlobalTable",
-    "missingProps": [
-      "writeOnDemandThroughputSettings"
-    ]
-  },
-  {
-    "module": "aws-dynamodb",
-    "name": "CfnTable",
-    "missingProps": [
-      "onDemandThroughput",
-      "resourcePolicy",
-      "tags"
-    ]
-  },
-  {
     "module": "aws-ec2",
     "name": "CfnClientVpnEndpoint",
     "missingProps": [
@@ -673,6 +643,22 @@
     "name": "CfnVolume",
     "missingProps": [
       "outpostArn",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-dynamodb",
+    "name": "CfnGlobalTable",
+    "missingProps": [
+      "writeOnDemandThroughputSettings"
+    ]
+  },
+  {
+    "module": "aws-dynamodb",
+    "name": "CfnTable",
+    "missingProps": [
+      "onDemandThroughput",
+      "resourcePolicy",
       "tags"
     ]
   },
@@ -1318,6 +1304,20 @@
     "module": "aws-apigateway",
     "name": "CfnVpcLink",
     "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-sqs",
+    "name": "CfnQueue",
+    "missingProps": [
+      "contentBasedDeduplication",
+      "deduplicationScope",
+      "fifoQueue",
+      "fifoThroughputLimit",
+      "kmsDataKeyReusePeriodSeconds",
+      "kmsMasterKeyId",
+      "sqsManagedSseEnabled",
       "tags"
     ]
   }
