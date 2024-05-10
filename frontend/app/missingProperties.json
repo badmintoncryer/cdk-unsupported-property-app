@@ -539,22 +539,6 @@
     ]
   },
   {
-    "module": "aws-dynamodb",
-    "name": "CfnGlobalTable",
-    "missingProps": [
-      "writeOnDemandThroughputSettings"
-    ]
-  },
-  {
-    "module": "aws-dynamodb",
-    "name": "CfnTable",
-    "missingProps": [
-      "onDemandThroughput",
-      "resourcePolicy",
-      "tags"
-    ]
-  },
-  {
     "module": "aws-ec2",
     "name": "CfnClientVpnEndpoint",
     "missingProps": [
@@ -677,6 +661,22 @@
     ]
   },
   {
+    "module": "aws-dynamodb",
+    "name": "CfnGlobalTable",
+    "missingProps": [
+      "writeOnDemandThroughputSettings"
+    ]
+  },
+  {
+    "module": "aws-dynamodb",
+    "name": "CfnTable",
+    "missingProps": [
+      "onDemandThroughput",
+      "resourcePolicy",
+      "tags"
+    ]
+  },
+  {
     "module": "aws-docdb",
     "name": "CfnDBCluster",
     "missingProps": [
@@ -702,7 +702,6 @@
     "module": "aws-docdb",
     "name": "CfnDBInstance",
     "missingProps": [
-      "caCertificateIdentifier",
       "certificateRotationRestart",
       "tags"
     ]
