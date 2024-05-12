@@ -1,155 +1,1020 @@
 [
   {
-    "module": "aws-synthetics",
-    "name": "CfnCanary",
+    "module": "aws-apigateway",
+    "name": "CfnApiKey",
     "missingProps": [
-      "artifactConfig",
-      "deleteLambdaResourcesOnCanaryDeletion",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnAuthorizer",
+    "missingProps": [
+      "authorizerCredentials",
+      "authorizerResultTtlInSeconds",
+      "authorizerUri",
+      "authType",
+      "identitySource",
+      "identityValidationExpression",
+      "name",
+      "providerArns",
+      "restApiId",
+      "type"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnBasePathMapping",
+    "missingProps": [
+      "id"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnDomainName",
+    "missingProps": [
+      "ownershipVerificationCertificateArn",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnGatewayResponse",
+    "missingProps": [
+      "responseParameters",
+      "responseTemplates",
+      "responseType",
+      "restApiId",
+      "statusCode"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnMethod",
+    "missingProps": [
+      "apiKeyRequired",
+      "authorizationScopes",
+      "authorizationType",
+      "authorizerId",
+      "httpMethod",
+      "integration",
+      "methodResponses",
+      "operationName",
+      "requestModels",
+      "requestParameters",
+      "requestValidatorId",
+      "resourceId",
+      "restApiId"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnModel",
+    "missingProps": [
+      "contentType",
+      "description",
+      "name",
+      "restApiId",
+      "schema"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnRequestValidator",
+    "missingProps": [
+      "name",
+      "restApiId",
+      "validateRequestBody",
+      "validateRequestParameters"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnResource",
+    "missingProps": [
+      "parentId",
+      "pathPart",
+      "restApiId"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnRestApi",
+    "missingProps": [
+      "apiKeySourceType",
+      "binaryMediaTypes",
+      "cloneFrom",
+      "description",
+      "mode",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnStage",
+    "missingProps": [
+      "canarySetting",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnUsagePlan",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-apigateway",
+    "name": "CfnVpcLink",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-apigatewayv2",
+    "name": "CfnApi",
+    "missingProps": [
+      "basePath",
+      "body",
+      "bodyS3Location",
+      "corsConfiguration",
+      "credentialsArn",
+      "disableExecuteApiEndpoint",
+      "disableSchemaValidation",
+      "failOnWarnings",
+      "routeKey",
       "tags",
-      "visualReference"
+      "target",
+      "version"
     ]
   },
   {
-    "module": "aws-stepfunctions",
-    "name": "CfnActivity",
+    "module": "aws-apigatewayv2",
+    "name": "CfnApiMapping",
+    "missingProps": [
+      "apiId",
+      "apiMappingKey",
+      "domainName",
+      "stage"
+    ]
+  },
+  {
+    "module": "aws-apigatewayv2",
+    "name": "CfnAuthorizer",
+    "missingProps": [
+      "authorizerCredentialsArn",
+      "authorizerPayloadFormatVersion",
+      "authorizerResultTtlInSeconds",
+      "enableSimpleResponses",
+      "identityValidationExpression",
+      "jwtConfiguration"
+    ]
+  },
+  {
+    "module": "aws-apigatewayv2",
+    "name": "CfnDomainName",
+    "missingProps": [
+      "domainName",
+      "domainNameConfigurations",
+      "mutualTlsAuthentication",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-apigatewayv2",
+    "name": "CfnIntegration",
+    "missingProps": [
+      "connectionId",
+      "connectionType",
+      "description",
+      "integrationSubtype",
+      "payloadFormatVersion",
+      "responseParameters",
+      "tlsConfig"
+    ]
+  },
+  {
+    "module": "aws-apigatewayv2",
+    "name": "CfnRoute",
+    "missingProps": [
+      "authorizationScopes",
+      "modelSelectionExpression",
+      "operationName",
+      "requestModels",
+      "requestParameters"
+    ]
+  },
+  {
+    "module": "aws-apigatewayv2",
+    "name": "CfnStage",
+    "missingProps": [
+      "accessLogSettings",
+      "accessPolicyId",
+      "clientCertificateId",
+      "deploymentId",
+      "description",
+      "routeSettings",
+      "stageVariables",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-apigatewayv2",
+    "name": "CfnVpcLink",
     "missingProps": [
       "tags"
     ]
   },
   {
-    "module": "aws-stepfunctions",
-    "name": "CfnStateMachine",
-    "missingProps": [
-      "definition",
-      "definitionS3Location",
-      "definitionString",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-sqs",
-    "name": "CfnQueue",
-    "missingProps": [
-      "contentBasedDeduplication",
-      "deduplicationScope",
-      "fifoQueue",
-      "fifoThroughputLimit",
-      "kmsDataKeyReusePeriodSeconds",
-      "kmsMasterKeyId",
-      "sqsManagedSseEnabled",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-sns",
-    "name": "CfnSubscription",
-    "missingProps": [
-      "deliveryPolicy",
-      "replayPolicy"
-    ]
-  },
-  {
-    "module": "aws-sns",
-    "name": "CfnTopic",
-    "missingProps": [
-      "dataProtectionPolicy",
-      "subscription",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-signer",
-    "name": "CfnSigningProfile",
+    "module": "aws-appconfig",
+    "name": "CfnApplication",
     "missingProps": [
       "tags"
     ]
   },
   {
-    "module": "aws-ses",
-    "name": "CfnConfigurationSet",
+    "module": "aws-appconfig",
+    "name": "CfnConfigurationProfile",
     "missingProps": [
-      "vdmOptions"
+      "kmsKeyIdentifier",
+      "tags"
     ]
   },
   {
-    "module": "aws-servicediscovery",
-    "name": "CfnHttpNamespace",
+    "module": "aws-appconfig",
+    "name": "CfnDeploymentStrategy",
     "missingProps": [
       "tags"
     ]
   },
   {
-    "module": "aws-servicediscovery",
-    "name": "CfnPrivateDnsNamespace",
-    "missingProps": [
-      "properties",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-servicediscovery",
-    "name": "CfnPublicDnsNamespace",
-    "missingProps": [
-      "properties",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-servicediscovery",
-    "name": "CfnService",
+    "module": "aws-appconfig",
+    "name": "CfnEnvironment",
     "missingProps": [
       "tags"
     ]
   },
   {
-    "module": "aws-servicecatalog",
-    "name": "CfnCloudFormationProduct",
-    "missingProps": [
-      "productType",
-      "sourceConnection",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-servicecatalog",
-    "name": "CfnPortfolio",
+    "module": "aws-appconfig",
+    "name": "CfnExtension",
     "missingProps": [
       "tags"
     ]
   },
   {
-    "module": "aws-secretsmanager",
-    "name": "CfnResourcePolicy",
+    "module": "aws-applicationautoscaling",
+    "name": "CfnScalableTarget",
     "missingProps": [
-      "blockPublicPolicy"
+      "suspendedState"
     ]
   },
   {
-    "module": "aws-s3",
-    "name": "CfnBucket",
+    "module": "aws-applicationautoscaling",
+    "name": "CfnScalingPolicy",
     "missingProps": [
-      "analyticsConfigurations",
-      "notificationConfiguration",
-      "replicationConfiguration",
+      "resourceId",
+      "scalableDimension",
+      "serviceNamespace",
+      "stepScalingPolicyConfiguration"
+    ]
+  },
+  {
+    "module": "aws-appmesh",
+    "name": "CfnGatewayRoute",
+    "missingProps": [
       "tags"
     ]
   },
   {
-    "module": "aws-route53",
-    "name": "CfnHostedZone",
+    "module": "aws-appmesh",
+    "name": "CfnMesh",
     "missingProps": [
-      "hostedZoneTags"
+      "tags"
     ]
   },
   {
-    "module": "aws-route53",
-    "name": "CfnRecordSet",
+    "module": "aws-appmesh",
+    "name": "CfnRoute",
     "missingProps": [
-      "cidrRoutingConfig",
-      "failover",
-      "geoProximityLocation",
-      "healthCheckId",
-      "hostedZoneName"
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-appmesh",
+    "name": "CfnVirtualGateway",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-appmesh",
+    "name": "CfnVirtualNode",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-appmesh",
+    "name": "CfnVirtualRouter",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-appmesh",
+    "name": "CfnVirtualService",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-appsync",
+    "name": "CfnDataSource",
+    "missingProps": [
+      "dynamoDbConfig",
+      "elasticsearchConfig",
+      "eventBridgeConfig",
+      "httpConfig",
+      "lambdaConfig",
+      "metricsConfig",
+      "openSearchServiceConfig",
+      "relationalDatabaseConfig",
+      "type"
+    ]
+  },
+  {
+    "module": "aws-appsync",
+    "name": "CfnFunctionConfiguration",
+    "missingProps": [
+      "maxBatchSize",
+      "requestMappingTemplateS3Location",
+      "responseMappingTemplateS3Location",
+      "syncConfig"
+    ]
+  },
+  {
+    "module": "aws-appsync",
+    "name": "CfnGraphQLApi",
+    "missingProps": [
+      "enhancedMetricsConfig",
+      "ownerContact",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-appsync",
+    "name": "CfnResolver",
+    "missingProps": [
+      "metricsConfig",
+      "requestMappingTemplateS3Location",
+      "responseMappingTemplateS3Location",
+      "syncConfig"
+    ]
+  },
+  {
+    "module": "aws-autoscaling",
+    "name": "CfnScalingPolicy",
+    "missingProps": [
+      "adjustmentType",
+      "metricAggregationType",
+      "minAdjustmentMagnitude",
+      "predictiveScalingConfiguration",
+      "scalingAdjustment",
+      "stepAdjustments"
+    ]
+  },
+  {
+    "module": "aws-backup",
+    "name": "CfnBackupPlan",
+    "missingProps": [
+      "backupPlanTags"
+    ]
+  },
+  {
+    "module": "aws-backup",
+    "name": "CfnBackupVault",
+    "missingProps": [
+      "backupVaultTags"
+    ]
+  },
+  {
+    "module": "aws-batch",
+    "name": "CfnComputeEnvironment",
+    "missingProps": [
+      "computeResources",
+      "eksConfiguration",
+      "replaceComputeEnvironment",
+      "tags",
+      "updatePolicy"
+    ]
+  },
+  {
+    "module": "aws-batch",
+    "name": "CfnJobDefinition",
+    "missingProps": [
+      "containerProperties",
+      "ecsProperties",
+      "eksProperties",
+      "parameters",
+      "retryStrategy",
+      "schedulingPriority",
+      "tags",
+      "timeout"
+    ]
+  },
+  {
+    "module": "aws-batch",
+    "name": "CfnJobQueue",
+    "missingProps": [
+      "jobStateTimeLimitActions",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-batch",
+    "name": "CfnSchedulingPolicy",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-certificatemanager",
+    "name": "CfnCertificate",
+    "missingProps": [
+      "certificateTransparencyLoggingPreference",
+      "domainValidationOptions",
+      "tags",
+      "validationMethod"
+    ]
+  },
+  {
+    "module": "aws-chatbot",
+    "name": "CfnSlackChannelConfiguration",
+    "missingProps": [
+      "userRoleRequired"
+    ]
+  },
+  {
+    "module": "aws-cloudfront",
+    "name": "CfnDistribution",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-cloudfront",
+    "name": "CfnFunction",
+    "missingProps": [
+      "functionMetadata"
+    ]
+  },
+  {
+    "module": "aws-cloudtrail",
+    "name": "CfnTrail",
+    "missingProps": [
+      "advancedEventSelectors",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-cloudwatch",
+    "name": "CfnAlarm",
+    "missingProps": [
+      "dimensions",
+      "extendedStatistic",
+      "metricName",
+      "metrics",
+      "namespace",
+      "period",
+      "statistic",
+      "tags",
+      "thresholdMetricId",
+      "unit"
+    ]
+  },
+  {
+    "module": "aws-cloudwatch",
+    "name": "CfnCompositeAlarm",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-codebuild",
+    "name": "CfnProject",
+    "missingProps": [
+      "resourceAccessRole",
+      "tags",
+      "visibility"
+    ]
+  },
+  {
+    "module": "aws-codebuild",
+    "name": "CfnReportGroup",
+    "missingProps": [
+      "deleteReports",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-codebuild",
+    "name": "CfnSourceCredential",
+    "missingProps": [
+      "username"
+    ]
+  },
+  {
+    "module": "aws-codecommit",
+    "name": "CfnRepository",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-codedeploy",
+    "name": "CfnApplication",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-codedeploy",
+    "name": "CfnDeploymentConfig",
+    "missingProps": [
+      "zonalConfig"
+    ]
+  },
+  {
+    "module": "aws-codedeploy",
+    "name": "CfnDeploymentGroup",
+    "missingProps": [
+      "blueGreenDeploymentConfiguration",
+      "deployment",
+      "ec2TagFilters",
+      "ecsServices",
+      "onPremisesInstanceTagFilters",
+      "outdatedInstancesStrategy",
+      "tags",
+      "terminationHookEnabled",
+      "triggerConfigurations"
+    ]
+  },
+  {
+    "module": "aws-codepipeline",
+    "name": "CfnCustomActionType",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-codepipeline",
+    "name": "CfnPipeline",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-codestarnotifications",
+    "name": "CfnNotificationRule",
+    "missingProps": [
+      "createdBy",
+      "eventTypeId",
+      "tags",
+      "targetAddress"
+    ]
+  },
+  {
+    "module": "aws-cognito",
+    "name": "CfnUserPool",
+    "missingProps": [
+      "userPoolTags"
+    ]
+  },
+  {
+    "module": "aws-cognito",
+    "name": "CfnUserPoolClient",
+    "missingProps": [
+      "accessTokenValidity",
+      "analyticsConfiguration",
+      "authSessionValidity",
+      "defaultRedirectUri",
+      "enablePropagateAdditionalUserContextData",
+      "idTokenValidity",
+      "refreshTokenValidity",
+      "tokenValidityUnits"
+    ]
+  },
+  {
+    "module": "aws-config",
+    "name": "CfnConfigRule",
+    "missingProps": [
+      "compliance",
+      "evaluationModes"
+    ]
+  },
+  {
+    "module": "aws-docdb",
+    "name": "CfnDBCluster",
+    "missingProps": [
+      "availabilityZones",
+      "copyTagsToSnapshot",
+      "restoreToTime",
+      "restoreType",
+      "snapshotIdentifier",
+      "sourceDbClusterIdentifier",
+      "storageType",
+      "tags",
+      "useLatestRestorableTime"
+    ]
+  },
+  {
+    "module": "aws-docdb",
+    "name": "CfnDBClusterParameterGroup",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-docdb",
+    "name": "CfnDBInstance",
+    "missingProps": [
+      "certificateRotationRestart",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-dynamodb",
+    "name": "CfnGlobalTable",
+    "missingProps": [
+      "writeOnDemandThroughputSettings"
+    ]
+  },
+  {
+    "module": "aws-dynamodb",
+    "name": "CfnTable",
+    "missingProps": [
+      "onDemandThroughput",
+      "resourcePolicy",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnClientVpnEndpoint",
+    "missingProps": [
+      "tagSpecifications"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnInstance",
+    "missingProps": [
+      "additionalInfo",
+      "affinity",
+      "cpuOptions",
+      "disableApiTermination",
+      "elasticGpuSpecifications",
+      "elasticInferenceAccelerators",
+      "enclaveOptions",
+      "hibernationOptions",
+      "hostId",
+      "hostResourceGroupArn",
+      "instanceInitiatedShutdownBehavior",
+      "ipv6AddressCount",
+      "ipv6Addresses",
+      "kernelId",
+      "launchTemplate",
+      "licenseSpecifications",
+      "placementGroupName",
+      "privateDnsNameOptions",
+      "ramdiskId",
+      "securityGroups",
+      "ssmAssociations",
+      "tags",
+      "tenancy",
+      "volumes"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnKeyPair",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnLaunchTemplate",
+    "missingProps": [
+      "versionDescription"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnNetworkAcl",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnNetworkAclEntry",
+    "missingProps": [
+      "cidrBlock",
+      "icmp",
+      "ipv6CidrBlock",
+      "portRange",
+      "protocol"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnPlacementGroup",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnPrefixList",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnSecurityGroup",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnVolume",
+    "missingProps": [
+      "outpostArn",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnVPC",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnVPCEndpoint",
+    "missingProps": [
+      "privateDnsEnabled",
+      "securityGroupIds",
+      "subnetIds"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnVPNConnection",
+    "missingProps": [
+      "tags",
+      "transitGatewayId"
+    ]
+  },
+  {
+    "module": "aws-ecr",
+    "name": "CfnRepository",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ecs",
+    "name": "CfnCluster",
+    "missingProps": [
+      "capacityProviders",
+      "defaultCapacityProviderStrategy",
+      "serviceConnectDefaults",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ecs",
+    "name": "CfnTaskDefinition",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-efs",
+    "name": "CfnAccessPoint",
+    "missingProps": [
+      "accessPointTags",
+      "clientToken"
+    ]
+  },
+  {
+    "module": "aws-efs",
+    "name": "CfnFileSystem",
+    "missingProps": [
+      "bypassPolicyLockoutSafetyCheck",
+      "fileSystemTags"
+    ]
+  },
+  {
+    "module": "aws-eks",
+    "name": "CfnNodegroup",
+    "missingProps": [
+      "version"
+    ]
+  },
+  {
+    "module": "aws-elasticloadbalancing",
+    "name": "CfnLoadBalancer",
+    "missingProps": [
+      "accessLoggingPolicy",
+      "appCookieStickinessPolicy",
+      "availabilityZones",
+      "connectionDrainingPolicy",
+      "connectionSettings",
+      "lbCookieStickinessPolicy",
+      "loadBalancerName",
+      "policies",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-elasticloadbalancingv2",
+    "name": "CfnListener",
+    "missingProps": [
+      "alpnPolicy",
+      "certificates",
+      "loadBalancerArn",
+      "mutualAuthentication",
+      "port",
+      "protocol",
+      "sslPolicy"
+    ]
+  },
+  {
+    "module": "aws-elasticloadbalancingv2",
+    "name": "CfnLoadBalancer",
+    "missingProps": [
+      "enforceSecurityGroupInboundRulesOnPrivateLinkTraffic",
+      "ipAddressType",
+      "securityGroups",
+      "subnetMappings",
+      "tags",
+      "type"
+    ]
+  },
+  {
+    "module": "aws-elasticloadbalancingv2",
+    "name": "CfnTargetGroup",
+    "missingProps": [
+      "ipAddressType",
+      "port",
+      "protocol",
+      "protocolVersion",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-elasticsearch",
+    "name": "CfnDomain",
+    "missingProps": [
+      "accessPolicies",
+      "domainArn",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-events",
+    "name": "CfnEventBus",
+    "missingProps": [
+      "policy",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-events",
+    "name": "CfnEventBusPolicy",
+    "missingProps": [
+      "action",
+      "condition",
+      "principal"
+    ]
+  },
+  {
+    "module": "aws-events",
+    "name": "CfnRule",
+    "missingProps": [
+      "roleArn"
+    ]
+  },
+  {
+    "module": "aws-fsx",
+    "name": "CfnFileSystem",
+    "missingProps": [
+      "fileSystemTypeVersion",
+      "ontapConfiguration",
+      "openZfsConfiguration",
+      "storageType",
+      "tags",
+      "windowsConfiguration"
+    ]
+  },
+  {
+    "module": "aws-iam",
+    "name": "CfnGroup",
+    "missingProps": [
+      "policies"
+    ]
+  },
+  {
+    "module": "aws-iam",
+    "name": "CfnRole",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-iam",
+    "name": "CfnSAMLProvider",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-iam",
+    "name": "CfnUser",
+    "missingProps": [
+      "policies",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-kinesis",
+    "name": "CfnStream",
+    "missingProps": [
+      "streamModeDetails",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-kms",
+    "name": "CfnKey",
+    "missingProps": [
+      "bypassPolicyLockoutSafetyCheck",
+      "multiRegion",
+      "origin",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-lambda",
+    "name": "CfnEventSourceMapping",
+    "missingProps": [
+      "documentDbEventSourceConfig",
+      "queues"
+    ]
+  },
+  {
+    "module": "aws-lambda",
+    "name": "CfnFunction",
+    "missingProps": [
+      "tags",
+      "tracingConfig"
+    ]
+  },
+  {
+    "module": "aws-lambda",
+    "name": "CfnVersion",
+    "missingProps": [
+      "runtimePolicy"
+    ]
+  },
+  {
+    "module": "aws-logs",
+    "name": "CfnLogGroup",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-logs",
+    "name": "CfnSubscriptionFilter",
+    "missingProps": [
+      "distribution"
+    ]
+  },
+  {
+    "module": "aws-opensearchservice",
+    "name": "CfnDomain",
+    "missingProps": [
+      "accessPolicies",
+      "domainArn",
+      "tags"
     ]
   },
   {
@@ -303,1021 +1168,156 @@
     ]
   },
   {
-    "module": "aws-opensearchservice",
-    "name": "CfnDomain",
+    "module": "aws-route53",
+    "name": "CfnHostedZone",
     "missingProps": [
-      "accessPolicies",
-      "domainArn",
+      "hostedZoneTags"
+    ]
+  },
+  {
+    "module": "aws-route53",
+    "name": "CfnRecordSet",
+    "missingProps": [
+      "cidrRoutingConfig",
+      "failover",
+      "geoProximityLocation",
+      "healthCheckId",
+      "hostedZoneName"
+    ]
+  },
+  {
+    "module": "aws-s3",
+    "name": "CfnBucket",
+    "missingProps": [
+      "analyticsConfigurations",
+      "notificationConfiguration",
+      "replicationConfiguration",
       "tags"
     ]
   },
   {
-    "module": "aws-logs",
-    "name": "CfnLogGroup",
+    "module": "aws-secretsmanager",
+    "name": "CfnResourcePolicy",
+    "missingProps": [
+      "blockPublicPolicy"
+    ]
+  },
+  {
+    "module": "aws-servicecatalog",
+    "name": "CfnCloudFormationProduct",
+    "missingProps": [
+      "productType",
+      "sourceConnection",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-servicecatalog",
+    "name": "CfnPortfolio",
     "missingProps": [
       "tags"
     ]
   },
   {
-    "module": "aws-logs",
-    "name": "CfnSubscriptionFilter",
+    "module": "aws-servicediscovery",
+    "name": "CfnHttpNamespace",
     "missingProps": [
-      "distribution"
+      "tags"
     ]
   },
   {
-    "module": "aws-lambda",
-    "name": "CfnEventSourceMapping",
+    "module": "aws-servicediscovery",
+    "name": "CfnPrivateDnsNamespace",
     "missingProps": [
-      "documentDbEventSourceConfig",
-      "queues"
+      "properties",
+      "tags"
     ]
   },
   {
-    "module": "aws-lambda",
-    "name": "CfnFunction",
+    "module": "aws-servicediscovery",
+    "name": "CfnPublicDnsNamespace",
     "missingProps": [
+      "properties",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-servicediscovery",
+    "name": "CfnService",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ses",
+    "name": "CfnConfigurationSet",
+    "missingProps": [
+      "vdmOptions"
+    ]
+  },
+  {
+    "module": "aws-signer",
+    "name": "CfnSigningProfile",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-sns",
+    "name": "CfnSubscription",
+    "missingProps": [
+      "deliveryPolicy",
+      "replayPolicy"
+    ]
+  },
+  {
+    "module": "aws-sns",
+    "name": "CfnTopic",
+    "missingProps": [
+      "dataProtectionPolicy",
+      "subscription",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-sqs",
+    "name": "CfnQueue",
+    "missingProps": [
+      "contentBasedDeduplication",
+      "deduplicationScope",
+      "fifoQueue",
+      "fifoThroughputLimit",
+      "kmsDataKeyReusePeriodSeconds",
+      "kmsMasterKeyId",
+      "sqsManagedSseEnabled",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-stepfunctions",
+    "name": "CfnActivity",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-stepfunctions",
+    "name": "CfnStateMachine",
+    "missingProps": [
+      "definition",
+      "definitionS3Location",
+      "definitionString",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-synthetics",
+    "name": "CfnCanary",
+    "missingProps": [
+      "artifactConfig",
+      "deleteLambdaResourcesOnCanaryDeletion",
       "tags",
-      "tracingConfig"
-    ]
-  },
-  {
-    "module": "aws-lambda",
-    "name": "CfnVersion",
-    "missingProps": [
-      "runtimePolicy"
-    ]
-  },
-  {
-    "module": "aws-kms",
-    "name": "CfnKey",
-    "missingProps": [
-      "bypassPolicyLockoutSafetyCheck",
-      "multiRegion",
-      "origin",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-kinesis",
-    "name": "CfnStream",
-    "missingProps": [
-      "streamModeDetails",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-iam",
-    "name": "CfnGroup",
-    "missingProps": [
-      "policies"
-    ]
-  },
-  {
-    "module": "aws-iam",
-    "name": "CfnRole",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-iam",
-    "name": "CfnSAMLProvider",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-iam",
-    "name": "CfnUser",
-    "missingProps": [
-      "policies",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-fsx",
-    "name": "CfnFileSystem",
-    "missingProps": [
-      "fileSystemTypeVersion",
-      "ontapConfiguration",
-      "openZfsConfiguration",
-      "storageType",
-      "tags",
-      "windowsConfiguration"
-    ]
-  },
-  {
-    "module": "aws-events",
-    "name": "CfnEventBus",
-    "missingProps": [
-      "policy",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-events",
-    "name": "CfnEventBusPolicy",
-    "missingProps": [
-      "action",
-      "condition",
-      "principal"
-    ]
-  },
-  {
-    "module": "aws-events",
-    "name": "CfnRule",
-    "missingProps": [
-      "roleArn"
-    ]
-  },
-  {
-    "module": "aws-elasticsearch",
-    "name": "CfnDomain",
-    "missingProps": [
-      "accessPolicies",
-      "domainArn",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-elasticloadbalancingv2",
-    "name": "CfnListener",
-    "missingProps": [
-      "alpnPolicy",
-      "certificates",
-      "loadBalancerArn",
-      "mutualAuthentication",
-      "port",
-      "protocol",
-      "sslPolicy"
-    ]
-  },
-  {
-    "module": "aws-elasticloadbalancingv2",
-    "name": "CfnLoadBalancer",
-    "missingProps": [
-      "enforceSecurityGroupInboundRulesOnPrivateLinkTraffic",
-      "ipAddressType",
-      "securityGroups",
-      "subnetMappings",
-      "tags",
-      "type"
-    ]
-  },
-  {
-    "module": "aws-elasticloadbalancingv2",
-    "name": "CfnTargetGroup",
-    "missingProps": [
-      "ipAddressType",
-      "port",
-      "protocol",
-      "protocolVersion",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-elasticloadbalancing",
-    "name": "CfnLoadBalancer",
-    "missingProps": [
-      "accessLoggingPolicy",
-      "appCookieStickinessPolicy",
-      "availabilityZones",
-      "connectionDrainingPolicy",
-      "connectionSettings",
-      "lbCookieStickinessPolicy",
-      "loadBalancerName",
-      "policies",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-eks",
-    "name": "CfnNodegroup",
-    "missingProps": [
-      "version"
-    ]
-  },
-  {
-    "module": "aws-efs",
-    "name": "CfnAccessPoint",
-    "missingProps": [
-      "accessPointTags",
-      "clientToken"
-    ]
-  },
-  {
-    "module": "aws-efs",
-    "name": "CfnFileSystem",
-    "missingProps": [
-      "bypassPolicyLockoutSafetyCheck",
-      "fileSystemTags"
-    ]
-  },
-  {
-    "module": "aws-ecs",
-    "name": "CfnCluster",
-    "missingProps": [
-      "capacityProviders",
-      "defaultCapacityProviderStrategy",
-      "serviceConnectDefaults",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-ecs",
-    "name": "CfnTaskDefinition",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-ecr",
-    "name": "CfnRepository",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnClientVpnEndpoint",
-    "missingProps": [
-      "tagSpecifications"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnInstance",
-    "missingProps": [
-      "additionalInfo",
-      "affinity",
-      "cpuOptions",
-      "disableApiTermination",
-      "elasticGpuSpecifications",
-      "elasticInferenceAccelerators",
-      "enclaveOptions",
-      "hibernationOptions",
-      "hostId",
-      "hostResourceGroupArn",
-      "instanceInitiatedShutdownBehavior",
-      "ipv6AddressCount",
-      "ipv6Addresses",
-      "kernelId",
-      "launchTemplate",
-      "licenseSpecifications",
-      "placementGroupName",
-      "privateDnsNameOptions",
-      "ramdiskId",
-      "securityGroups",
-      "ssmAssociations",
-      "tags",
-      "tenancy",
-      "volumes"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnKeyPair",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnLaunchTemplate",
-    "missingProps": [
-      "versionDescription"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnNetworkAcl",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnNetworkAclEntry",
-    "missingProps": [
-      "cidrBlock",
-      "icmp",
-      "ipv6CidrBlock",
-      "portRange",
-      "protocol"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnPlacementGroup",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnPrefixList",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnSecurityGroup",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnVPC",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnVPCEndpoint",
-    "missingProps": [
-      "privateDnsEnabled",
-      "securityGroupIds",
-      "subnetIds"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnVPNConnection",
-    "missingProps": [
-      "tags",
-      "transitGatewayId"
-    ]
-  },
-  {
-    "module": "aws-ec2",
-    "name": "CfnVolume",
-    "missingProps": [
-      "outpostArn",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-dynamodb",
-    "name": "CfnGlobalTable",
-    "missingProps": [
-      "writeOnDemandThroughputSettings"
-    ]
-  },
-  {
-    "module": "aws-dynamodb",
-    "name": "CfnTable",
-    "missingProps": [
-      "onDemandThroughput",
-      "resourcePolicy",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-docdb",
-    "name": "CfnDBCluster",
-    "missingProps": [
-      "availabilityZones",
-      "copyTagsToSnapshot",
-      "restoreToTime",
-      "restoreType",
-      "snapshotIdentifier",
-      "sourceDbClusterIdentifier",
-      "storageType",
-      "tags",
-      "useLatestRestorableTime"
-    ]
-  },
-  {
-    "module": "aws-docdb",
-    "name": "CfnDBClusterParameterGroup",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-docdb",
-    "name": "CfnDBInstance",
-    "missingProps": [
-      "certificateRotationRestart",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-config",
-    "name": "CfnConfigRule",
-    "missingProps": [
-      "compliance",
-      "evaluationModes"
-    ]
-  },
-  {
-    "module": "aws-cognito",
-    "name": "CfnUserPool",
-    "missingProps": [
-      "userPoolTags"
-    ]
-  },
-  {
-    "module": "aws-cognito",
-    "name": "CfnUserPoolClient",
-    "missingProps": [
-      "accessTokenValidity",
-      "analyticsConfiguration",
-      "authSessionValidity",
-      "defaultRedirectUri",
-      "enablePropagateAdditionalUserContextData",
-      "idTokenValidity",
-      "refreshTokenValidity",
-      "tokenValidityUnits"
-    ]
-  },
-  {
-    "module": "aws-codestarnotifications",
-    "name": "CfnNotificationRule",
-    "missingProps": [
-      "createdBy",
-      "eventTypeId",
-      "tags",
-      "targetAddress"
-    ]
-  },
-  {
-    "module": "aws-codepipeline",
-    "name": "CfnCustomActionType",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-codepipeline",
-    "name": "CfnPipeline",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-codedeploy",
-    "name": "CfnApplication",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-codedeploy",
-    "name": "CfnDeploymentConfig",
-    "missingProps": [
-      "zonalConfig"
-    ]
-  },
-  {
-    "module": "aws-codedeploy",
-    "name": "CfnDeploymentGroup",
-    "missingProps": [
-      "blueGreenDeploymentConfiguration",
-      "deployment",
-      "ec2TagFilters",
-      "ecsServices",
-      "onPremisesInstanceTagFilters",
-      "outdatedInstancesStrategy",
-      "tags",
-      "terminationHookEnabled",
-      "triggerConfigurations"
-    ]
-  },
-  {
-    "module": "aws-codecommit",
-    "name": "CfnRepository",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-codebuild",
-    "name": "CfnProject",
-    "missingProps": [
-      "resourceAccessRole",
-      "tags",
-      "visibility"
-    ]
-  },
-  {
-    "module": "aws-codebuild",
-    "name": "CfnReportGroup",
-    "missingProps": [
-      "deleteReports",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-codebuild",
-    "name": "CfnSourceCredential",
-    "missingProps": [
-      "username"
-    ]
-  },
-  {
-    "module": "aws-cloudwatch",
-    "name": "CfnAlarm",
-    "missingProps": [
-      "dimensions",
-      "extendedStatistic",
-      "metricName",
-      "metrics",
-      "namespace",
-      "period",
-      "statistic",
-      "tags",
-      "thresholdMetricId",
-      "unit"
-    ]
-  },
-  {
-    "module": "aws-cloudwatch",
-    "name": "CfnCompositeAlarm",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-cloudtrail",
-    "name": "CfnTrail",
-    "missingProps": [
-      "advancedEventSelectors",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-cloudfront",
-    "name": "CfnDistribution",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-cloudfront",
-    "name": "CfnFunction",
-    "missingProps": [
-      "functionMetadata"
-    ]
-  },
-  {
-    "module": "aws-chatbot",
-    "name": "CfnSlackChannelConfiguration",
-    "missingProps": [
-      "userRoleRequired"
-    ]
-  },
-  {
-    "module": "aws-certificatemanager",
-    "name": "CfnCertificate",
-    "missingProps": [
-      "certificateTransparencyLoggingPreference",
-      "domainValidationOptions",
-      "tags",
-      "validationMethod"
-    ]
-  },
-  {
-    "module": "aws-batch",
-    "name": "CfnComputeEnvironment",
-    "missingProps": [
-      "computeResources",
-      "eksConfiguration",
-      "replaceComputeEnvironment",
-      "tags",
-      "updatePolicy"
-    ]
-  },
-  {
-    "module": "aws-batch",
-    "name": "CfnJobDefinition",
-    "missingProps": [
-      "containerProperties",
-      "ecsProperties",
-      "eksProperties",
-      "parameters",
-      "retryStrategy",
-      "schedulingPriority",
-      "tags",
-      "timeout"
-    ]
-  },
-  {
-    "module": "aws-batch",
-    "name": "CfnJobQueue",
-    "missingProps": [
-      "jobStateTimeLimitActions",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-batch",
-    "name": "CfnSchedulingPolicy",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-backup",
-    "name": "CfnBackupPlan",
-    "missingProps": [
-      "backupPlanTags"
-    ]
-  },
-  {
-    "module": "aws-backup",
-    "name": "CfnBackupVault",
-    "missingProps": [
-      "backupVaultTags"
-    ]
-  },
-  {
-    "module": "aws-autoscaling",
-    "name": "CfnScalingPolicy",
-    "missingProps": [
-      "adjustmentType",
-      "metricAggregationType",
-      "minAdjustmentMagnitude",
-      "predictiveScalingConfiguration",
-      "scalingAdjustment",
-      "stepAdjustments"
-    ]
-  },
-  {
-    "module": "aws-appsync",
-    "name": "CfnDataSource",
-    "missingProps": [
-      "dynamoDbConfig",
-      "elasticsearchConfig",
-      "eventBridgeConfig",
-      "httpConfig",
-      "lambdaConfig",
-      "metricsConfig",
-      "openSearchServiceConfig",
-      "relationalDatabaseConfig",
-      "type"
-    ]
-  },
-  {
-    "module": "aws-appsync",
-    "name": "CfnFunctionConfiguration",
-    "missingProps": [
-      "maxBatchSize",
-      "requestMappingTemplateS3Location",
-      "responseMappingTemplateS3Location",
-      "syncConfig"
-    ]
-  },
-  {
-    "module": "aws-appsync",
-    "name": "CfnGraphQLApi",
-    "missingProps": [
-      "enhancedMetricsConfig",
-      "ownerContact",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appsync",
-    "name": "CfnResolver",
-    "missingProps": [
-      "metricsConfig",
-      "requestMappingTemplateS3Location",
-      "responseMappingTemplateS3Location",
-      "syncConfig"
-    ]
-  },
-  {
-    "module": "aws-appmesh",
-    "name": "CfnGatewayRoute",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appmesh",
-    "name": "CfnMesh",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appmesh",
-    "name": "CfnRoute",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appmesh",
-    "name": "CfnVirtualGateway",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appmesh",
-    "name": "CfnVirtualNode",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appmesh",
-    "name": "CfnVirtualRouter",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appmesh",
-    "name": "CfnVirtualService",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-applicationautoscaling",
-    "name": "CfnScalableTarget",
-    "missingProps": [
-      "suspendedState"
-    ]
-  },
-  {
-    "module": "aws-applicationautoscaling",
-    "name": "CfnScalingPolicy",
-    "missingProps": [
-      "resourceId",
-      "scalableDimension",
-      "serviceNamespace",
-      "stepScalingPolicyConfiguration"
-    ]
-  },
-  {
-    "module": "aws-appconfig",
-    "name": "CfnApplication",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appconfig",
-    "name": "CfnConfigurationProfile",
-    "missingProps": [
-      "kmsKeyIdentifier",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appconfig",
-    "name": "CfnDeploymentStrategy",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appconfig",
-    "name": "CfnEnvironment",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-appconfig",
-    "name": "CfnExtension",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-apigatewayv2",
-    "name": "CfnApi",
-    "missingProps": [
-      "basePath",
-      "body",
-      "bodyS3Location",
-      "corsConfiguration",
-      "credentialsArn",
-      "disableExecuteApiEndpoint",
-      "disableSchemaValidation",
-      "failOnWarnings",
-      "routeKey",
-      "tags",
-      "target",
-      "version"
-    ]
-  },
-  {
-    "module": "aws-apigatewayv2",
-    "name": "CfnApiMapping",
-    "missingProps": [
-      "apiId",
-      "apiMappingKey",
-      "domainName",
-      "stage"
-    ]
-  },
-  {
-    "module": "aws-apigatewayv2",
-    "name": "CfnAuthorizer",
-    "missingProps": [
-      "authorizerCredentialsArn",
-      "authorizerPayloadFormatVersion",
-      "authorizerResultTtlInSeconds",
-      "enableSimpleResponses",
-      "identityValidationExpression",
-      "jwtConfiguration"
-    ]
-  },
-  {
-    "module": "aws-apigatewayv2",
-    "name": "CfnDomainName",
-    "missingProps": [
-      "domainName",
-      "domainNameConfigurations",
-      "mutualTlsAuthentication",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-apigatewayv2",
-    "name": "CfnIntegration",
-    "missingProps": [
-      "connectionId",
-      "connectionType",
-      "description",
-      "integrationSubtype",
-      "payloadFormatVersion",
-      "responseParameters",
-      "tlsConfig"
-    ]
-  },
-  {
-    "module": "aws-apigatewayv2",
-    "name": "CfnRoute",
-    "missingProps": [
-      "authorizationScopes",
-      "modelSelectionExpression",
-      "operationName",
-      "requestModels",
-      "requestParameters"
-    ]
-  },
-  {
-    "module": "aws-apigatewayv2",
-    "name": "CfnStage",
-    "missingProps": [
-      "accessLogSettings",
-      "accessPolicyId",
-      "clientCertificateId",
-      "deploymentId",
-      "description",
-      "routeSettings",
-      "stageVariables",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-apigatewayv2",
-    "name": "CfnVpcLink",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnApiKey",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnAuthorizer",
-    "missingProps": [
-      "authorizerCredentials",
-      "authorizerResultTtlInSeconds",
-      "authorizerUri",
-      "authType",
-      "identitySource",
-      "identityValidationExpression",
-      "name",
-      "providerArns",
-      "restApiId",
-      "type"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnBasePathMapping",
-    "missingProps": [
-      "id"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnDomainName",
-    "missingProps": [
-      "ownershipVerificationCertificateArn",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnGatewayResponse",
-    "missingProps": [
-      "responseParameters",
-      "responseTemplates",
-      "responseType",
-      "restApiId",
-      "statusCode"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnMethod",
-    "missingProps": [
-      "apiKeyRequired",
-      "authorizationScopes",
-      "authorizationType",
-      "authorizerId",
-      "httpMethod",
-      "integration",
-      "methodResponses",
-      "operationName",
-      "requestModels",
-      "requestParameters",
-      "requestValidatorId",
-      "resourceId",
-      "restApiId"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnModel",
-    "missingProps": [
-      "contentType",
-      "description",
-      "name",
-      "restApiId",
-      "schema"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnRequestValidator",
-    "missingProps": [
-      "name",
-      "restApiId",
-      "validateRequestBody",
-      "validateRequestParameters"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnResource",
-    "missingProps": [
-      "parentId",
-      "pathPart",
-      "restApiId"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnRestApi",
-    "missingProps": [
-      "apiKeySourceType",
-      "binaryMediaTypes",
-      "cloneFrom",
-      "description",
-      "mode",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnStage",
-    "missingProps": [
-      "canarySetting",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnUsagePlan",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-apigateway",
-    "name": "CfnVpcLink",
-    "missingProps": [
-      "tags"
+      "visualReference"
     ]
   }
 ]
