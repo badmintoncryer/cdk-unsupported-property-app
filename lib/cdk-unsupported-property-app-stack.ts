@@ -111,8 +111,13 @@ export class CdkUnsupportedPropertyAppStack extends cdk.Stack {
             image: cdk.DockerImage.fromRegistry("node:20"),
             local: {
               tryBundle: (outputDir: string) => {
+                // 環境変数に指定されたGoogle Analytics IDを渡すために環境変数に設定
+                const env = {
+                  ...process.env,
+                };
                 spawnSync("npm", ["--cwd", "./frontend", "run", "build"], {
                   stdio: "inherit",
+                  env,
                 });
                 spawnSync("cp", ["./frontend/public/error.html", outputDir], {
                   stdio: "inherit",

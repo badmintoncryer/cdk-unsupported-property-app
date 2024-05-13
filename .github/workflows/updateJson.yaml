@@ -12,6 +12,8 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      GA_ID: ${{ secrets.GA_ID }}
 
     steps:
       - name: Checkout code
