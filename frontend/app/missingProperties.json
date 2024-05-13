@@ -618,7 +618,6 @@
     "name": "CfnDBCluster",
     "missingProps": [
       "availabilityZones",
-      "copyTagsToSnapshot",
       "restoreToTime",
       "restoreType",
       "snapshotIdentifier",
