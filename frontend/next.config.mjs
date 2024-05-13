@@ -1,4 +1,4 @@
-import { PHASE_PRODUCTION_BUILD } from 'next/constants.js';
+import { PHASE_PRODUCTION_BUILD } from "next/constants.js";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = (phase) => {
@@ -9,13 +9,13 @@ const nextConfig = (phase) => {
     return {
       output: "export",
       env: {
-        BUILD_TIME: buildDate
-      }
+        BUILD_TIME: buildDate,
+      },
     };
   }
 
   return {
-    output: "export"
+    output: "export",
   };
 };
 
