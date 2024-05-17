@@ -599,7 +599,6 @@
       "analyticsConfiguration",
       "authSessionValidity",
       "defaultRedirectUri",
-      "enablePropagateAdditionalUserContextData",
       "idTokenValidity",
       "refreshTokenValidity",
       "tokenValidityUnits"
