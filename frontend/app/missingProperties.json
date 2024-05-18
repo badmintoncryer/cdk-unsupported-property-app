@@ -427,7 +427,6 @@
     "module": "aws-batch",
     "name": "CfnJobQueue",
     "missingProps": [
-      "jobStateTimeLimitActions",
       "tags"
     ]
   },
