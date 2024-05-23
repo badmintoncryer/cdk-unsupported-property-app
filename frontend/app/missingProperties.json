@@ -683,7 +683,6 @@
       "kernelId",
       "launchTemplate",
       "licenseSpecifications",
-      "placementGroupName",
       "privateDnsNameOptions",
       "ramdiskId",
       "securityGroups",
@@ -889,6 +888,9 @@
     "module": "aws-events",
     "name": "CfnEventBus",
     "missingProps": [
+      "deadLetterConfig",
+      "description",
+      "kmsKeyIdentifier",
       "policy",
       "tags"
     ]
@@ -988,6 +990,7 @@
     "module": "aws-lambda",
     "name": "CfnVersion",
     "missingProps": [
+      "policy",
       "runtimePolicy"
     ]
   },
