@@ -512,7 +512,6 @@
     "module": "aws-codebuild",
     "name": "CfnReportGroup",
     "missingProps": [
-      "deleteReports",
       "tags"
     ]
   },
