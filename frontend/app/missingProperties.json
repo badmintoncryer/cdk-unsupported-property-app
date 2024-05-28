@@ -451,6 +451,7 @@
     "module": "aws-chatbot",
     "name": "CfnSlackChannelConfiguration",
     "missingProps": [
+      "tags",
       "userRoleRequired"
     ]
   },
@@ -676,7 +677,6 @@
       "hibernationOptions",
       "hostId",
       "hostResourceGroupArn",
-      "instanceInitiatedShutdownBehavior",
       "ipv6AddressCount",
       "ipv6Addresses",
       "kernelId",
