@@ -652,7 +652,6 @@
     "name": "CfnTable",
     "missingProps": [
       "onDemandThroughput",
-      "resourcePolicy",
       "tags"
     ]
   },
