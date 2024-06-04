@@ -451,8 +451,7 @@
     "module": "aws-chatbot",
     "name": "CfnSlackChannelConfiguration",
     "missingProps": [
-      "tags",
-      "userRoleRequired"
+      "tags"
     ]
   },
   {
@@ -997,13 +996,6 @@
     "name": "CfnLogGroup",
     "missingProps": [
       "tags"
-    ]
-  },
-  {
-    "module": "aws-logs",
-    "name": "CfnSubscriptionFilter",
-    "missingProps": [
-      "distribution"
     ]
   },
   {
