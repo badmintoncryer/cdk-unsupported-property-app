@@ -501,6 +501,16 @@
   },
   {
     "module": "aws-codebuild",
+    "name": "CfnFleet",
+    "missingProps": [
+      "fleetServiceRole",
+      "fleetVpcConfig",
+      "overflowBehavior",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-codebuild",
     "name": "CfnProject",
     "missingProps": [
       "resourceAccessRole",
