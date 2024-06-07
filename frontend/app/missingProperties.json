@@ -616,8 +616,7 @@
     "module": "aws-config",
     "name": "CfnConfigRule",
     "missingProps": [
-      "compliance",
-      "evaluationModes"
+      "compliance"
     ]
   },
   {
