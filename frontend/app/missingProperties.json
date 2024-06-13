@@ -347,7 +347,6 @@
     "module": "aws-appsync",
     "name": "CfnFunctionConfiguration",
     "missingProps": [
-      "maxBatchSize",
       "requestMappingTemplateS3Location",
       "responseMappingTemplateS3Location",
       "syncConfig"
@@ -821,6 +820,15 @@
     "missingProps": [
       "bypassPolicyLockoutSafetyCheck",
       "fileSystemTags"
+    ]
+  },
+  {
+    "module": "aws-eks",
+    "name": "CfnAccessEntry",
+    "missingProps": [
+      "kubernetesGroups",
+      "tags",
+      "username"
     ]
   },
   {
