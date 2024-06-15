@@ -679,8 +679,6 @@
       "disableApiTermination",
       "elasticGpuSpecifications",
       "elasticInferenceAccelerators",
-      "enclaveOptions",
-      "hibernationOptions",
       "hostId",
       "hostResourceGroupArn",
       "ipv6AddressCount",
