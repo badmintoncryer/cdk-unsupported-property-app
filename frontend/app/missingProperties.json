@@ -1254,13 +1254,6 @@
     ]
   },
   {
-    "module": "aws-ses",
-    "name": "CfnConfigurationSet",
-    "missingProps": [
-      "vdmOptions"
-    ]
-  },
-  {
     "module": "aws-signer",
     "name": "CfnSigningProfile",
     "missingProps": [
