@@ -513,8 +513,7 @@
     "name": "CfnProject",
     "missingProps": [
       "resourceAccessRole",
-      "tags",
-      "visibility"
+      "tags"
     ]
   },
   {
