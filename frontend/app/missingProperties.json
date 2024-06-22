@@ -604,7 +604,6 @@
       "accessTokenValidity",
       "analyticsConfiguration",
       "authSessionValidity",
-      "defaultRedirectUri",
       "idTokenValidity",
       "refreshTokenValidity",
       "tokenValidityUnits"
