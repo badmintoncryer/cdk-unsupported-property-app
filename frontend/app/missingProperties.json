@@ -562,7 +562,6 @@
       "onPremisesInstanceTagFilters",
       "outdatedInstancesStrategy",
       "tags",
-      "terminationHookEnabled",
       "triggerConfigurations"
     ]
   },
