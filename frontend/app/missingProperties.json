@@ -828,6 +828,18 @@
   },
   {
     "module": "aws-eks",
+    "name": "CfnAddon",
+    "missingProps": [
+      "configurationValues",
+      "podIdentityAssociations",
+      "preserveOnDelete",
+      "resolveConflicts",
+      "serviceAccountRoleArn",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-eks",
     "name": "CfnNodegroup",
     "missingProps": [
       "version"
