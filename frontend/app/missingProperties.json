@@ -1056,7 +1056,9 @@
       "enableGlobalWriteForwarding",
       "enableHttpEndpoint",
       "enableIamDatabaseAuthentication",
+      "enableLocalWriteForwarding",
       "engine",
+      "engineLifecycleSupport",
       "engineMode",
       "engineVersion",
       "globalClusterIdentifier",
@@ -1128,6 +1130,7 @@
       "enablePerformanceInsights",
       "endpoint",
       "engine",
+      "engineLifecycleSupport",
       "engineVersion",
       "iops",
       "licenseModel",
@@ -1266,6 +1269,7 @@
     "module": "aws-signer",
     "name": "CfnSigningProfile",
     "missingProps": [
+      "profileName",
       "tags"
     ]
   },
