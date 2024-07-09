@@ -546,13 +546,6 @@
   },
   {
     "module": "aws-codedeploy",
-    "name": "CfnDeploymentConfig",
-    "missingProps": [
-      "zonalConfig"
-    ]
-  },
-  {
-    "module": "aws-codedeploy",
     "name": "CfnDeploymentGroup",
     "missingProps": [
       "blueGreenDeploymentConfiguration",
