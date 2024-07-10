@@ -576,7 +576,6 @@
     "module": "aws-codestarnotifications",
     "name": "CfnNotificationRule",
     "missingProps": [
-      "createdBy",
       "eventTypeId",
       "tags",
       "targetAddress"
