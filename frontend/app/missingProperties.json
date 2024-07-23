@@ -213,7 +213,6 @@
       "accessPolicyId",
       "clientCertificateId",
       "deploymentId",
-      "description",
       "routeSettings",
       "stageVariables",
       "tags"
