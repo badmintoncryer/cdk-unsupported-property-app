@@ -902,7 +902,6 @@
     "missingProps": [
       "deadLetterConfig",
       "description",
-      "kmsKeyIdentifier",
       "policy",
       "tags"
     ]
