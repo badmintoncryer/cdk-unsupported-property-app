@@ -757,6 +757,7 @@
     "module": "aws-ec2",
     "name": "CfnVPNConnection",
     "missingProps": [
+      "enableAcceleration",
       "tags",
       "transitGatewayId"
     ]
@@ -1290,6 +1291,7 @@
     "module": "aws-stepfunctions",
     "name": "CfnActivity",
     "missingProps": [
+      "encryptionConfiguration",
       "tags"
     ]
   },
@@ -1300,6 +1302,7 @@
       "definition",
       "definitionS3Location",
       "definitionString",
+      "encryptionConfiguration",
       "tags"
     ]
   },
