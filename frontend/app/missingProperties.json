@@ -882,6 +882,13 @@
     ]
   },
   {
+    "module": "aws-elasticloadbalancingv2",
+    "name": "CfnTrustStore",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
     "module": "aws-elasticsearch",
     "name": "CfnDomain",
     "missingProps": [
