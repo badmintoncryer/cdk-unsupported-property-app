@@ -503,6 +503,7 @@
     "missingProps": [
       "fleetServiceRole",
       "fleetVpcConfig",
+      "imageId",
       "overflowBehavior",
       "tags"
     ]
