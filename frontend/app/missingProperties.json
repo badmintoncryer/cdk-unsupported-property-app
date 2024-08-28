@@ -811,7 +811,6 @@
     "missingProps": [
       "configurationValues",
       "podIdentityAssociations",
-      "preserveOnDelete",
       "resolveConflicts",
       "serviceAccountRoleArn",
       "tags"
