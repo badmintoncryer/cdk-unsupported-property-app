@@ -663,7 +663,6 @@
       "elasticInferenceAccelerators",
       "hostId",
       "hostResourceGroupArn",
-      "ipv6AddressCount",
       "ipv6Addresses",
       "kernelId",
       "launchTemplate",
@@ -969,7 +968,6 @@
     "name": "CfnKey",
     "missingProps": [
       "bypassPolicyLockoutSafetyCheck",
-      "multiRegion",
       "origin",
       "tags"
     ]
