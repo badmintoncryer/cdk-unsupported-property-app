@@ -616,7 +616,6 @@
       "restoreType",
       "snapshotIdentifier",
       "sourceDbClusterIdentifier",
-      "storageType",
       "tags",
       "useLatestRestorableTime"
     ]
