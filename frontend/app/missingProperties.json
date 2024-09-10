@@ -401,6 +401,7 @@
     "name": "CfnComputeEnvironment",
     "missingProps": [
       "computeResources",
+      "context",
       "eksConfiguration",
       "replaceComputeEnvironment",
       "tags",
@@ -750,8 +751,15 @@
     "name": "CfnVPNConnection",
     "missingProps": [
       "enableAcceleration",
+      "localIpv4NetworkCidr",
+      "localIpv6NetworkCidr",
+      "outsideIpAddressType",
+      "remoteIpv4NetworkCidr",
+      "remoteIpv6NetworkCidr",
       "tags",
-      "transitGatewayId"
+      "transitGatewayId",
+      "transportTransitGatewayAttachmentId",
+      "tunnelInsideIpVersion"
     ]
   },
   {
@@ -1008,6 +1016,7 @@
     "missingProps": [
       "accessPolicies",
       "domainArn",
+      "skipShardMigrationWait",
       "tags"
     ]
   },
