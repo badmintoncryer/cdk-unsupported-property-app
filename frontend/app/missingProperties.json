@@ -586,6 +586,8 @@
     "module": "aws-cognito",
     "name": "CfnUserPool",
     "missingProps": [
+      "emailAuthenticationMessage",
+      "emailAuthenticationSubject",
       "userPoolTags"
     ]
   },
@@ -850,6 +852,7 @@
     "missingProps": [
       "alpnPolicy",
       "certificates",
+      "listenerAttributes",
       "loadBalancerArn",
       "mutualAuthentication",
       "port",
@@ -981,10 +984,18 @@
   },
   {
     "module": "aws-lambda",
+    "name": "CfnCodeSigningConfig",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-lambda",
     "name": "CfnEventSourceMapping",
     "missingProps": [
       "documentDbEventSourceConfig",
-      "queues"
+      "queues",
+      "tags"
     ]
   },
   {
