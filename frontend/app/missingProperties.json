@@ -1327,6 +1327,7 @@
     "missingProps": [
       "artifactConfig",
       "deleteLambdaResourcesOnCanaryDeletion",
+      "resourcesToReplicateTags",
       "tags",
       "visualReference"
     ]
