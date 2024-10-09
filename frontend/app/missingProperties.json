@@ -851,7 +851,6 @@
     "missingProps": [
       "alpnPolicy",
       "certificates",
-      "listenerAttributes",
       "loadBalancerArn",
       "mutualAuthentication",
       "port",
