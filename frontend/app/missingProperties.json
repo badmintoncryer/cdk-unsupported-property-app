@@ -929,7 +929,6 @@
       "fileSystemTypeVersion",
       "ontapConfiguration",
       "openZfsConfiguration",
-      "storageType",
       "tags",
       "windowsConfiguration"
     ]
