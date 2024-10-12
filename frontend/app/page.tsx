@@ -14,10 +14,10 @@ export default function Home() {
   const initialData: MissingProperty[] = [];
   // missingPropsから'tags'を削除し、その結果要素数が0になった項目を取り除く
   const processedData = missingProperties.reduce((acc, item) => {
-    // 'tags'を除外する
+    // 'tags'または'xxxTags'を除外する
     const filteredProps = showTags
       ? item.missingProps
-      : item.missingProps.filter((prop) => prop !== "tags");
+      : item.missingProps.filter((prop) => prop !== "tags" && !prop.endsWith("Tags"));
 
     // filteredPropsが空でなければ、新しい配列に追加
     if (filteredProps.length > 0) {
