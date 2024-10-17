@@ -659,7 +659,6 @@
       "additionalInfo",
       "affinity",
       "cpuOptions",
-      "disableApiTermination",
       "elasticGpuSpecifications",
       "elasticInferenceAccelerators",
       "hostId",
@@ -926,7 +925,6 @@
     "module": "aws-fsx",
     "name": "CfnFileSystem",
     "missingProps": [
-      "fileSystemTypeVersion",
       "ontapConfiguration",
       "openZfsConfiguration",
       "tags",
