@@ -790,8 +790,7 @@
     "module": "aws-efs",
     "name": "CfnAccessPoint",
     "missingProps": [
-      "accessPointTags",
-      "clientToken"
+      "accessPointTags"
     ]
   },
   {
