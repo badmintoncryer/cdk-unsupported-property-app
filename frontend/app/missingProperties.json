@@ -899,7 +899,6 @@
     "module": "aws-events",
     "name": "CfnEventBus",
     "missingProps": [
-      "deadLetterConfig",
       "policy",
       "tags"
     ]
