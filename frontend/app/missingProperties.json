@@ -1020,6 +1020,7 @@
     "missingProps": [
       "accessPolicies",
       "domainArn",
+      "identityCenterOptions",
       "skipShardMigrationWait",
       "tags"
     ]
