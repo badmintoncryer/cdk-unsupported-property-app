@@ -1319,7 +1319,6 @@
     "module": "aws-synthetics",
     "name": "CfnCanary",
     "missingProps": [
-      "artifactConfig",
       "deleteLambdaResourcesOnCanaryDeletion",
       "resourcesToReplicateTags",
       "tags",
