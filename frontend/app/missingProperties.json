@@ -272,6 +272,7 @@
     "module": "aws-applicationautoscaling",
     "name": "CfnScalingPolicy",
     "missingProps": [
+      "predictiveScalingPolicyConfiguration",
       "resourceId",
       "scalableDimension",
       "serviceNamespace",
@@ -501,10 +502,13 @@
     "module": "aws-codebuild",
     "name": "CfnFleet",
     "missingProps": [
+      "computeConfiguration",
+      "fleetProxyConfiguration",
       "fleetServiceRole",
       "fleetVpcConfig",
       "imageId",
       "overflowBehavior",
+      "scalingConfiguration",
       "tags"
     ]
   },
@@ -639,10 +643,18 @@
   },
   {
     "module": "aws-dynamodb",
+    "name": "CfnGlobalTable",
+    "missingProps": [
+      "warmThroughput"
+    ]
+  },
+  {
+    "module": "aws-dynamodb",
     "name": "CfnTable",
     "missingProps": [
       "onDemandThroughput",
-      "tags"
+      "tags",
+      "warmThroughput"
     ]
   },
   {
@@ -860,6 +872,7 @@
     "module": "aws-elasticloadbalancingv2",
     "name": "CfnLoadBalancer",
     "missingProps": [
+      "enablePrefixForIpv6SourceNat",
       "enforceSecurityGroupInboundRulesOnPrivateLinkTraffic",
       "ipAddressType",
       "securityGroups",
@@ -987,6 +1000,7 @@
     "name": "CfnEventSourceMapping",
     "missingProps": [
       "documentDbEventSourceConfig",
+      "provisionedPollerConfig",
       "queues",
       "tags"
     ]
@@ -1272,7 +1286,6 @@
     "module": "aws-sns",
     "name": "CfnSubscription",
     "missingProps": [
-      "deliveryPolicy",
       "replayPolicy"
     ]
   },
