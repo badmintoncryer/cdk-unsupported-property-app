@@ -837,6 +837,7 @@
     "module": "aws-eks",
     "name": "CfnNodegroup",
     "missingProps": [
+      "nodeRepairConfig",
       "version"
     ]
   },
@@ -1000,7 +1001,6 @@
     "name": "CfnEventSourceMapping",
     "missingProps": [
       "documentDbEventSourceConfig",
-      "provisionedPollerConfig",
       "queues",
       "tags"
     ]
@@ -1334,6 +1334,7 @@
     "name": "CfnCanary",
     "missingProps": [
       "deleteLambdaResourcesOnCanaryDeletion",
+      "provisionedResourceCleanup",
       "resourcesToReplicateTags",
       "tags",
       "visualReference"
