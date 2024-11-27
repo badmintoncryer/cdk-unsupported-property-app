@@ -886,7 +886,6 @@
     "module": "aws-elasticloadbalancingv2",
     "name": "CfnTargetGroup",
     "missingProps": [
-      "ipAddressType",
       "port",
       "protocol",
       "protocolVersion",
