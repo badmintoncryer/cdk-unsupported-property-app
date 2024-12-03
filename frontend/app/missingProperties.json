@@ -450,6 +450,7 @@
     "module": "aws-chatbot",
     "name": "CfnSlackChannelConfiguration",
     "missingProps": [
+      "customizationResourceArns",
       "tags"
     ]
   },
@@ -591,7 +592,10 @@
     "missingProps": [
       "emailAuthenticationMessage",
       "emailAuthenticationSubject",
-      "userPoolTags"
+      "userPoolTags",
+      "userPoolTier",
+      "webAuthnRelyingPartyId",
+      "webAuthnUserVerification"
     ]
   },
   {
@@ -876,6 +880,7 @@
       "enablePrefixForIpv6SourceNat",
       "enforceSecurityGroupInboundRulesOnPrivateLinkTraffic",
       "ipAddressType",
+      "minimumLoadBalancerCapacity",
       "securityGroups",
       "subnetMappings",
       "tags",
