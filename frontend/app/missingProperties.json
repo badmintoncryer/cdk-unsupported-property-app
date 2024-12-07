@@ -593,7 +593,6 @@
       "emailAuthenticationMessage",
       "emailAuthenticationSubject",
       "userPoolTags",
-      "userPoolTier",
       "webAuthnRelyingPartyId",
       "webAuthnUserVerification"
     ]
@@ -647,18 +646,10 @@
   },
   {
     "module": "aws-dynamodb",
-    "name": "CfnGlobalTable",
-    "missingProps": [
-      "warmThroughput"
-    ]
-  },
-  {
-    "module": "aws-dynamodb",
     "name": "CfnTable",
     "missingProps": [
       "onDemandThroughput",
-      "tags",
-      "warmThroughput"
+      "tags"
     ]
   },
   {
