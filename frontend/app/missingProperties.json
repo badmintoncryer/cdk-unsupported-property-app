@@ -517,6 +517,7 @@
     "module": "aws-codebuild",
     "name": "CfnProject",
     "missingProps": [
+      "autoRetryLimit",
       "resourceAccessRole",
       "tags"
     ]
@@ -610,6 +611,13 @@
     ]
   },
   {
+    "module": "aws-cognito",
+    "name": "CfnUserPoolDomain",
+    "missingProps": [
+      "managedLoginVersion"
+    ]
+  },
+  {
     "module": "aws-config",
     "name": "CfnConfigRule",
     "missingProps": [
@@ -623,6 +631,7 @@
       "availabilityZones",
       "restoreToTime",
       "restoreType",
+      "serverlessV2ScalingConfiguration",
       "snapshotIdentifier",
       "sourceDbClusterIdentifier",
       "tags",
@@ -1266,6 +1275,7 @@
     "module": "aws-servicediscovery",
     "name": "CfnService",
     "missingProps": [
+      "serviceAttributes",
       "tags"
     ]
   },
