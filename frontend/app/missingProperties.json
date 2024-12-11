@@ -1199,6 +1199,13 @@
   },
   {
     "module": "aws-route53",
+    "name": "CfnHealthCheck",
+    "missingProps": [
+      "healthCheckTags"
+    ]
+  },
+  {
+    "module": "aws-route53",
     "name": "CfnHostedZone",
     "missingProps": [
       "hostedZoneTags"
@@ -1211,7 +1218,6 @@
       "cidrRoutingConfig",
       "failover",
       "geoProximityLocation",
-      "healthCheckId",
       "hostedZoneName"
     ]
   },
