@@ -236,6 +236,7 @@
     "module": "aws-appconfig",
     "name": "CfnConfigurationProfile",
     "missingProps": [
+      "deletionProtectionCheck",
       "kmsKeyIdentifier",
       "tags"
     ]
@@ -251,6 +252,7 @@
     "module": "aws-appconfig",
     "name": "CfnEnvironment",
     "missingProps": [
+      "deletionProtectionCheck",
       "tags"
     ]
   },
@@ -517,7 +519,6 @@
     "module": "aws-codebuild",
     "name": "CfnProject",
     "missingProps": [
-      "autoRetryLimit",
       "resourceAccessRole",
       "tags"
     ]
@@ -757,9 +758,14 @@
     "module": "aws-ec2",
     "name": "CfnVPCEndpoint",
     "missingProps": [
+      "dnsOptions",
+      "ipAddressType",
       "privateDnsEnabled",
+      "resourceConfigurationArn",
       "securityGroupIds",
-      "subnetIds"
+      "serviceNetworkArn",
+      "subnetIds",
+      "tags"
     ]
   },
   {
@@ -799,6 +805,7 @@
     "module": "aws-ecs",
     "name": "CfnTaskDefinition",
     "missingProps": [
+      "enableFaultInjection",
       "tags"
     ]
   },
@@ -1029,7 +1036,29 @@
     "module": "aws-logs",
     "name": "CfnLogGroup",
     "missingProps": [
+      "fieldIndexPolicies",
       "tags"
+    ]
+  },
+  {
+    "module": "aws-logs",
+    "name": "CfnMetricFilter",
+    "missingProps": [
+      "applyOnTransformedLogs"
+    ]
+  },
+  {
+    "module": "aws-logs",
+    "name": "CfnQueryDefinition",
+    "missingProps": [
+      "queryLanguage"
+    ]
+  },
+  {
+    "module": "aws-logs",
+    "name": "CfnSubscriptionFilter",
+    "missingProps": [
+      "applyOnTransformedLogs"
     ]
   },
   {
@@ -1129,6 +1158,7 @@
       "dbSecurityGroups",
       "dbSnapshotIdentifier",
       "dbSubnetGroupName",
+      "dbSystemId",
       "dedicatedLogVolume",
       "deleteAutomatedBackups",
       "deletionProtection",
