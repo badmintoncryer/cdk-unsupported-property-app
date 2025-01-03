@@ -656,6 +656,13 @@
   },
   {
     "module": "aws-dynamodb",
+    "name": "CfnGlobalTable",
+    "missingProps": [
+      "pointInTimeRecoverySpecification"
+    ]
+  },
+  {
+    "module": "aws-dynamodb",
     "name": "CfnTable",
     "missingProps": [
       "onDemandThroughput",
