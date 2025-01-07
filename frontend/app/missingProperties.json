@@ -630,8 +630,11 @@
     "name": "CfnDBCluster",
     "missingProps": [
       "availabilityZones",
+      "manageMasterUserPassword",
+      "masterUserSecretKmsKeyId",
       "restoreToTime",
       "restoreType",
+      "rotateMasterUserPassword",
       "serverlessV2ScalingConfiguration",
       "snapshotIdentifier",
       "sourceDbClusterIdentifier",
