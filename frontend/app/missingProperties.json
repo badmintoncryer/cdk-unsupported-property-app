@@ -815,7 +815,6 @@
     "module": "aws-ecs",
     "name": "CfnTaskDefinition",
     "missingProps": [
-      "enableFaultInjection",
       "tags"
     ]
   },
