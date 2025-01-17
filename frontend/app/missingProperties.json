@@ -1266,7 +1266,6 @@
     "missingProps": [
       "analyticsConfigurations",
       "notificationConfiguration",
-      "replicationConfiguration",
       "tags"
     ]
   },
