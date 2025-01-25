@@ -135,20 +135,15 @@
     "module": "aws-apigatewayv2",
     "name": "CfnApi",
     "missingProps": [
-      "apiKeySelectionExpression",
       "basePath",
       "body",
       "bodyS3Location",
       "corsConfiguration",
       "credentialsArn",
-      "description",
       "disableExecuteApiEndpoint",
       "disableSchemaValidation",
       "failOnWarnings",
-      "name",
-      "protocolType",
       "routeKey",
-      "routeSelectionExpression",
       "tags",
       "target",
       "version"
@@ -169,7 +164,11 @@
     "name": "CfnAuthorizer",
     "missingProps": [
       "authorizerCredentialsArn",
-      "identityValidationExpression"
+      "authorizerPayloadFormatVersion",
+      "authorizerResultTtlInSeconds",
+      "enableSimpleResponses",
+      "identityValidationExpression",
+      "jwtConfiguration"
     ]
   },
   {
@@ -186,12 +185,12 @@
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "contentHandlingStrategy",
+      "connectionId",
+      "connectionType",
       "description",
-      "passthroughBehavior",
-      "requestTemplates",
+      "integrationSubtype",
+      "payloadFormatVersion",
       "responseParameters",
-      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
@@ -199,18 +198,11 @@
     "module": "aws-apigatewayv2",
     "name": "CfnRoute",
     "missingProps": [
-      "apiId",
-      "apiKeyRequired",
       "authorizationScopes",
-      "authorizationType",
-      "authorizerId",
       "modelSelectionExpression",
       "operationName",
       "requestModels",
-      "requestParameters",
-      "routeKey",
-      "routeResponseSelectionExpression",
-      "target"
+      "requestParameters"
     ]
   },
   {
@@ -616,13 +608,6 @@
       "idTokenValidity",
       "refreshTokenValidity",
       "tokenValidityUnits"
-    ]
-  },
-  {
-    "module": "aws-cognito",
-    "name": "CfnUserPoolDomain",
-    "missingProps": [
-      "managedLoginVersion"
     ]
   },
   {
@@ -1392,7 +1377,6 @@
     "name": "CfnCanary",
     "missingProps": [
       "deleteLambdaResourcesOnCanaryDeletion",
-      "provisionedResourceCleanup",
       "resourcesToReplicateTags",
       "tags",
       "visualReference"
