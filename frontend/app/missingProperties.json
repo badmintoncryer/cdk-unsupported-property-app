@@ -331,6 +331,20 @@
   },
   {
     "module": "aws-appsync",
+    "name": "CfnApi",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-appsync",
+    "name": "CfnChannelNamespace",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-appsync",
     "name": "CfnDataSource",
     "missingProps": [
       "dynamoDbConfig",
@@ -504,7 +518,6 @@
     "module": "aws-codebuild",
     "name": "CfnFleet",
     "missingProps": [
-      "computeConfiguration",
       "fleetProxyConfiguration",
       "fleetServiceRole",
       "fleetVpcConfig",
@@ -668,6 +681,7 @@
     "module": "aws-ec2",
     "name": "CfnClientVpnEndpoint",
     "missingProps": [
+      "disconnectOnSessionTimeout",
       "tagSpecifications"
     ]
   },
@@ -989,6 +1003,27 @@
     "name": "CfnStream",
     "missingProps": [
       "streamModeDetails",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-kinesisfirehose",
+    "name": "CfnDeliveryStream",
+    "missingProps": [
+      "amazonOpenSearchServerlessDestinationConfiguration",
+      "amazonopensearchserviceDestinationConfiguration",
+      "databaseSourceConfiguration",
+      "directPutSourceConfiguration",
+      "elasticsearchDestinationConfiguration",
+      "extendedS3DestinationConfiguration",
+      "httpEndpointDestinationConfiguration",
+      "icebergDestinationConfiguration",
+      "kinesisStreamSourceConfiguration",
+      "mskSourceConfiguration",
+      "redshiftDestinationConfiguration",
+      "s3DestinationConfiguration",
+      "snowflakeDestinationConfiguration",
+      "splunkDestinationConfiguration",
       "tags"
     ]
   },
@@ -1336,7 +1371,6 @@
     "name": "CfnTopic",
     "missingProps": [
       "dataProtectionPolicy",
-      "fifoThroughputScope",
       "subscription",
       "tags"
     ]
