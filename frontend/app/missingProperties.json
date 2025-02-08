@@ -616,7 +616,6 @@
     "name": "CfnUserPoolClient",
     "missingProps": [
       "accessTokenValidity",
-      "analyticsConfiguration",
       "authSessionValidity",
       "idTokenValidity",
       "refreshTokenValidity",
