@@ -1292,6 +1292,7 @@
     "name": "CfnBucket",
     "missingProps": [
       "analyticsConfigurations",
+      "metadataTableConfiguration",
       "notificationConfiguration",
       "tags"
     ]
