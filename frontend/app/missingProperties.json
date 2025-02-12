@@ -901,7 +901,6 @@
       "enablePrefixForIpv6SourceNat",
       "enforceSecurityGroupInboundRulesOnPrivateLinkTraffic",
       "ipAddressType",
-      "minimumLoadBalancerCapacity",
       "securityGroups",
       "subnetMappings",
       "tags",
