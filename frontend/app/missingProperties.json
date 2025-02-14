@@ -606,9 +606,7 @@
     "missingProps": [
       "emailAuthenticationMessage",
       "emailAuthenticationSubject",
-      "userPoolTags",
-      "webAuthnRelyingPartyId",
-      "webAuthnUserVerification"
+      "userPoolTags"
     ]
   },
   {
