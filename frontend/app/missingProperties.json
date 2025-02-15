@@ -661,13 +661,6 @@
   },
   {
     "module": "aws-dynamodb",
-    "name": "CfnGlobalTable",
-    "missingProps": [
-      "pointInTimeRecoverySpecification"
-    ]
-  },
-  {
-    "module": "aws-dynamodb",
     "name": "CfnTable",
     "missingProps": [
       "onDemandThroughput",
@@ -1171,6 +1164,7 @@
     "missingProps": [
       "allocatedStorage",
       "allowMajorVersionUpgrade",
+      "applyImmediately",
       "associatedRoles",
       "automaticBackupReplicationKmsKeyId",
       "automaticBackupReplicationRegion",
