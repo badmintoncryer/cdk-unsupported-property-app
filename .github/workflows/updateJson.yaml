@@ -43,7 +43,7 @@ jobs:
           cd cdk-unsupported-property
           npm install
           npm i -g ts-node
-          ts-node src/index.ts ../aws-cdk/packages/aws-cdk-lib
+          ts-node src/index.ts ../aws-cdk/packages
           mv missingProperties.json ../frontend/app/missingProperties.json
 
       - name: clean up
