@@ -1346,6 +1346,13 @@
     ]
   },
   {
+    "module": "aws-cloudfront",
+    "name": "CfnVpcOrigin",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
     "module": "aws-chatbot",
     "name": "CfnSlackChannelConfiguration",
     "missingProps": [
