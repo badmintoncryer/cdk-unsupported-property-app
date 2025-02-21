@@ -526,6 +526,7 @@
     "name": "CfnBucket",
     "missingProps": [
       "analyticsConfigurations",
+      "metadataTableConfiguration",
       "notificationConfiguration",
       "tags"
     ]
@@ -621,6 +622,7 @@
     "missingProps": [
       "allocatedStorage",
       "allowMajorVersionUpgrade",
+      "applyImmediately",
       "associatedRoles",
       "automaticBackupReplicationKmsKeyId",
       "automaticBackupReplicationRegion",
@@ -1138,13 +1140,6 @@
       "transitGatewayId",
       "transportTransitGatewayAttachmentId",
       "tunnelInsideIpVersion"
-    ]
-  },
-  {
-    "module": "aws-dynamodb",
-    "name": "CfnGlobalTable",
-    "missingProps": [
-      "pointInTimeRecoverySpecification"
     ]
   },
   {
