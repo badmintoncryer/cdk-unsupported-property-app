@@ -60,7 +60,6 @@
       "endpoint",
       "hsmClientCertificateIdentifier",
       "hsmConfigurationIdentifier",
-      "maintenanceTrackName",
       "manageMasterPassword",
       "manualSnapshotRetentionPeriod",
       "masterPasswordSecretKmsKeyId",
