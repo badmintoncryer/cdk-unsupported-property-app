@@ -84,13 +84,6 @@
     ]
   },
   {
-    "module": "aws-pipes-alpha",
-    "name": "CfnPipe",
-    "missingProps": [
-      "kmsKeyIdentifier"
-    ]
-  },
-  {
     "module": "aws-neptune-alpha",
     "name": "CfnDBCluster",
     "missingProps": [
