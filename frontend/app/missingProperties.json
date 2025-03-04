@@ -1373,6 +1373,7 @@
     "module": "aws-batch",
     "name": "CfnJobDefinition",
     "missingProps": [
+      "consumableResourceProperties",
       "containerProperties",
       "ecsProperties",
       "eksProperties",
