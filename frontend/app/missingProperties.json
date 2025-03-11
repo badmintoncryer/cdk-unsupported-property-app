@@ -832,6 +832,10 @@
     "module": "aws-iam",
     "name": "CfnSAMLProvider",
     "missingProps": [
+      "addPrivateKey",
+      "assertionEncryptionMode",
+      "privateKeyList",
+      "removePrivateKey",
       "tags"
     ]
   },
