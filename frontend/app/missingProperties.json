@@ -910,6 +910,7 @@
       "enablePrefixForIpv6SourceNat",
       "enforceSecurityGroupInboundRulesOnPrivateLinkTraffic",
       "ipAddressType",
+      "ipv4IpamPoolId",
       "securityGroups",
       "subnetMappings",
       "tags",
