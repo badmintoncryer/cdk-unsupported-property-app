@@ -514,6 +514,13 @@
     ]
   },
   {
+    "module": "aws-scheduler",
+    "name": "CfnScheduleGroup",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
     "module": "aws-s3",
     "name": "CfnBucket",
     "missingProps": [
