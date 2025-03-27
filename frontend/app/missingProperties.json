@@ -980,7 +980,6 @@
     "module": "aws-eks",
     "name": "CfnNodegroup",
     "missingProps": [
-      "nodeRepairConfig",
       "version"
     ]
   },
