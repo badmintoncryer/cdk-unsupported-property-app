@@ -14,13 +14,6 @@
     ]
   },
   {
-    "module": "aws-scheduler-alpha",
-    "name": "CfnScheduleGroup",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
     "module": "aws-route53resolver-alpha",
     "name": "CfnFirewallDomainList",
     "missingProps": [
@@ -183,27 +176,6 @@
     "missingProps": [
       "pricingPlan",
       "pricingPlanDataSource",
-      "tags"
-    ]
-  },
-  {
-    "module": "aws-kinesisfirehose-alpha",
-    "name": "CfnDeliveryStream",
-    "missingProps": [
-      "amazonOpenSearchServerlessDestinationConfiguration",
-      "amazonopensearchserviceDestinationConfiguration",
-      "databaseSourceConfiguration",
-      "directPutSourceConfiguration",
-      "elasticsearchDestinationConfiguration",
-      "extendedS3DestinationConfiguration",
-      "httpEndpointDestinationConfiguration",
-      "icebergDestinationConfiguration",
-      "kinesisStreamSourceConfiguration",
-      "mskSourceConfiguration",
-      "redshiftDestinationConfiguration",
-      "s3DestinationConfiguration",
-      "snowflakeDestinationConfiguration",
-      "splunkDestinationConfiguration",
       "tags"
     ]
   },
