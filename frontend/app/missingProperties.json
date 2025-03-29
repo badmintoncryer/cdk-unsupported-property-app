@@ -354,6 +354,7 @@
     "module": "aws-amplify-alpha",
     "name": "CfnApp",
     "missingProps": [
+      "computeRoleArn",
       "tags"
     ]
   },
@@ -362,6 +363,8 @@
     "name": "CfnBranch",
     "missingProps": [
       "backend",
+      "computeRoleArn",
+      "enableSkewProtection",
       "framework",
       "tags"
     ]
@@ -597,6 +600,7 @@
       "associatedRoles",
       "automaticBackupReplicationKmsKeyId",
       "automaticBackupReplicationRegion",
+      "automaticBackupReplicationRetentionPeriod",
       "autoMinorVersionUpgrade",
       "availabilityZone",
       "backupRetentionPeriod",
