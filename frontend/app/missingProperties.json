@@ -1583,6 +1583,7 @@
       "disableExecuteApiEndpoint",
       "disableSchemaValidation",
       "failOnWarnings",
+      "ipAddressType",
       "routeKey",
       "tags",
       "target",
