@@ -259,6 +259,20 @@
   },
   {
     "module": "aws-gamelift-alpha",
+    "name": "CfnAlias",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-gamelift-alpha",
+    "name": "CfnBuild",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-gamelift-alpha",
     "name": "CfnFleet",
     "missingProps": [
       "anywhereConfiguration",
