@@ -909,7 +909,6 @@
       "ipAddressType",
       "ipv4IpamPoolId",
       "securityGroups",
-      "subnetMappings",
       "tags",
       "type"
     ]
