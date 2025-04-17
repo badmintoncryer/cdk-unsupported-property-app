@@ -619,7 +619,6 @@
       "availabilityZone",
       "backupRetentionPeriod",
       "caCertificateIdentifier",
-      "certificateDetails",
       "certificateRotationRestart",
       "copyTagsToSnapshot",
       "customIamInstanceProfile",
@@ -645,7 +644,6 @@
       "enableCloudwatchLogsExports",
       "enableIamDatabaseAuthentication",
       "enablePerformanceInsights",
-      "endpoint",
       "engine",
       "engineLifecycleSupport",
       "engineVersion",
@@ -807,6 +805,7 @@
     "module": "aws-kinesis",
     "name": "CfnStream",
     "missingProps": [
+      "desiredShardLevelMetrics",
       "streamModeDetails",
       "tags"
     ]
@@ -1114,6 +1113,7 @@
       "resourceConfigurationArn",
       "securityGroupIds",
       "serviceNetworkArn",
+      "serviceRegion",
       "subnetIds",
       "tags"
     ]
