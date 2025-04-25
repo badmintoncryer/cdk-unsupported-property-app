@@ -871,13 +871,6 @@
     ]
   },
   {
-    "module": "aws-events",
-    "name": "CfnRule",
-    "missingProps": [
-      "roleArn"
-    ]
-  },
-  {
     "module": "aws-elasticsearch",
     "name": "CfnDomain",
     "missingProps": [
@@ -1688,7 +1681,6 @@
       "binaryMediaTypes",
       "cloneFrom",
       "description",
-      "mode",
       "tags"
     ]
   },
