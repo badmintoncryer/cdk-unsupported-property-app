@@ -622,6 +622,7 @@
       "certificateRotationRestart",
       "copyTagsToSnapshot",
       "customIamInstanceProfile",
+      "databaseInsightsMode",
       "dbClusterIdentifier",
       "dbClusterSnapshotIdentifier",
       "dbInstanceClass",
