@@ -139,6 +139,13 @@
   },
   {
     "module": "aws-location-alpha",
+    "name": "CfnAPIKey",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-location-alpha",
     "name": "CfnGeofenceCollection",
     "missingProps": [
       "pricingPlan",
