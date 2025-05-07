@@ -1015,6 +1015,7 @@
     "module": "aws-ec2",
     "name": "CfnClientVpnEndpoint",
     "missingProps": [
+      "clientRouteEnforcementOptions",
       "disconnectOnSessionTimeout",
       "tagSpecifications"
     ]
@@ -1198,6 +1199,7 @@
       "accessTokenValidity",
       "authSessionValidity",
       "idTokenValidity",
+      "refreshTokenRotation",
       "refreshTokenValidity",
       "tokenValidityUnits"
     ]
