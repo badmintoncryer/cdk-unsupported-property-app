@@ -544,7 +544,6 @@
     "module": "aws-route53",
     "name": "CfnRecordSet",
     "missingProps": [
-      "cidrRoutingConfig",
       "failover",
       "geoProximityLocation",
       "hostedZoneName"
