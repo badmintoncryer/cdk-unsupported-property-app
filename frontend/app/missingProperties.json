@@ -1302,7 +1302,6 @@
       "period",
       "statistic",
       "tags",
-      "thresholdMetricId",
       "unit"
     ]
   },
