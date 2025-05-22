@@ -376,7 +376,6 @@
     "module": "aws-amplify-alpha",
     "name": "CfnApp",
     "missingProps": [
-      "computeRoleArn",
       "tags"
     ]
   },
