@@ -395,6 +395,7 @@
     "name": "CfnCanary",
     "missingProps": [
       "deleteLambdaResourcesOnCanaryDeletion",
+      "dryRunAndUpdate",
       "resourcesToReplicateTags",
       "tags",
       "visualReference"
@@ -1034,6 +1035,7 @@
       "kernelId",
       "launchTemplate",
       "licenseSpecifications",
+      "metadataOptions",
       "privateDnsNameOptions",
       "ramdiskId",
       "securityGroups",
