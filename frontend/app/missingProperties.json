@@ -1562,7 +1562,6 @@
     "module": "aws-appconfig",
     "name": "CfnConfigurationProfile",
     "missingProps": [
-      "deletionProtectionCheck",
       "kmsKeyIdentifier",
       "tags"
     ]
