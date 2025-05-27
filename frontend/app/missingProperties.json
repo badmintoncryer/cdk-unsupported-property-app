@@ -958,7 +958,6 @@
     "module": "aws-eks",
     "name": "CfnAddon",
     "missingProps": [
-      "configurationValues",
       "podIdentityAssociations",
       "resolveConflicts",
       "serviceAccountRoleArn",
