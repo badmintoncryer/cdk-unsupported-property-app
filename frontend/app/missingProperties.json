@@ -827,6 +827,13 @@
   },
   {
     "module": "aws-iam",
+    "name": "CfnOIDCProvider",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-iam",
     "name": "CfnRole",
     "missingProps": [
       "tags"
