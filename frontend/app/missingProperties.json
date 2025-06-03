@@ -775,7 +775,6 @@
     "module": "aws-lambda",
     "name": "CfnVersion",
     "missingProps": [
-      "policy",
       "runtimePolicy"
     ]
   },
