@@ -1101,8 +1101,7 @@
     "name": "CfnVolume",
     "missingProps": [
       "outpostArn",
-      "tags",
-      "volumeInitializationRate"
+      "tags"
     ]
   },
   {
