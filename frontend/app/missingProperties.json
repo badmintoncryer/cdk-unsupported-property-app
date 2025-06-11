@@ -395,7 +395,6 @@
     "name": "CfnCanary",
     "missingProps": [
       "deleteLambdaResourcesOnCanaryDeletion",
-      "dryRunAndUpdate",
       "resourcesToReplicateTags",
       "tags",
       "visualReference"
