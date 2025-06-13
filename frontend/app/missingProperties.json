@@ -385,7 +385,6 @@
     "missingProps": [
       "backend",
       "computeRoleArn",
-      "enableSkewProtection",
       "framework",
       "tags"
     ]
