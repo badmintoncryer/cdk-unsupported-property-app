@@ -384,7 +384,6 @@
     "name": "CfnBranch",
     "missingProps": [
       "backend",
-      "computeRoleArn",
       "framework",
       "tags"
     ]
