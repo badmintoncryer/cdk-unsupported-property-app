@@ -376,6 +376,7 @@
     "module": "aws-amplify-alpha",
     "name": "CfnApp",
     "missingProps": [
+      "jobConfig",
       "tags"
     ]
   },
@@ -1017,7 +1018,6 @@
     "module": "aws-ec2",
     "name": "CfnClientVpnEndpoint",
     "missingProps": [
-      "clientRouteEnforcementOptions",
       "disconnectOnSessionTimeout",
       "tagSpecifications"
     ]
