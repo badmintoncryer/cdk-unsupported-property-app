@@ -1651,7 +1651,6 @@
       "clientCertificateId",
       "deploymentId",
       "routeSettings",
-      "stageVariables",
       "tags"
     ]
   },
