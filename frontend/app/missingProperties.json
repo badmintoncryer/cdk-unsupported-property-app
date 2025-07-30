@@ -519,6 +519,7 @@
     "name": "CfnBucket",
     "missingProps": [
       "analyticsConfigurations",
+      "metadataConfiguration",
       "metadataTableConfiguration",
       "notificationConfiguration",
       "tags"
@@ -567,6 +568,7 @@
       "dbInstanceParameterGroupName",
       "dbSubnetGroupName",
       "dbSystemId",
+      "deleteAutomatedBackups",
       "deletionProtection",
       "domain",
       "domainIamRoleName",
@@ -876,6 +878,7 @@
     "module": "aws-events",
     "name": "CfnEventBus",
     "missingProps": [
+      "logConfig",
       "policy",
       "tags"
     ]
@@ -1373,6 +1376,7 @@
     "module": "aws-certificatemanager",
     "name": "CfnCertificate",
     "missingProps": [
+      "certificateExport",
       "certificateTransparencyLoggingPreference",
       "domainValidationOptions",
       "tags",
