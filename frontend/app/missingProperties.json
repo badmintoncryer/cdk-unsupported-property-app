@@ -1151,14 +1151,6 @@
   },
   {
     "module": "aws-dynamodb",
-    "name": "CfnGlobalTable",
-    "missingProps": [
-      "globalTableWitnesses",
-      "multiRegionConsistency"
-    ]
-  },
-  {
-    "module": "aws-dynamodb",
     "name": "CfnTable",
     "missingProps": [
       "onDemandThroughput",
