@@ -454,6 +454,27 @@
     ]
   },
   {
+    "module": "aws-ses",
+    "name": "CfnConfigurationSet",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ses",
+    "name": "CfnDedicatedIpPool",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-ses",
+    "name": "CfnEmailIdentity",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
     "module": "aws-servicediscovery",
     "name": "CfnHttpNamespace",
     "missingProps": [
@@ -602,6 +623,7 @@
       "serverlessV2ScalingConfiguration",
       "snapshotIdentifier",
       "sourceDbClusterIdentifier",
+      "sourceDbClusterResourceId",
       "sourceRegion",
       "storageEncrypted",
       "storageType",
@@ -681,6 +703,7 @@
       "sourceDbInstanceIdentifier",
       "sourceDbiResourceId",
       "sourceRegion",
+      "statusInfos",
       "storageThroughput",
       "storageType",
       "tags",
@@ -720,9 +743,17 @@
   },
   {
     "module": "aws-logs",
+    "name": "CfnDestination",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-logs",
     "name": "CfnLogGroup",
     "missingProps": [
       "fieldIndexPolicies",
+      "resourcePolicyDocument",
       "tags"
     ]
   },
@@ -1021,6 +1052,7 @@
     "module": "aws-ecr",
     "name": "CfnRepository",
     "missingProps": [
+      "imageTagMutabilityExclusionFilters",
       "tags"
     ]
   },
@@ -1406,6 +1438,8 @@
     "module": "aws-batch",
     "name": "CfnJobQueue",
     "missingProps": [
+      "jobQueueType",
+      "serviceEnvironmentOrder",
       "tags"
     ]
   },
