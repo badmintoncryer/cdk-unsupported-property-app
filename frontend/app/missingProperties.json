@@ -449,7 +449,6 @@
     "module": "aws-signer",
     "name": "CfnSigningProfile",
     "missingProps": [
-      "profileName",
       "tags"
     ]
   },
