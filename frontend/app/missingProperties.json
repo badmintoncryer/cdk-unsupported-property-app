@@ -702,6 +702,7 @@
       "sourceDbInstanceIdentifier",
       "sourceDbiResourceId",
       "sourceRegion",
+      "statusInfos",
       "storageThroughput",
       "storageType",
       "tags",
