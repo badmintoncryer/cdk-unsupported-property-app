@@ -1040,13 +1040,6 @@
     ]
   },
   {
-    "module": "aws-ecs",
-    "name": "CfnTaskDefinition",
-    "missingProps": [
-      "tags"
-    ]
-  },
-  {
     "module": "aws-ecr",
     "name": "CfnRepository",
     "missingProps": [
