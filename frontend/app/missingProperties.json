@@ -897,6 +897,7 @@
     "module": "aws-fsx",
     "name": "CfnFileSystem",
     "missingProps": [
+      "networkType",
       "ontapConfiguration",
       "openZfsConfiguration",
       "tags",
@@ -919,6 +920,13 @@
       "action",
       "condition",
       "principal"
+    ]
+  },
+  {
+    "module": "aws-events",
+    "name": "CfnRule",
+    "missingProps": [
+      "tags"
     ]
   },
   {
@@ -1001,6 +1009,7 @@
     "module": "aws-eks",
     "name": "CfnAddon",
     "missingProps": [
+      "namespaceConfig",
       "podIdentityAssociations",
       "resolveConflicts",
       "serviceAccountRoleArn",
@@ -1164,6 +1173,7 @@
       "localIpv4NetworkCidr",
       "localIpv6NetworkCidr",
       "outsideIpAddressType",
+      "preSharedKeyStorage",
       "remoteIpv4NetworkCidr",
       "remoteIpv6NetworkCidr",
       "tags",
