@@ -393,9 +393,11 @@
     "module": "aws-synthetics",
     "name": "CfnCanary",
     "missingProps": [
+      "browserConfigs",
       "deleteLambdaResourcesOnCanaryDeletion",
       "tags",
-      "visualReference"
+      "visualReference",
+      "visualReferences"
     ]
   },
   {
@@ -1401,7 +1403,6 @@
     "module": "aws-certificatemanager",
     "name": "CfnCertificate",
     "missingProps": [
-      "certificateExport",
       "certificateTransparencyLoggingPreference",
       "domainValidationOptions",
       "tags",
@@ -1659,19 +1660,23 @@
     "name": "CfnAuthorizer",
     "missingProps": [
       "authorizerCredentialsArn",
-      "identityValidationExpression"
+      "authorizerPayloadFormatVersion",
+      "authorizerResultTtlInSeconds",
+      "enableSimpleResponses",
+      "identityValidationExpression",
+      "jwtConfiguration"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "contentHandlingStrategy",
+      "connectionId",
+      "connectionType",
       "description",
-      "passthroughBehavior",
-      "requestTemplates",
+      "integrationSubtype",
+      "payloadFormatVersion",
       "responseParameters",
-      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
@@ -1690,6 +1695,7 @@
     "module": "aws-apigatewayv2",
     "name": "CfnStage",
     "missingProps": [
+      "accessLogSettings",
       "accessPolicyId",
       "clientCertificateId",
       "deploymentId",
