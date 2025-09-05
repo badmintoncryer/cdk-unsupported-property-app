@@ -724,6 +724,13 @@
   },
   {
     "module": "aws-rds",
+    "name": "CfnDBProxyEndpoint",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-rds",
     "name": "CfnOptionGroup",
     "missingProps": [
       "optionGroupName",
