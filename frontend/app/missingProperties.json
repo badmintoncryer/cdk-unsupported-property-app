@@ -393,7 +393,6 @@
     "module": "aws-synthetics",
     "name": "CfnCanary",
     "missingProps": [
-      "browserConfigs",
       "deleteLambdaResourcesOnCanaryDeletion",
       "tags",
       "visualReference",
