@@ -916,7 +916,6 @@
     "module": "aws-events",
     "name": "CfnEventBus",
     "missingProps": [
-      "logConfig",
       "policy",
       "tags"
     ]
