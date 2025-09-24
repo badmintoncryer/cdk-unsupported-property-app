@@ -1664,19 +1664,23 @@
     "name": "CfnAuthorizer",
     "missingProps": [
       "authorizerCredentialsArn",
-      "identityValidationExpression"
+      "authorizerPayloadFormatVersion",
+      "authorizerResultTtlInSeconds",
+      "enableSimpleResponses",
+      "identityValidationExpression",
+      "jwtConfiguration"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "contentHandlingStrategy",
+      "connectionId",
+      "connectionType",
       "description",
-      "passthroughBehavior",
-      "requestTemplates",
+      "integrationSubtype",
+      "payloadFormatVersion",
       "responseParameters",
-      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
@@ -1695,6 +1699,7 @@
     "module": "aws-apigatewayv2",
     "name": "CfnStage",
     "missingProps": [
+      "accessLogSettings",
       "accessPolicyId",
       "clientCertificateId",
       "deploymentId",
