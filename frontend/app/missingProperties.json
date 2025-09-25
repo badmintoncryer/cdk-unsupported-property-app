@@ -605,6 +605,7 @@
       "globalClusterIdentifier",
       "iops",
       "manageMasterUserPassword",
+      "masterUserAuthenticationType",
       "masterUserSecret",
       "monitoringInterval",
       "monitoringRoleArn",
@@ -680,6 +681,7 @@
       "iops",
       "licenseModel",
       "manageMasterUserPassword",
+      "masterUserAuthenticationType",
       "masterUserSecret",
       "maxAllocatedStorage",
       "monitoringInterval",
@@ -962,6 +964,7 @@
     "module": "aws-elasticloadbalancingv2",
     "name": "CfnLoadBalancer",
     "missingProps": [
+      "enableCapacityReservationProvisionStabilize",
       "enablePrefixForIpv6SourceNat",
       "enforceSecurityGroupInboundRulesOnPrivateLinkTraffic",
       "ipAddressType",
@@ -1191,8 +1194,17 @@
   },
   {
     "module": "aws-dynamodb",
+    "name": "CfnGlobalTable",
+    "missingProps": [
+      "globalTableSettingsReplicationMode",
+      "globalTableSourceArn"
+    ]
+  },
+  {
+    "module": "aws-dynamodb",
     "name": "CfnTable",
     "missingProps": [
+      "globalTableSettingsReplicationMode",
       "onDemandThroughput",
       "tags"
     ]
