@@ -720,13 +720,17 @@
     "module": "aws-rds",
     "name": "CfnDBProxy",
     "missingProps": [
-      "tags"
+      "defaultAuthScheme",
+      "endpointNetworkType",
+      "tags",
+      "targetConnectionNetworkType"
     ]
   },
   {
     "module": "aws-rds",
     "name": "CfnDBProxyEndpoint",
     "missingProps": [
+      "endpointNetworkType",
       "tags"
     ]
   },
