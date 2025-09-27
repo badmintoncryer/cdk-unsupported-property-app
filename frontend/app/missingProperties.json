@@ -1225,7 +1225,6 @@
       "restoreToTime",
       "restoreType",
       "rotateMasterUserPassword",
-      "serverlessV2ScalingConfiguration",
       "snapshotIdentifier",
       "sourceDbClusterIdentifier",
       "tags",
