@@ -324,6 +324,29 @@
     ]
   },
   {
+    "module": "aws-elasticache-alpha",
+    "name": "CfnServerlessCache",
+    "missingProps": [
+      "endpoint",
+      "readerEndpoint",
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-elasticache-alpha",
+    "name": "CfnUser",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-elasticache-alpha",
+    "name": "CfnUserGroup",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
     "module": "aws-ec2-alpha",
     "name": "CfnVPC",
     "missingProps": [
@@ -1760,6 +1783,7 @@
       "binaryMediaTypes",
       "cloneFrom",
       "description",
+      "securityPolicy",
       "tags"
     ]
   },
