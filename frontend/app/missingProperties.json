@@ -1353,10 +1353,7 @@
     "name": "CfnFleet",
     "missingProps": [
       "fleetProxyConfiguration",
-      "fleetServiceRole",
-      "fleetVpcConfig",
       "imageId",
-      "overflowBehavior",
       "scalingConfiguration",
       "tags"
     ]
