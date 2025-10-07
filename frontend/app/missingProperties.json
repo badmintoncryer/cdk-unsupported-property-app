@@ -1096,7 +1096,6 @@
     "module": "aws-ec2",
     "name": "CfnClientVpnEndpoint",
     "missingProps": [
-      "disconnectOnSessionTimeout",
       "tagSpecifications"
     ]
   },
