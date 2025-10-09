@@ -793,13 +793,6 @@
   },
   {
     "module": "aws-logs",
-    "name": "CfnMetricFilter",
-    "missingProps": [
-      "applyOnTransformedLogs"
-    ]
-  },
-  {
-    "module": "aws-logs",
     "name": "CfnQueryDefinition",
     "missingProps": [
       "queryLanguage"
