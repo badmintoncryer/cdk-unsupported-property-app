@@ -870,7 +870,6 @@
     "module": "aws-kinesis",
     "name": "CfnStream",
     "missingProps": [
-      "desiredShardLevelMetrics",
       "streamModeDetails",
       "tags"
     ]
