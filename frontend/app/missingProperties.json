@@ -24,7 +24,19 @@
     "module": "aws-route53resolver-alpha",
     "name": "CfnFirewallRuleGroup",
     "missingProps": [
-      "tags"
+      "tags",
+      "firewallRules.action",
+      "firewallRules.blockOverrideDnsType",
+      "firewallRules.blockOverrideDomain",
+      "firewallRules.blockOverrideTtl",
+      "firewallRules.blockResponse",
+      "firewallRules.confidenceThreshold",
+      "firewallRules.dnsThreatProtection",
+      "firewallRules.firewallDomainListId",
+      "firewallRules.firewallDomainRedirectionAction",
+      "firewallRules.firewallThreatProtectionId",
+      "firewallRules.priority",
+      "firewallRules.qtype"
     ]
   },
   {
@@ -65,7 +77,11 @@
       "snapshotCopyManual",
       "snapshotCopyRetentionPeriod",
       "snapshotIdentifier",
-      "tags"
+      "tags",
+      "loggingProperties.bucketName",
+      "loggingProperties.logDestinationType",
+      "loggingProperties.logExports",
+      "loggingProperties.s3KeyPrefix"
     ]
   },
   {
@@ -73,7 +89,43 @@
     "name": "CfnClusterParameterGroup",
     "missingProps": [
       "parameterGroupName",
-      "tags"
+      "tags",
+      "parameters.parameterName",
+      "parameters.parameterValue"
+    ]
+  },
+  {
+    "module": "aws-pipes-alpha",
+    "name": "CfnPipe",
+    "missingProps": [
+      "enrichmentParameters.httpParameters",
+      "enrichmentParameters.inputTemplate",
+      "logConfiguration.cloudwatchLogsLogDestination",
+      "logConfiguration.firehoseLogDestination",
+      "logConfiguration.includeExecutionData",
+      "logConfiguration.level",
+      "logConfiguration.s3LogDestination",
+      "sourceParameters.activeMqBrokerParameters",
+      "sourceParameters.dynamoDbStreamParameters",
+      "sourceParameters.filterCriteria",
+      "sourceParameters.kinesisStreamParameters",
+      "sourceParameters.managedStreamingKafkaParameters",
+      "sourceParameters.rabbitMqBrokerParameters",
+      "sourceParameters.selfManagedKafkaParameters",
+      "sourceParameters.sqsQueueParameters",
+      "targetParameters.batchJobParameters",
+      "targetParameters.cloudWatchLogsParameters",
+      "targetParameters.ecsTaskParameters",
+      "targetParameters.eventBridgeEventBusParameters",
+      "targetParameters.httpParameters",
+      "targetParameters.inputTemplate",
+      "targetParameters.kinesisStreamParameters",
+      "targetParameters.lambdaFunctionParameters",
+      "targetParameters.redshiftDataParameters",
+      "targetParameters.sageMakerPipelineParameters",
+      "targetParameters.sqsQueueParameters",
+      "targetParameters.stepFunctionStateMachineParameters",
+      "targetParameters.timestreamParameters"
     ]
   },
   {
@@ -87,7 +139,11 @@
       "snapshotIdentifier",
       "sourceDbClusterIdentifier",
       "tags",
-      "useLatestRestorableTime"
+      "useLatestRestorableTime",
+      "associatedRoles.featureName",
+      "associatedRoles.roleArn",
+      "serverlessScalingConfiguration.maxCapacity",
+      "serverlessScalingConfiguration.minCapacity"
     ]
   },
   {
@@ -127,21 +183,37 @@
     "name": "CfnCluster",
     "missingProps": [
       "currentVersion",
-      "tags"
+      "tags",
+      "brokerNodeGroupInfo.brokerAzDistribution",
+      "brokerNodeGroupInfo.connectivityInfo",
+      "brokerNodeGroupInfo.storageInfo.ebsStorageInfo.provisionedThroughput",
+      "clientAuthentication.sasl",
+      "configurationInfo.arn",
+      "configurationInfo.revision",
+      "encryptionInfo.encryptionAtRest.dataVolumeKmsKeyId",
+      "encryptionInfo.encryptionInTransit.clientBroker",
+      "encryptionInfo.encryptionInTransit.inCluster",
+      "loggingInfo.brokerLogs",
+      "openMonitoring.prometheus"
     ]
   },
   {
     "module": "aws-msk-alpha",
     "name": "CfnServerlessCluster",
     "missingProps": [
-      "tags"
+      "tags",
+      "vpcConfigs.securityGroups",
+      "vpcConfigs.subnetIds"
     ]
   },
   {
     "module": "aws-location-alpha",
     "name": "CfnAPIKey",
     "missingProps": [
-      "tags"
+      "tags",
+      "restrictions.allowActions",
+      "restrictions.allowReferers",
+      "restrictions.allowResources"
     ]
   },
   {
@@ -166,7 +238,8 @@
     "name": "CfnPlaceIndex",
     "missingProps": [
       "pricingPlan",
-      "tags"
+      "tags",
+      "dataSourceConfiguration.intendedUse"
     ]
   },
   {
@@ -190,7 +263,10 @@
     "module": "aws-ivs-alpha",
     "name": "CfnChannel",
     "missingProps": [
-      "tags"
+      "tags",
+      "multitrackInputConfiguration.enabled",
+      "multitrackInputConfiguration.maximumResolution",
+      "multitrackInputConfiguration.policy"
     ]
   },
   {
@@ -204,7 +280,10 @@
     "module": "aws-ivs-alpha",
     "name": "CfnRecordingConfiguration",
     "missingProps": [
-      "tags"
+      "tags",
+      "renditionConfiguration.renditions",
+      "renditionConfiguration.renditionSelection",
+      "thumbnailConfiguration.participantThumbnailConfiguration"
     ]
   },
   {
@@ -218,7 +297,11 @@
     "module": "aws-iotevents-alpha",
     "name": "CfnDetectorModel",
     "missingProps": [
-      "tags"
+      "tags",
+      "detectorModelDefinition.states.onEnter",
+      "detectorModelDefinition.states.onExit",
+      "detectorModelDefinition.states.onInput",
+      "detectorModelDefinition.states.stateName"
     ]
   },
   {
@@ -226,21 +309,96 @@
     "name": "CfnInput",
     "missingProps": [
       "inputDescription",
-      "tags"
+      "tags",
+      "inputDefinition.attributes.jsonPath"
     ]
   },
   {
     "module": "aws-iot-alpha",
     "name": "CfnTopicRule",
     "missingProps": [
-      "tags"
+      "tags",
+      "topicRulePayload.actions.cloudwatchAlarm",
+      "topicRulePayload.actions.cloudwatchLogs",
+      "topicRulePayload.actions.cloudwatchMetric",
+      "topicRulePayload.actions.dynamoDb",
+      "topicRulePayload.actions.dynamoDBv2",
+      "topicRulePayload.actions.elasticsearch",
+      "topicRulePayload.actions.firehose",
+      "topicRulePayload.actions.http",
+      "topicRulePayload.actions.iotAnalytics",
+      "topicRulePayload.actions.iotEvents",
+      "topicRulePayload.actions.iotSiteWise",
+      "topicRulePayload.actions.kafka",
+      "topicRulePayload.actions.kinesis",
+      "topicRulePayload.actions.lambda",
+      "topicRulePayload.actions.location",
+      "topicRulePayload.actions.openSearch",
+      "topicRulePayload.actions.republish",
+      "topicRulePayload.actions.s3",
+      "topicRulePayload.actions.sns",
+      "topicRulePayload.actions.sqs",
+      "topicRulePayload.actions.stepFunctions",
+      "topicRulePayload.actions.timestream",
+      "topicRulePayload.errorAction.cloudwatchAlarm",
+      "topicRulePayload.errorAction.cloudwatchLogs",
+      "topicRulePayload.errorAction.cloudwatchMetric",
+      "topicRulePayload.errorAction.dynamoDb",
+      "topicRulePayload.errorAction.dynamoDBv2",
+      "topicRulePayload.errorAction.elasticsearch",
+      "topicRulePayload.errorAction.firehose",
+      "topicRulePayload.errorAction.http",
+      "topicRulePayload.errorAction.iotAnalytics",
+      "topicRulePayload.errorAction.iotEvents",
+      "topicRulePayload.errorAction.iotSiteWise",
+      "topicRulePayload.errorAction.kafka",
+      "topicRulePayload.errorAction.kinesis",
+      "topicRulePayload.errorAction.lambda",
+      "topicRulePayload.errorAction.location",
+      "topicRulePayload.errorAction.openSearch",
+      "topicRulePayload.errorAction.republish",
+      "topicRulePayload.errorAction.s3",
+      "topicRulePayload.errorAction.sns",
+      "topicRulePayload.errorAction.sqs",
+      "topicRulePayload.errorAction.stepFunctions",
+      "topicRulePayload.errorAction.timestream"
+    ]
+  },
+  {
+    "module": "aws-glue-alpha",
+    "name": "CfnConnection",
+    "missingProps": [
+      "connectionInput.athenaProperties",
+      "connectionInput.authenticationConfiguration",
+      "connectionInput.pythonProperties",
+      "connectionInput.sparkProperties",
+      "connectionInput.validateCredentials",
+      "connectionInput.validateForComputeEnvironments",
+      "connectionInput.physicalConnectionRequirements.availabilityZone",
+      "connectionInput.physicalConnectionRequirements.securityGroupIdList",
+      "connectionInput.physicalConnectionRequirements.subnetId"
     ]
   },
   {
     "module": "aws-glue-alpha",
     "name": "CfnDatabase",
     "missingProps": [
-      "databaseName"
+      "databaseName",
+      "databaseInput.createTableDefaultPermissions",
+      "databaseInput.description",
+      "databaseInput.federatedDatabase",
+      "databaseInput.locationUri",
+      "databaseInput.name",
+      "databaseInput.parameters",
+      "databaseInput.targetDatabase"
+    ]
+  },
+  {
+    "module": "aws-glue-alpha",
+    "name": "CfnDataQualityRuleset",
+    "missingProps": [
+      "targetTable.databaseName",
+      "targetTable.tableName"
     ]
   },
   {
@@ -254,7 +412,23 @@
       "maintenanceWindow",
       "maxCapacity",
       "nonOverridableArguments",
-      "notificationProperty"
+      "notificationProperty",
+      "command.pythonVersion",
+      "command.runtime",
+      "connections.connections",
+      "executionProperty.maxConcurrentRuns"
+    ]
+  },
+  {
+    "module": "aws-glue-alpha",
+    "name": "CfnSecurityConfiguration",
+    "missingProps": [
+      "encryptionConfiguration.cloudWatchEncryption.cloudWatchEncryptionMode",
+      "encryptionConfiguration.cloudWatchEncryption.kmsKeyArn",
+      "encryptionConfiguration.jobBookmarksEncryption.jobBookmarksEncryptionMode",
+      "encryptionConfiguration.jobBookmarksEncryption.kmsKeyArn",
+      "encryptionConfiguration.s3Encryptions.kmsKeyArn",
+      "encryptionConfiguration.s3Encryptions.s3EncryptionMode"
     ]
   },
   {
@@ -268,7 +442,10 @@
     "module": "aws-gamelift-alpha",
     "name": "CfnAlias",
     "missingProps": [
-      "tags"
+      "tags",
+      "routingStrategy.fleetId",
+      "routingStrategy.message",
+      "routingStrategy.type"
     ]
   },
   {
@@ -292,21 +469,46 @@
       "scriptId",
       "serverLaunchParameters",
       "serverLaunchPath",
-      "tags"
+      "tags",
+      "ec2InboundPermissions.fromPort",
+      "ec2InboundPermissions.ipRange",
+      "ec2InboundPermissions.protocol",
+      "ec2InboundPermissions.toPort",
+      "locations.location",
+      "locations.locationCapacity",
+      "locations.stoppedActions",
+      "resourceCreationLimitPolicy.newGameSessionsPerCreator",
+      "resourceCreationLimitPolicy.policyPeriodInMinutes",
+      "runtimeConfiguration.gameSessionActivationTimeoutSeconds",
+      "runtimeConfiguration.maxConcurrentGameSessionActivations",
+      "runtimeConfiguration.serverProcesses"
     ]
   },
   {
     "module": "aws-gamelift-alpha",
     "name": "CfnGameServerGroup",
     "missingProps": [
-      "tags"
+      "tags",
+      "autoScalingPolicy.estimatedInstanceWarmup",
+      "autoScalingPolicy.targetTrackingConfiguration",
+      "instanceDefinitions.instanceType",
+      "instanceDefinitions.weightedCapacity",
+      "launchTemplate.launchTemplateId",
+      "launchTemplate.launchTemplateName",
+      "launchTemplate.version"
     ]
   },
   {
     "module": "aws-gamelift-alpha",
     "name": "CfnGameSessionQueue",
     "missingProps": [
-      "tags"
+      "tags",
+      "destinations.destinationArn",
+      "filterConfiguration.allowedLocations",
+      "playerLatencyPolicies.maximumIndividualPlayerLatencyMilliseconds",
+      "playerLatencyPolicies.policyDurationSeconds",
+      "priorityConfiguration.locationOrder",
+      "priorityConfiguration.priorityOrder"
     ]
   },
   {
@@ -329,7 +531,9 @@
     "missingProps": [
       "endpoint",
       "readerEndpoint",
-      "tags"
+      "tags",
+      "cacheUsageLimits.dataStorage",
+      "cacheUsageLimits.ecpuPerSecond"
     ]
   },
   {
@@ -357,7 +561,9 @@
     "module": "aws-cloud9-alpha",
     "name": "CfnEnvironmentEC2",
     "missingProps": [
-      "tags"
+      "tags",
+      "repositories.pathComponent",
+      "repositories.repositoryUrl"
     ]
   },
   {
@@ -378,7 +584,26 @@
     "module": "aws-apprunner-alpha",
     "name": "CfnService",
     "missingProps": [
-      "tags"
+      "tags",
+      "encryptionConfiguration.kmsKey",
+      "healthCheckConfiguration.healthyThreshold",
+      "healthCheckConfiguration.interval",
+      "healthCheckConfiguration.path",
+      "healthCheckConfiguration.protocol",
+      "healthCheckConfiguration.timeout",
+      "healthCheckConfiguration.unhealthyThreshold",
+      "networkConfiguration.ingressConfiguration.isPubliclyAccessible",
+      "observabilityConfiguration.observabilityConfigurationArn",
+      "observabilityConfiguration.observabilityEnabled",
+      "sourceConfiguration.authenticationConfiguration.accessRoleArn",
+      "sourceConfiguration.authenticationConfiguration.connectionArn",
+      "sourceConfiguration.codeRepository.codeConfiguration",
+      "sourceConfiguration.codeRepository.repositoryUrl",
+      "sourceConfiguration.codeRepository.sourceCodeVersion",
+      "sourceConfiguration.codeRepository.sourceDirectory",
+      "sourceConfiguration.imageRepository.imageConfiguration",
+      "sourceConfiguration.imageRepository.imageIdentifier",
+      "sourceConfiguration.imageRepository.imageRepositoryType"
     ]
   },
   {
@@ -399,7 +624,29 @@
     "module": "aws-amplify-alpha",
     "name": "CfnApp",
     "missingProps": [
-      "tags"
+      "tags",
+      "autoBranchCreationConfig.autoBranchCreationPatterns",
+      "autoBranchCreationConfig.basicAuthConfig",
+      "autoBranchCreationConfig.buildSpec",
+      "autoBranchCreationConfig.enableAutoBranchCreation",
+      "autoBranchCreationConfig.enableAutoBuild",
+      "autoBranchCreationConfig.enablePerformanceMode",
+      "autoBranchCreationConfig.enablePullRequestPreview",
+      "autoBranchCreationConfig.environmentVariables",
+      "autoBranchCreationConfig.framework",
+      "autoBranchCreationConfig.pullRequestEnvironmentName",
+      "autoBranchCreationConfig.stage",
+      "basicAuthConfig.enableBasicAuth",
+      "basicAuthConfig.password",
+      "basicAuthConfig.username",
+      "cacheConfig.type",
+      "customRules.condition",
+      "customRules.source",
+      "customRules.status",
+      "customRules.target",
+      "environmentVariables.name",
+      "environmentVariables.value",
+      "jobConfig.buildComputeType"
     ]
   },
   {
@@ -408,7 +655,22 @@
     "missingProps": [
       "backend",
       "framework",
-      "tags"
+      "tags",
+      "basicAuthConfig.enableBasicAuth",
+      "basicAuthConfig.password",
+      "basicAuthConfig.username",
+      "environmentVariables.name",
+      "environmentVariables.value"
+    ]
+  },
+  {
+    "module": "aws-amplify-alpha",
+    "name": "CfnDomain",
+    "missingProps": [
+      "certificateSettings.certificateType",
+      "certificateSettings.customCertificateArn",
+      "subDomainSettings.branchName",
+      "subDomainSettings.prefix"
     ]
   },
   {
@@ -418,14 +680,38 @@
       "deleteLambdaResourcesOnCanaryDeletion",
       "tags",
       "visualReference",
-      "visualReferences"
+      "visualReferences",
+      "artifactConfig.s3Encryption",
+      "browserConfigs.browserType",
+      "code.dependencies",
+      "code.handler",
+      "code.s3Bucket",
+      "code.s3Key",
+      "code.s3ObjectVersion",
+      "code.script",
+      "code.sourceLocationArn",
+      "runConfig.activeTracing",
+      "runConfig.environmentVariables",
+      "runConfig.ephemeralStorage",
+      "runConfig.memoryInMb",
+      "runConfig.timeoutInSeconds",
+      "schedule.durationInSeconds",
+      "schedule.expression",
+      "schedule.retryConfig",
+      "vpcConfig.ipv6AllowedForDualStack",
+      "vpcConfig.securityGroupIds",
+      "vpcConfig.subnetIds",
+      "vpcConfig.vpcId"
     ]
   },
   {
     "module": "aws-stepfunctions",
     "name": "CfnActivity",
     "missingProps": [
-      "tags"
+      "tags",
+      "encryptionConfiguration.kmsDataKeyReusePeriodSeconds",
+      "encryptionConfiguration.kmsKeyId",
+      "encryptionConfiguration.type"
     ]
   },
   {
@@ -435,7 +721,14 @@
       "definition",
       "definitionS3Location",
       "definitionString",
-      "tags"
+      "tags",
+      "encryptionConfiguration.kmsDataKeyReusePeriodSeconds",
+      "encryptionConfiguration.kmsKeyId",
+      "encryptionConfiguration.type",
+      "loggingConfiguration.destinations",
+      "loggingConfiguration.includeExecutionData",
+      "loggingConfiguration.level",
+      "tracingConfiguration.enabled"
     ]
   },
   {
@@ -465,21 +758,48 @@
     "missingProps": [
       "dataProtectionPolicy",
       "subscription",
-      "tags"
+      "tags",
+      "deliveryStatusLogging.failureFeedbackRoleArn",
+      "deliveryStatusLogging.protocol",
+      "deliveryStatusLogging.successFeedbackRoleArn",
+      "deliveryStatusLogging.successFeedbackSampleRate"
     ]
   },
   {
     "module": "aws-signer",
     "name": "CfnSigningProfile",
     "missingProps": [
-      "tags"
+      "tags",
+      "signatureValidityPeriod.type",
+      "signatureValidityPeriod.value"
     ]
   },
   {
     "module": "aws-ses",
     "name": "CfnConfigurationSet",
     "missingProps": [
-      "tags"
+      "tags",
+      "deliveryOptions.maxDeliverySeconds",
+      "deliveryOptions.sendingPoolName",
+      "deliveryOptions.tlsPolicy",
+      "reputationOptions.reputationMetricsEnabled",
+      "sendingOptions.sendingEnabled",
+      "suppressionOptions.suppressedReasons",
+      "trackingOptions.customRedirectDomain",
+      "trackingOptions.httpsPolicy",
+      "vdmOptions.dashboardOptions",
+      "vdmOptions.guardianOptions"
+    ]
+  },
+  {
+    "module": "aws-ses",
+    "name": "CfnConfigurationSetEventDestination",
+    "missingProps": [
+      "eventDestination.cloudWatchDestination.dimensionConfigurations",
+      "eventDestination.eventBridgeDestination.eventBusArn",
+      "eventDestination.kinesisFirehoseDestination.deliveryStreamArn",
+      "eventDestination.kinesisFirehoseDestination.iamRoleArn",
+      "eventDestination.snsDestination.topicArn"
     ]
   },
   {
@@ -493,7 +813,33 @@
     "module": "aws-ses",
     "name": "CfnEmailIdentity",
     "missingProps": [
-      "tags"
+      "tags",
+      "configurationSetAttributes.configurationSetName",
+      "dkimAttributes.signingEnabled",
+      "dkimSigningAttributes.domainSigningPrivateKey",
+      "dkimSigningAttributes.domainSigningSelector",
+      "dkimSigningAttributes.nextSigningKeyLength",
+      "feedbackAttributes.emailForwardingEnabled",
+      "mailFromAttributes.behaviorOnMxFailure",
+      "mailFromAttributes.mailFromDomain"
+    ]
+  },
+  {
+    "module": "aws-ses",
+    "name": "CfnReceiptRule",
+    "missingProps": [
+      "rule.conditions",
+      "rule.unless",
+      "rule.actions.addHeader",
+      "rule.actions.archive",
+      "rule.actions.deliverToMailbox",
+      "rule.actions.deliverToQBusiness",
+      "rule.actions.drop",
+      "rule.actions.publishToSns",
+      "rule.actions.relay",
+      "rule.actions.replaceRecipient",
+      "rule.actions.send",
+      "rule.actions.writeToS3"
     ]
   },
   {
@@ -524,7 +870,14 @@
     "name": "CfnService",
     "missingProps": [
       "serviceAttributes",
-      "tags"
+      "tags",
+      "dnsConfig.dnsRecords",
+      "dnsConfig.namespaceId",
+      "dnsConfig.routingPolicy",
+      "healthCheckConfig.failureThreshold",
+      "healthCheckConfig.resourcePath",
+      "healthCheckConfig.type",
+      "healthCheckCustomConfig.failureThreshold"
     ]
   },
   {
@@ -533,7 +886,12 @@
     "missingProps": [
       "productType",
       "sourceConnection",
-      "tags"
+      "tags",
+      "provisioningArtifactParameters.description",
+      "provisioningArtifactParameters.disableTemplateValidation",
+      "provisioningArtifactParameters.info",
+      "provisioningArtifactParameters.name",
+      "provisioningArtifactParameters.type"
     ]
   },
   {
@@ -551,6 +909,54 @@
     ]
   },
   {
+    "module": "aws-secretsmanager",
+    "name": "CfnRotationSchedule",
+    "missingProps": [
+      "hostedRotationLambda.excludeCharacters",
+      "hostedRotationLambda.kmsKeyArn",
+      "hostedRotationLambda.masterSecretArn",
+      "hostedRotationLambda.masterSecretKmsKeyArn",
+      "hostedRotationLambda.rotationLambdaName",
+      "hostedRotationLambda.rotationType",
+      "hostedRotationLambda.runtime",
+      "hostedRotationLambda.superuserSecretArn",
+      "hostedRotationLambda.superuserSecretKmsKeyArn",
+      "hostedRotationLambda.vpcSecurityGroupIds",
+      "hostedRotationLambda.vpcSubnetIds",
+      "rotationRules.automaticallyAfterDays",
+      "rotationRules.duration",
+      "rotationRules.scheduleExpression"
+    ]
+  },
+  {
+    "module": "aws-scheduler",
+    "name": "CfnSchedule",
+    "missingProps": [
+      "target.deadLetterConfig.arn",
+      "target.ecsParameters.capacityProviderStrategy",
+      "target.ecsParameters.enableEcsManagedTags",
+      "target.ecsParameters.enableExecuteCommand",
+      "target.ecsParameters.group",
+      "target.ecsParameters.launchType",
+      "target.ecsParameters.networkConfiguration",
+      "target.ecsParameters.placementConstraints",
+      "target.ecsParameters.placementStrategy",
+      "target.ecsParameters.platformVersion",
+      "target.ecsParameters.propagateTags",
+      "target.ecsParameters.referenceId",
+      "target.ecsParameters.tags",
+      "target.ecsParameters.taskCount",
+      "target.ecsParameters.taskDefinitionArn",
+      "target.eventBridgeParameters.detailType",
+      "target.eventBridgeParameters.source",
+      "target.kinesisParameters.partitionKey",
+      "target.retryPolicy.maximumEventAgeInSeconds",
+      "target.retryPolicy.maximumRetryAttempts",
+      "target.sageMakerPipelineParameters.pipelineParameterList",
+      "target.sqsParameters.messageGroupId"
+    ]
+  },
+  {
     "module": "aws-scheduler",
     "name": "CfnScheduleGroup",
     "missingProps": [
@@ -565,21 +971,65 @@
       "metadataConfiguration",
       "metadataTableConfiguration",
       "notificationConfiguration",
-      "tags"
+      "tags",
+      "accelerateConfiguration.accelerationStatus",
+      "bucketEncryption.serverSideEncryptionConfiguration",
+      "corsConfiguration.corsRules",
+      "intelligentTieringConfigurations.id",
+      "intelligentTieringConfigurations.prefix",
+      "intelligentTieringConfigurations.status",
+      "intelligentTieringConfigurations.tagFilters",
+      "intelligentTieringConfigurations.tierings",
+      "inventoryConfigurations.destination",
+      "inventoryConfigurations.enabled",
+      "inventoryConfigurations.id",
+      "inventoryConfigurations.includedObjectVersions",
+      "inventoryConfigurations.optionalFields",
+      "inventoryConfigurations.prefix",
+      "inventoryConfigurations.scheduleFrequency",
+      "lifecycleConfiguration.rules",
+      "lifecycleConfiguration.transitionDefaultMinimumObjectSize",
+      "loggingConfiguration.destinationBucketName",
+      "loggingConfiguration.logFilePrefix",
+      "loggingConfiguration.targetObjectKeyFormat",
+      "metricsConfigurations.accessPointArn",
+      "metricsConfigurations.id",
+      "metricsConfigurations.prefix",
+      "metricsConfigurations.tagFilters",
+      "objectLockConfiguration.objectLockEnabled",
+      "objectLockConfiguration.rule",
+      "ownershipControls.rules",
+      "publicAccessBlockConfiguration.blockPublicAcls",
+      "publicAccessBlockConfiguration.blockPublicPolicy",
+      "publicAccessBlockConfiguration.ignorePublicAcls",
+      "publicAccessBlockConfiguration.restrictPublicBuckets",
+      "replicationConfiguration.role",
+      "replicationConfiguration.rules",
+      "versioningConfiguration.status",
+      "websiteConfiguration.errorDocument",
+      "websiteConfiguration.indexDocument",
+      "websiteConfiguration.redirectAllRequestsTo",
+      "websiteConfiguration.routingRules"
     ]
   },
   {
     "module": "aws-route53",
     "name": "CfnHealthCheck",
     "missingProps": [
-      "healthCheckTags"
+      "healthCheckTags",
+      "healthCheckConfig.alarmIdentifier.name",
+      "healthCheckConfig.alarmIdentifier.region"
     ]
   },
   {
     "module": "aws-route53",
     "name": "CfnHostedZone",
     "missingProps": [
-      "hostedZoneTags"
+      "hostedZoneTags",
+      "hostedZoneConfig.comment",
+      "queryLoggingConfig.cloudWatchLogsLogGroupArn",
+      "vpcs.vpcId",
+      "vpcs.vpcRegion"
     ]
   },
   {
@@ -588,7 +1038,15 @@
     "missingProps": [
       "failover",
       "geoProximityLocation",
-      "hostedZoneName"
+      "hostedZoneName",
+      "aliasTarget.dnsName",
+      "aliasTarget.evaluateTargetHealth",
+      "aliasTarget.hostedZoneId",
+      "cidrRoutingConfig.collectionId",
+      "cidrRoutingConfig.locationName",
+      "geoLocation.continentCode",
+      "geoLocation.countryCode",
+      "geoLocation.subdivisionCode"
     ]
   },
   {
@@ -745,7 +1203,12 @@
       "defaultAuthScheme",
       "endpointNetworkType",
       "tags",
-      "targetConnectionNetworkType"
+      "targetConnectionNetworkType",
+      "auth.authScheme",
+      "auth.clientPasswordAuthType",
+      "auth.description",
+      "auth.iamAuth",
+      "auth.secretArn"
     ]
   },
   {
@@ -761,7 +1224,13 @@
     "name": "CfnOptionGroup",
     "missingProps": [
       "optionGroupName",
-      "tags"
+      "tags",
+      "optionConfigurations.dbSecurityGroupMemberships",
+      "optionConfigurations.optionName",
+      "optionConfigurations.optionSettings",
+      "optionConfigurations.optionVersion",
+      "optionConfigurations.port",
+      "optionConfigurations.vpcSecurityGroupMemberships"
     ]
   },
   {
@@ -772,7 +1241,34 @@
       "domainArn",
       "identityCenterOptions",
       "skipShardMigrationWait",
-      "tags"
+      "tags",
+      "advancedSecurityOptions.anonymousAuthDisableDate",
+      "advancedSecurityOptions.anonymousAuthEnabled",
+      "advancedSecurityOptions.enabled",
+      "advancedSecurityOptions.iamFederationOptions",
+      "advancedSecurityOptions.internalUserDatabaseEnabled",
+      "advancedSecurityOptions.jwtOptions",
+      "advancedSecurityOptions.masterUserOptions",
+      "advancedSecurityOptions.samlOptions",
+      "clusterConfig.coldStorageOptions.enabled",
+      "clusterConfig.nodeOptions.nodeConfig",
+      "clusterConfig.nodeOptions.nodeType",
+      "clusterConfig.zoneAwarenessConfig.availabilityZoneCount",
+      "cognitoOptions.enabled",
+      "cognitoOptions.identityPoolId",
+      "cognitoOptions.roleArn",
+      "cognitoOptions.userPoolId",
+      "domainEndpointOptions.customEndpoint",
+      "domainEndpointOptions.customEndpointCertificateArn",
+      "domainEndpointOptions.customEndpointEnabled",
+      "logPublishingOptions.cloudWatchLogsLogGroupArn",
+      "logPublishingOptions.enabled",
+      "offPeakWindowOptions.enabled",
+      "offPeakWindowOptions.offPeakWindow",
+      "snapshotOptions.automatedSnapshotStartHour",
+      "softwareUpdateOptions.autoSoftwareUpdateEnabled",
+      "vpcOptions.securityGroupIds",
+      "vpcOptions.subnetIds"
     ]
   },
   {
@@ -793,6 +1289,18 @@
   },
   {
     "module": "aws-logs",
+    "name": "CfnMetricFilter",
+    "missingProps": [
+      "metricTransformations.defaultValue",
+      "metricTransformations.dimensions",
+      "metricTransformations.metricName",
+      "metricTransformations.metricNamespace",
+      "metricTransformations.metricValue",
+      "metricTransformations.unit"
+    ]
+  },
+  {
+    "module": "aws-logs",
     "name": "CfnQueryDefinition",
     "missingProps": [
       "queryLanguage"
@@ -807,9 +1315,24 @@
   },
   {
     "module": "aws-lambda",
+    "name": "CfnAlias",
+    "missingProps": [
+      "provisionedConcurrencyConfig.provisionedConcurrentExecutions",
+      "routingConfig.additionalVersionWeights"
+    ]
+  },
+  {
+    "module": "aws-lambda",
     "name": "CfnCodeSigningConfig",
     "missingProps": [
       "tags"
+    ]
+  },
+  {
+    "module": "aws-lambda",
+    "name": "CfnEventInvokeConfig",
+    "missingProps": [
+      "destinationConfig.onFailure"
     ]
   },
   {
@@ -818,7 +1341,20 @@
     "missingProps": [
       "documentDbEventSourceConfig",
       "queues",
-      "tags"
+      "tags",
+      "amazonManagedKafkaEventSourceConfig.consumerGroupId",
+      "amazonManagedKafkaEventSourceConfig.schemaRegistryConfig",
+      "destinationConfig.onFailure",
+      "filterCriteria.filters",
+      "metricsConfig.metrics",
+      "provisionedPollerConfig.maximumPollers",
+      "provisionedPollerConfig.minimumPollers",
+      "scalingConfig.maximumConcurrency",
+      "selfManagedEventSource.endpoints",
+      "selfManagedKafkaEventSourceConfig.consumerGroupId",
+      "selfManagedKafkaEventSourceConfig.schemaRegistryConfig",
+      "sourceAccessConfigurations.type",
+      "sourceAccessConfigurations.uri"
     ]
   },
   {
@@ -826,14 +1362,45 @@
     "name": "CfnFunction",
     "missingProps": [
       "tags",
-      "tracingConfig"
+      "tracingConfig",
+      "deadLetterConfig.targetArn",
+      "environment.variables",
+      "ephemeralStorage.size",
+      "fileSystemConfigs.arn",
+      "fileSystemConfigs.localMountPath",
+      "imageConfig.command",
+      "imageConfig.entryPoint",
+      "imageConfig.workingDirectory",
+      "loggingConfig.applicationLogLevel",
+      "loggingConfig.logFormat",
+      "loggingConfig.logGroup",
+      "loggingConfig.systemLogLevel",
+      "runtimeManagementConfig.runtimeVersionArn",
+      "runtimeManagementConfig.updateRuntimeOn",
+      "snapStart.applyOn",
+      "vpcConfig.ipv6AllowedForDualStack",
+      "vpcConfig.securityGroupIds",
+      "vpcConfig.subnetIds"
+    ]
+  },
+  {
+    "module": "aws-lambda",
+    "name": "CfnUrl",
+    "missingProps": [
+      "cors.allowCredentials",
+      "cors.allowHeaders",
+      "cors.allowMethods",
+      "cors.allowOrigins",
+      "cors.exposeHeaders",
+      "cors.maxAge"
     ]
   },
   {
     "module": "aws-lambda",
     "name": "CfnVersion",
     "missingProps": [
-      "runtimePolicy"
+      "runtimePolicy",
+      "provisionedConcurrencyConfig.provisionedConcurrentExecutions"
     ]
   },
   {
@@ -863,7 +1430,9 @@
       "s3DestinationConfiguration",
       "snowflakeDestinationConfiguration",
       "splunkDestinationConfiguration",
-      "tags"
+      "tags",
+      "deliveryStreamEncryptionConfigurationInput.keyArn",
+      "deliveryStreamEncryptionConfigurationInput.keyType"
     ]
   },
   {
@@ -871,7 +1440,9 @@
     "name": "CfnStream",
     "missingProps": [
       "streamModeDetails",
-      "tags"
+      "tags",
+      "streamEncryption.encryptionType",
+      "streamEncryption.keyId"
     ]
   },
   {
@@ -899,7 +1470,9 @@
     "module": "aws-iam",
     "name": "CfnRole",
     "missingProps": [
-      "tags"
+      "tags",
+      "policies.policyDocument",
+      "policies.policyName"
     ]
   },
   {
@@ -918,7 +1491,9 @@
     "name": "CfnUser",
     "missingProps": [
       "policies",
-      "tags"
+      "tags",
+      "loginProfile.password",
+      "loginProfile.passwordResetRequired"
     ]
   },
   {
@@ -929,7 +1504,23 @@
       "ontapConfiguration",
       "openZfsConfiguration",
       "tags",
-      "windowsConfiguration"
+      "windowsConfiguration",
+      "lustreConfiguration.autoImportPolicy",
+      "lustreConfiguration.automaticBackupRetentionDays",
+      "lustreConfiguration.copyTagsToBackups",
+      "lustreConfiguration.dailyAutomaticBackupStartTime",
+      "lustreConfiguration.dataCompressionType",
+      "lustreConfiguration.dataReadCacheConfiguration",
+      "lustreConfiguration.deploymentType",
+      "lustreConfiguration.driveCacheType",
+      "lustreConfiguration.efaEnabled",
+      "lustreConfiguration.exportPath",
+      "lustreConfiguration.importedFileChunkSize",
+      "lustreConfiguration.importPath",
+      "lustreConfiguration.metadataConfiguration",
+      "lustreConfiguration.perUnitStorageThroughput",
+      "lustreConfiguration.throughputCapacity",
+      "lustreConfiguration.weeklyMaintenanceStartTime"
     ]
   },
   {
@@ -937,7 +1528,10 @@
     "name": "CfnEventBus",
     "missingProps": [
       "policy",
-      "tags"
+      "tags",
+      "deadLetterConfig.arn",
+      "logConfig.includeDetail",
+      "logConfig.level"
     ]
   },
   {
@@ -953,7 +1547,24 @@
     "module": "aws-events",
     "name": "CfnRule",
     "missingProps": [
-      "tags"
+      "tags",
+      "targets.appSyncParameters",
+      "targets.arn",
+      "targets.batchParameters",
+      "targets.deadLetterConfig",
+      "targets.ecsParameters",
+      "targets.httpParameters",
+      "targets.id",
+      "targets.input",
+      "targets.inputPath",
+      "targets.inputTransformer",
+      "targets.kinesisParameters",
+      "targets.redshiftDataParameters",
+      "targets.retryPolicy",
+      "targets.roleArn",
+      "targets.runCommandParameters",
+      "targets.sageMakerPipelineParameters",
+      "targets.sqsParameters"
     ]
   },
   {
@@ -962,7 +1573,21 @@
     "missingProps": [
       "accessPolicies",
       "domainArn",
-      "tags"
+      "tags",
+      "advancedSecurityOptions.anonymousAuthEnabled",
+      "advancedSecurityOptions.enabled",
+      "advancedSecurityOptions.internalUserDatabaseEnabled",
+      "advancedSecurityOptions.masterUserOptions",
+      "domainEndpointOptions.customEndpoint",
+      "domainEndpointOptions.customEndpointCertificateArn",
+      "domainEndpointOptions.customEndpointEnabled",
+      "elasticsearchClusterConfig.coldStorageOptions",
+      "elasticsearchClusterConfig.zoneAwarenessConfig.availabilityZoneCount",
+      "logPublishingOptions.cloudWatchLogsLogGroupArn",
+      "logPublishingOptions.enabled",
+      "snapshotOptions.automatedSnapshotStartHour",
+      "vpcOptions.securityGroupIds",
+      "vpcOptions.subnetIds"
     ]
   },
   {
@@ -975,7 +1600,46 @@
       "mutualAuthentication",
       "port",
       "protocol",
-      "sslPolicy"
+      "sslPolicy",
+      "defaultActions.authenticateCognitoConfig",
+      "defaultActions.authenticateOidcConfig",
+      "defaultActions.fixedResponseConfig",
+      "defaultActions.forwardConfig",
+      "defaultActions.order",
+      "defaultActions.redirectConfig",
+      "defaultActions.targetGroupArn",
+      "defaultActions.type",
+      "listenerAttributes.key",
+      "listenerAttributes.value"
+    ]
+  },
+  {
+    "module": "aws-elasticloadbalancingv2",
+    "name": "CfnListenerCertificate",
+    "missingProps": [
+      "certificates.certificateArn"
+    ]
+  },
+  {
+    "module": "aws-elasticloadbalancingv2",
+    "name": "CfnListenerRule",
+    "missingProps": [
+      "actions.authenticateCognitoConfig",
+      "actions.authenticateOidcConfig",
+      "actions.fixedResponseConfig",
+      "actions.forwardConfig",
+      "actions.order",
+      "actions.redirectConfig",
+      "actions.targetGroupArn",
+      "actions.type",
+      "conditions.field",
+      "conditions.hostHeaderConfig",
+      "conditions.httpHeaderConfig",
+      "conditions.httpRequestMethodConfig",
+      "conditions.pathPatternConfig",
+      "conditions.queryStringConfig",
+      "conditions.sourceIpConfig",
+      "conditions.values"
     ]
   },
   {
@@ -989,7 +1653,15 @@
       "ipv4IpamPoolId",
       "securityGroups",
       "tags",
-      "type"
+      "type",
+      "loadBalancerAttributes.key",
+      "loadBalancerAttributes.value",
+      "minimumLoadBalancerCapacity.capacityUnits",
+      "subnetMappings.allocationId",
+      "subnetMappings.iPv6Address",
+      "subnetMappings.privateIPv4Address",
+      "subnetMappings.sourceNatIpv6Prefix",
+      "subnetMappings.subnetId"
     ]
   },
   {
@@ -999,7 +1671,14 @@
       "port",
       "protocol",
       "protocolVersion",
-      "tags"
+      "tags",
+      "matcher.grpcCode",
+      "matcher.httpCode",
+      "targetGroupAttributes.key",
+      "targetGroupAttributes.value",
+      "targets.availabilityZone",
+      "targets.id",
+      "targets.port"
     ]
   },
   {
@@ -1007,6 +1686,16 @@
     "name": "CfnTrustStore",
     "missingProps": [
       "tags"
+    ]
+  },
+  {
+    "module": "aws-elasticloadbalancingv2",
+    "name": "CfnTrustStoreRevocation",
+    "missingProps": [
+      "revocationContents.revocationType",
+      "revocationContents.s3Bucket",
+      "revocationContents.s3Key",
+      "revocationContents.s3ObjectVersion"
     ]
   },
   {
@@ -1021,7 +1710,18 @@
       "lbCookieStickinessPolicy",
       "loadBalancerName",
       "policies",
-      "tags"
+      "tags",
+      "healthCheck.healthyThreshold",
+      "healthCheck.interval",
+      "healthCheck.target",
+      "healthCheck.timeout",
+      "healthCheck.unhealthyThreshold",
+      "listeners.instancePort",
+      "listeners.instanceProtocol",
+      "listeners.loadBalancerPort",
+      "listeners.policyNames",
+      "listeners.protocol",
+      "listeners.sslCertificateId"
     ]
   },
   {
@@ -1030,7 +1730,9 @@
     "missingProps": [
       "kubernetesGroups",
       "tags",
-      "username"
+      "username",
+      "accessPolicies.accessScope",
+      "accessPolicies.policyArn"
     ]
   },
   {
@@ -1048,14 +1750,32 @@
     "module": "aws-eks",
     "name": "CfnNodegroup",
     "missingProps": [
-      "version"
+      "version",
+      "launchTemplate.id",
+      "launchTemplate.name",
+      "launchTemplate.version",
+      "nodeRepairConfig.enabled",
+      "remoteAccess.ec2SshKey",
+      "remoteAccess.sourceSecurityGroups",
+      "taints.effect",
+      "taints.key",
+      "taints.value",
+      "updateConfig.maxUnavailable",
+      "updateConfig.maxUnavailablePercentage",
+      "updateConfig.updateStrategy"
     ]
   },
   {
     "module": "aws-efs",
     "name": "CfnAccessPoint",
     "missingProps": [
-      "accessPointTags"
+      "accessPointTags",
+      "posixUser.gid",
+      "posixUser.secondaryGids",
+      "posixUser.uid",
+      "rootDirectory.creationInfo.ownerGid",
+      "rootDirectory.creationInfo.ownerUid",
+      "rootDirectory.creationInfo.permissions"
     ]
   },
   {
@@ -1063,7 +1783,13 @@
     "name": "CfnFileSystem",
     "missingProps": [
       "bypassPolicyLockoutSafetyCheck",
-      "fileSystemTags"
+      "fileSystemTags",
+      "backupPolicy.status",
+      "fileSystemProtection.replicationOverwriteProtection",
+      "lifecyclePolicies.transitionToArchive",
+      "lifecyclePolicies.transitionToIa",
+      "lifecyclePolicies.transitionToPrimaryStorageClass",
+      "replicationConfiguration.destinations"
     ]
   },
   {
@@ -1073,7 +1799,11 @@
       "capacityProviders",
       "defaultCapacityProviderStrategy",
       "serviceConnectDefaults",
-      "tags"
+      "tags",
+      "clusterSettings.name",
+      "clusterSettings.value",
+      "configuration.executeCommandConfiguration",
+      "configuration.managedStorageConfiguration"
     ]
   },
   {
@@ -1081,14 +1811,28 @@
     "name": "CfnRepository",
     "missingProps": [
       "imageTagMutabilityExclusionFilters",
-      "tags"
+      "tags",
+      "encryptionConfiguration.encryptionType",
+      "encryptionConfiguration.kmsKey",
+      "imageScanningConfiguration.scanOnPush",
+      "lifecyclePolicy.lifecyclePolicyText",
+      "lifecyclePolicy.registryId"
     ]
   },
   {
     "module": "aws-ec2",
     "name": "CfnClientVpnEndpoint",
     "missingProps": [
-      "tagSpecifications"
+      "tagSpecifications",
+      "authenticationOptions.activeDirectory",
+      "authenticationOptions.federatedAuthentication",
+      "authenticationOptions.mutualAuthentication",
+      "authenticationOptions.type",
+      "clientConnectOptions.enabled",
+      "clientConnectOptions.lambdaFunctionArn",
+      "clientLoginBannerOptions.bannerText",
+      "clientLoginBannerOptions.enabled",
+      "clientRouteEnforcementOptions.enforced"
     ]
   },
   {
@@ -1113,7 +1857,37 @@
       "ssmAssociations",
       "tags",
       "tenancy",
-      "volumes"
+      "volumes",
+      "blockDeviceMappings.deviceName",
+      "blockDeviceMappings.ebs",
+      "blockDeviceMappings.noDevice",
+      "blockDeviceMappings.virtualName",
+      "creditSpecification.cpuCredits",
+      "enclaveOptions.enabled",
+      "hibernationOptions.configured",
+      "networkInterfaces.associateCarrierIpAddress",
+      "networkInterfaces.associatePublicIpAddress",
+      "networkInterfaces.connectionTrackingSpecification",
+      "networkInterfaces.deleteOnTermination",
+      "networkInterfaces.description",
+      "networkInterfaces.deviceIndex",
+      "networkInterfaces.enaQueueCount",
+      "networkInterfaces.enaSrdSpecification",
+      "networkInterfaces.groups",
+      "networkInterfaces.interfaceType",
+      "networkInterfaces.ipv4PrefixCount",
+      "networkInterfaces.ipv4Prefixes",
+      "networkInterfaces.ipv6AddressCount",
+      "networkInterfaces.ipv6Addresses",
+      "networkInterfaces.ipv6PrefixCount",
+      "networkInterfaces.ipv6Prefixes",
+      "networkInterfaces.networkCardIndex",
+      "networkInterfaces.networkInterfaceId",
+      "networkInterfaces.primaryIpv6",
+      "networkInterfaces.privateIpAddress",
+      "networkInterfaces.privateIpAddresses",
+      "networkInterfaces.secondaryPrivateIpAddressCount",
+      "networkInterfaces.subnetId"
     ]
   },
   {
@@ -1121,6 +1895,78 @@
     "name": "CfnKeyPair",
     "missingProps": [
       "tags"
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnLaunchTemplate",
+    "missingProps": [
+      "launchTemplateData.capacityReservationSpecification",
+      "launchTemplateData.cpuOptions",
+      "launchTemplateData.disableApiStop",
+      "launchTemplateData.elasticGpuSpecifications",
+      "launchTemplateData.elasticInferenceAccelerators",
+      "launchTemplateData.instanceRequirements",
+      "launchTemplateData.kernelId",
+      "launchTemplateData.licenseSpecifications",
+      "launchTemplateData.maintenanceOptions",
+      "launchTemplateData.networkPerformanceOptions",
+      "launchTemplateData.privateDnsNameOptions",
+      "launchTemplateData.ramDiskId",
+      "launchTemplateData.securityGroups",
+      "launchTemplateData.blockDeviceMappings.deviceName",
+      "launchTemplateData.blockDeviceMappings.ebs",
+      "launchTemplateData.blockDeviceMappings.noDevice",
+      "launchTemplateData.blockDeviceMappings.virtualName",
+      "launchTemplateData.creditSpecification.cpuCredits",
+      "launchTemplateData.enclaveOptions.enabled",
+      "launchTemplateData.hibernationOptions.configured",
+      "launchTemplateData.iamInstanceProfile.arn",
+      "launchTemplateData.iamInstanceProfile.name",
+      "launchTemplateData.instanceMarketOptions.marketType",
+      "launchTemplateData.instanceMarketOptions.spotOptions",
+      "launchTemplateData.metadataOptions.httpEndpoint",
+      "launchTemplateData.metadataOptions.httpProtocolIpv6",
+      "launchTemplateData.metadataOptions.httpPutResponseHopLimit",
+      "launchTemplateData.metadataOptions.httpTokens",
+      "launchTemplateData.metadataOptions.instanceMetadataTags",
+      "launchTemplateData.monitoring.enabled",
+      "launchTemplateData.networkInterfaces.associateCarrierIpAddress",
+      "launchTemplateData.networkInterfaces.associatePublicIpAddress",
+      "launchTemplateData.networkInterfaces.connectionTrackingSpecification",
+      "launchTemplateData.networkInterfaces.deleteOnTermination",
+      "launchTemplateData.networkInterfaces.description",
+      "launchTemplateData.networkInterfaces.deviceIndex",
+      "launchTemplateData.networkInterfaces.enaQueueCount",
+      "launchTemplateData.networkInterfaces.enaSrdSpecification",
+      "launchTemplateData.networkInterfaces.groups",
+      "launchTemplateData.networkInterfaces.interfaceType",
+      "launchTemplateData.networkInterfaces.ipv4PrefixCount",
+      "launchTemplateData.networkInterfaces.ipv4Prefixes",
+      "launchTemplateData.networkInterfaces.ipv6AddressCount",
+      "launchTemplateData.networkInterfaces.ipv6Addresses",
+      "launchTemplateData.networkInterfaces.ipv6PrefixCount",
+      "launchTemplateData.networkInterfaces.ipv6Prefixes",
+      "launchTemplateData.networkInterfaces.networkCardIndex",
+      "launchTemplateData.networkInterfaces.networkInterfaceId",
+      "launchTemplateData.networkInterfaces.primaryIpv6",
+      "launchTemplateData.networkInterfaces.privateIpAddress",
+      "launchTemplateData.networkInterfaces.privateIpAddresses",
+      "launchTemplateData.networkInterfaces.secondaryPrivateIpAddressCount",
+      "launchTemplateData.networkInterfaces.subnetId",
+      "launchTemplateData.placement.affinity",
+      "launchTemplateData.placement.availabilityZone",
+      "launchTemplateData.placement.groupId",
+      "launchTemplateData.placement.groupName",
+      "launchTemplateData.placement.hostId",
+      "launchTemplateData.placement.hostResourceGroupArn",
+      "launchTemplateData.placement.partitionNumber",
+      "launchTemplateData.placement.spreadDomain",
+      "launchTemplateData.placement.tenancy",
+      "launchTemplateData.tagSpecifications.resourceType",
+      "launchTemplateData.tagSpecifications.tags",
+      "tagSpecifications.resourceType",
+      "tagSpecifications.tags"
     ]
   },
   {
@@ -1152,14 +1998,34 @@
     "module": "aws-ec2",
     "name": "CfnPrefixList",
     "missingProps": [
-      "tags"
+      "tags",
+      "entries.cidr",
+      "entries.description"
     ]
   },
   {
     "module": "aws-ec2",
     "name": "CfnSecurityGroup",
     "missingProps": [
-      "tags"
+      "tags",
+      "securityGroupEgress.cidrIp",
+      "securityGroupEgress.cidrIpv6",
+      "securityGroupEgress.description",
+      "securityGroupEgress.destinationPrefixListId",
+      "securityGroupEgress.destinationSecurityGroupId",
+      "securityGroupEgress.fromPort",
+      "securityGroupEgress.ipProtocol",
+      "securityGroupEgress.toPort",
+      "securityGroupIngress.cidrIp",
+      "securityGroupIngress.cidrIpv6",
+      "securityGroupIngress.description",
+      "securityGroupIngress.fromPort",
+      "securityGroupIngress.ipProtocol",
+      "securityGroupIngress.sourcePrefixListId",
+      "securityGroupIngress.sourceSecurityGroupId",
+      "securityGroupIngress.sourceSecurityGroupName",
+      "securityGroupIngress.sourceSecurityGroupOwnerId",
+      "securityGroupIngress.toPort"
     ]
   },
   {
@@ -1206,7 +2072,27 @@
       "tags",
       "transitGatewayId",
       "transportTransitGatewayAttachmentId",
-      "tunnelInsideIpVersion"
+      "tunnelInsideIpVersion",
+      "vpnTunnelOptionsSpecifications.dpdTimeoutAction",
+      "vpnTunnelOptionsSpecifications.dpdTimeoutSeconds",
+      "vpnTunnelOptionsSpecifications.enableTunnelLifecycleControl",
+      "vpnTunnelOptionsSpecifications.ikeVersions",
+      "vpnTunnelOptionsSpecifications.logOptions",
+      "vpnTunnelOptionsSpecifications.phase1DhGroupNumbers",
+      "vpnTunnelOptionsSpecifications.phase1EncryptionAlgorithms",
+      "vpnTunnelOptionsSpecifications.phase1IntegrityAlgorithms",
+      "vpnTunnelOptionsSpecifications.phase1LifetimeSeconds",
+      "vpnTunnelOptionsSpecifications.phase2DhGroupNumbers",
+      "vpnTunnelOptionsSpecifications.phase2EncryptionAlgorithms",
+      "vpnTunnelOptionsSpecifications.phase2IntegrityAlgorithms",
+      "vpnTunnelOptionsSpecifications.phase2LifetimeSeconds",
+      "vpnTunnelOptionsSpecifications.preSharedKey",
+      "vpnTunnelOptionsSpecifications.rekeyFuzzPercentage",
+      "vpnTunnelOptionsSpecifications.rekeyMarginTimeSeconds",
+      "vpnTunnelOptionsSpecifications.replayWindowSize",
+      "vpnTunnelOptionsSpecifications.startupAction",
+      "vpnTunnelOptionsSpecifications.tunnelInsideCidr",
+      "vpnTunnelOptionsSpecifications.tunnelInsideIpv6Cidr"
     ]
   },
   {
@@ -1214,7 +2100,46 @@
     "name": "CfnGlobalTable",
     "missingProps": [
       "globalTableSettingsReplicationMode",
-      "globalTableSourceArn"
+      "globalTableSourceArn",
+      "attributeDefinitions.attributeName",
+      "attributeDefinitions.attributeType",
+      "globalSecondaryIndexes.contributorInsightsSpecification",
+      "globalSecondaryIndexes.indexName",
+      "globalSecondaryIndexes.keySchema",
+      "globalSecondaryIndexes.onDemandThroughput",
+      "globalSecondaryIndexes.projection",
+      "globalSecondaryIndexes.provisionedThroughput",
+      "globalSecondaryIndexes.warmThroughput",
+      "globalTableWitnesses.region",
+      "keySchema.attributeName",
+      "keySchema.keyType",
+      "localSecondaryIndexes.indexName",
+      "localSecondaryIndexes.keySchema",
+      "localSecondaryIndexes.projection",
+      "replicas.contributorInsightsSpecification",
+      "replicas.deletionProtectionEnabled",
+      "replicas.globalSecondaryIndexes",
+      "replicas.kinesisStreamSpecification",
+      "replicas.pointInTimeRecoverySpecification",
+      "replicas.readOnDemandThroughputSettings",
+      "replicas.readProvisionedThroughputSettings",
+      "replicas.region",
+      "replicas.replicaStreamSpecification",
+      "replicas.resourcePolicy",
+      "replicas.sseSpecification",
+      "replicas.tableClass",
+      "replicas.tags",
+      "sseSpecification.kmsMasterKeyId",
+      "sseSpecification.sseEnabled",
+      "sseSpecification.sseType",
+      "streamSpecification.resourcePolicy",
+      "streamSpecification.streamViewType",
+      "timeToLiveSpecification.attributeName",
+      "timeToLiveSpecification.enabled",
+      "warmThroughput.readUnitsPerSecond",
+      "warmThroughput.writeUnitsPerSecond",
+      "writeOnDemandThroughputSettings.maxWriteRequestUnits",
+      "writeProvisionedThroughputSettings.writeCapacityAutoScalingSettings"
     ]
   },
   {
@@ -1223,7 +2148,43 @@
     "missingProps": [
       "globalTableSettingsReplicationMode",
       "onDemandThroughput",
-      "tags"
+      "tags",
+      "attributeDefinitions.attributeName",
+      "attributeDefinitions.attributeType",
+      "contributorInsightsSpecification.enabled",
+      "contributorInsightsSpecification.mode",
+      "globalSecondaryIndexes.contributorInsightsSpecification",
+      "globalSecondaryIndexes.indexName",
+      "globalSecondaryIndexes.keySchema",
+      "globalSecondaryIndexes.onDemandThroughput",
+      "globalSecondaryIndexes.projection",
+      "globalSecondaryIndexes.provisionedThroughput",
+      "globalSecondaryIndexes.warmThroughput",
+      "importSourceSpecification.inputCompressionType",
+      "importSourceSpecification.inputFormat",
+      "importSourceSpecification.inputFormatOptions",
+      "importSourceSpecification.s3BucketSource",
+      "keySchema.attributeName",
+      "keySchema.keyType",
+      "kinesisStreamSpecification.approximateCreationDateTimePrecision",
+      "kinesisStreamSpecification.streamArn",
+      "localSecondaryIndexes.indexName",
+      "localSecondaryIndexes.keySchema",
+      "localSecondaryIndexes.projection",
+      "pointInTimeRecoverySpecification.pointInTimeRecoveryEnabled",
+      "pointInTimeRecoverySpecification.recoveryPeriodInDays",
+      "provisionedThroughput.readCapacityUnits",
+      "provisionedThroughput.writeCapacityUnits",
+      "resourcePolicy.policyDocument",
+      "sseSpecification.kmsMasterKeyId",
+      "sseSpecification.sseEnabled",
+      "sseSpecification.sseType",
+      "streamSpecification.resourcePolicy",
+      "streamSpecification.streamViewType",
+      "timeToLiveSpecification.attributeName",
+      "timeToLiveSpecification.enabled",
+      "warmThroughput.readUnitsPerSecond",
+      "warmThroughput.writeUnitsPerSecond"
     ]
   },
   {
@@ -1241,7 +2202,9 @@
       "snapshotIdentifier",
       "sourceDbClusterIdentifier",
       "tags",
-      "useLatestRestorableTime"
+      "useLatestRestorableTime",
+      "serverlessV2ScalingConfiguration.maxCapacity",
+      "serverlessV2ScalingConfiguration.minCapacity"
     ]
   },
   {
@@ -1263,7 +2226,14 @@
     "module": "aws-config",
     "name": "CfnConfigRule",
     "missingProps": [
-      "compliance"
+      "compliance",
+      "evaluationModes.mode",
+      "scope.complianceResourceId",
+      "scope.complianceResourceTypes",
+      "scope.tagKey",
+      "scope.tagValue",
+      "source.customPolicyDetails",
+      "source.sourceDetails"
     ]
   },
   {
@@ -1272,7 +2242,54 @@
     "missingProps": [
       "emailAuthenticationMessage",
       "emailAuthenticationSubject",
-      "userPoolTags"
+      "userPoolTags",
+      "accountRecoverySetting.recoveryMechanisms",
+      "adminCreateUserConfig.allowAdminCreateUserOnly",
+      "adminCreateUserConfig.inviteMessageTemplate",
+      "adminCreateUserConfig.unusedAccountValidityDays",
+      "deviceConfiguration.challengeRequiredOnNewDevice",
+      "deviceConfiguration.deviceOnlyRememberedOnUserPrompt",
+      "emailConfiguration.configurationSet",
+      "emailConfiguration.emailSendingAccount",
+      "emailConfiguration.from",
+      "emailConfiguration.replyToEmailAddress",
+      "emailConfiguration.sourceArn",
+      "lambdaConfig.createAuthChallenge",
+      "lambdaConfig.customEmailSender",
+      "lambdaConfig.customMessage",
+      "lambdaConfig.customSmsSender",
+      "lambdaConfig.defineAuthChallenge",
+      "lambdaConfig.kmsKeyId",
+      "lambdaConfig.postAuthentication",
+      "lambdaConfig.postConfirmation",
+      "lambdaConfig.preAuthentication",
+      "lambdaConfig.preSignUp",
+      "lambdaConfig.preTokenGeneration",
+      "lambdaConfig.preTokenGenerationConfig",
+      "lambdaConfig.userMigration",
+      "lambdaConfig.verifyAuthChallengeResponse",
+      "policies.passwordPolicy",
+      "policies.signInPolicy",
+      "schema.attributeDataType",
+      "schema.developerOnlyAttribute",
+      "schema.mutable",
+      "schema.name",
+      "schema.numberAttributeConstraints",
+      "schema.required",
+      "schema.stringAttributeConstraints",
+      "smsConfiguration.externalId",
+      "smsConfiguration.snsCallerArn",
+      "smsConfiguration.snsRegion",
+      "userAttributeUpdateSettings.attributesRequireVerificationBeforeUpdate",
+      "usernameConfiguration.caseSensitive",
+      "userPoolAddOns.advancedSecurityAdditionalFlows",
+      "userPoolAddOns.advancedSecurityMode",
+      "verificationMessageTemplate.defaultEmailOption",
+      "verificationMessageTemplate.emailMessage",
+      "verificationMessageTemplate.emailMessageByLink",
+      "verificationMessageTemplate.emailSubject",
+      "verificationMessageTemplate.emailSubjectByLink",
+      "verificationMessageTemplate.smsMessage"
     ]
   },
   {
@@ -1284,7 +2301,27 @@
       "idTokenValidity",
       "refreshTokenRotation",
       "refreshTokenValidity",
-      "tokenValidityUnits"
+      "tokenValidityUnits",
+      "analyticsConfiguration.applicationArn",
+      "analyticsConfiguration.applicationId",
+      "analyticsConfiguration.externalId",
+      "analyticsConfiguration.roleArn",
+      "analyticsConfiguration.userDataShared"
+    ]
+  },
+  {
+    "module": "aws-cognito",
+    "name": "CfnUserPoolDomain",
+    "missingProps": [
+      "customDomainConfig.certificateArn"
+    ]
+  },
+  {
+    "module": "aws-cognito",
+    "name": "CfnUserPoolResourceServer",
+    "missingProps": [
+      "scopes.scopeDescription",
+      "scopes.scopeName"
     ]
   },
   {
@@ -1293,21 +2330,50 @@
     "missingProps": [
       "eventTypeId",
       "tags",
-      "targetAddress"
+      "targetAddress",
+      "targets.targetAddress",
+      "targets.targetType"
     ]
   },
   {
     "module": "aws-codepipeline",
     "name": "CfnCustomActionType",
     "missingProps": [
-      "tags"
+      "tags",
+      "configurationProperties.description",
+      "configurationProperties.key",
+      "configurationProperties.name",
+      "configurationProperties.queryable",
+      "configurationProperties.required",
+      "configurationProperties.secret",
+      "configurationProperties.type",
+      "settings.revisionUrlTemplate",
+      "settings.thirdPartyConfigurationUrl"
     ]
   },
   {
     "module": "aws-codepipeline",
     "name": "CfnPipeline",
     "missingProps": [
-      "tags"
+      "tags",
+      "artifactStore.encryptionKey",
+      "artifactStore.location",
+      "artifactStore.type",
+      "artifactStores.artifactStore",
+      "artifactStores.region",
+      "disableInboundStageTransitions.reason",
+      "disableInboundStageTransitions.stageName",
+      "stages.actions",
+      "stages.beforeEntry",
+      "stages.blockers",
+      "stages.name",
+      "stages.onFailure",
+      "stages.onSuccess",
+      "triggers.gitConfiguration",
+      "triggers.providerType",
+      "variables.defaultValue",
+      "variables.description",
+      "variables.name"
     ]
   },
   {
@@ -1315,6 +2381,20 @@
     "name": "CfnApplication",
     "missingProps": [
       "tags"
+    ]
+  },
+  {
+    "module": "aws-codedeploy",
+    "name": "CfnDeploymentConfig",
+    "missingProps": [
+      "minimumHealthyHosts.type",
+      "minimumHealthyHosts.value",
+      "trafficRoutingConfig.timeBasedCanary",
+      "trafficRoutingConfig.timeBasedLinear",
+      "trafficRoutingConfig.type",
+      "zonalConfig.firstZoneMonitorDurationInSeconds",
+      "zonalConfig.minimumHealthyHostsPerZone",
+      "zonalConfig.monitorDurationInSeconds"
     ]
   },
   {
@@ -1328,14 +2408,33 @@
       "onPremisesInstanceTagFilters",
       "outdatedInstancesStrategy",
       "tags",
-      "triggerConfigurations"
+      "triggerConfigurations",
+      "alarmConfiguration.alarms",
+      "alarmConfiguration.enabled",
+      "alarmConfiguration.ignorePollAlarmFailure",
+      "autoRollbackConfiguration.enabled",
+      "autoRollbackConfiguration.events",
+      "deploymentStyle.deploymentOption",
+      "deploymentStyle.deploymentType",
+      "ec2TagSet.ec2TagSetList",
+      "loadBalancerInfo.elbInfoList",
+      "loadBalancerInfo.targetGroupInfoList",
+      "loadBalancerInfo.targetGroupPairInfoList",
+      "onPremisesTagSet.onPremisesTagSetList"
     ]
   },
   {
     "module": "aws-codecommit",
     "name": "CfnRepository",
     "missingProps": [
-      "tags"
+      "tags",
+      "code.branchName",
+      "code.s3",
+      "triggers.branches",
+      "triggers.customData",
+      "triggers.destinationArn",
+      "triggers.events",
+      "triggers.name"
     ]
   },
   {
@@ -1345,7 +2444,15 @@
       "fleetProxyConfiguration",
       "imageId",
       "scalingConfiguration",
-      "tags"
+      "tags",
+      "computeConfiguration.disk",
+      "computeConfiguration.instanceType",
+      "computeConfiguration.machineType",
+      "computeConfiguration.memory",
+      "computeConfiguration.vCpu",
+      "fleetVpcConfig.securityGroupIds",
+      "fleetVpcConfig.subnets",
+      "fleetVpcConfig.vpcId"
     ]
   },
   {
@@ -1353,14 +2460,93 @@
     "name": "CfnProject",
     "missingProps": [
       "resourceAccessRole",
-      "tags"
+      "tags",
+      "artifacts.artifactIdentifier",
+      "artifacts.encryptionDisabled",
+      "artifacts.location",
+      "artifacts.name",
+      "artifacts.namespaceType",
+      "artifacts.overrideArtifactName",
+      "artifacts.packaging",
+      "artifacts.path",
+      "artifacts.type",
+      "buildBatchConfig.batchReportMode",
+      "buildBatchConfig.combineArtifacts",
+      "buildBatchConfig.restrictions",
+      "buildBatchConfig.serviceRole",
+      "buildBatchConfig.timeoutInMins",
+      "cache.cacheNamespace",
+      "cache.location",
+      "cache.modes",
+      "cache.type",
+      "environment.certificate",
+      "environment.computeType",
+      "environment.dockerServer",
+      "environment.environmentVariables",
+      "environment.fleet",
+      "environment.image",
+      "environment.imagePullCredentialsType",
+      "environment.privilegedMode",
+      "environment.registryCredential",
+      "environment.type",
+      "fileSystemLocations.identifier",
+      "fileSystemLocations.location",
+      "fileSystemLocations.mountOptions",
+      "fileSystemLocations.mountPoint",
+      "fileSystemLocations.type",
+      "logsConfig.cloudWatchLogs",
+      "logsConfig.s3Logs",
+      "secondaryArtifacts.artifactIdentifier",
+      "secondaryArtifacts.encryptionDisabled",
+      "secondaryArtifacts.location",
+      "secondaryArtifacts.name",
+      "secondaryArtifacts.namespaceType",
+      "secondaryArtifacts.overrideArtifactName",
+      "secondaryArtifacts.packaging",
+      "secondaryArtifacts.path",
+      "secondaryArtifacts.type",
+      "secondarySources.auth",
+      "secondarySources.buildSpec",
+      "secondarySources.buildStatusConfig",
+      "secondarySources.gitCloneDepth",
+      "secondarySources.gitSubmodulesConfig",
+      "secondarySources.insecureSsl",
+      "secondarySources.location",
+      "secondarySources.reportBuildStatus",
+      "secondarySources.sourceIdentifier",
+      "secondarySources.type",
+      "secondarySourceVersions.sourceIdentifier",
+      "secondarySourceVersions.sourceVersion",
+      "source.auth",
+      "source.buildStatusConfig",
+      "source.gitCloneDepth",
+      "source.gitSubmodulesConfig",
+      "source.insecureSsl",
+      "source.location",
+      "source.reportBuildStatus",
+      "source.sourceIdentifier",
+      "source.type",
+      "triggers.buildType",
+      "triggers.filterGroups",
+      "triggers.pullRequestBuildPolicy",
+      "triggers.scopeConfiguration",
+      "triggers.webhook",
+      "vpcConfig.securityGroupIds",
+      "vpcConfig.subnets",
+      "vpcConfig.vpcId"
     ]
   },
   {
     "module": "aws-codebuild",
     "name": "CfnReportGroup",
     "missingProps": [
-      "tags"
+      "tags",
+      "exportConfig.s3Destination.bucket",
+      "exportConfig.s3Destination.bucketOwner",
+      "exportConfig.s3Destination.encryptionDisabled",
+      "exportConfig.s3Destination.encryptionKey",
+      "exportConfig.s3Destination.packaging",
+      "exportConfig.s3Destination.path"
     ]
   },
   {
@@ -1397,21 +2583,153 @@
     "name": "CfnTrail",
     "missingProps": [
       "advancedEventSelectors",
-      "tags"
+      "tags",
+      "eventSelectors.dataResources",
+      "eventSelectors.excludeManagementEventSources",
+      "eventSelectors.includeManagementEvents",
+      "eventSelectors.readWriteType",
+      "insightSelectors.insightType"
+    ]
+  },
+  {
+    "module": "aws-cloudfront",
+    "name": "CfnCachePolicy",
+    "missingProps": [
+      "cachePolicyConfig.parametersInCacheKeyAndForwardedToOrigin.cookiesConfig",
+      "cachePolicyConfig.parametersInCacheKeyAndForwardedToOrigin.enableAcceptEncodingBrotli",
+      "cachePolicyConfig.parametersInCacheKeyAndForwardedToOrigin.enableAcceptEncodingGzip",
+      "cachePolicyConfig.parametersInCacheKeyAndForwardedToOrigin.headersConfig",
+      "cachePolicyConfig.parametersInCacheKeyAndForwardedToOrigin.queryStringsConfig"
     ]
   },
   {
     "module": "aws-cloudfront",
     "name": "CfnDistribution",
     "missingProps": [
-      "tags"
+      "tags",
+      "distributionConfig.anycastIpListId",
+      "distributionConfig.cnamEs",
+      "distributionConfig.connectionMode",
+      "distributionConfig.continuousDeploymentPolicyId",
+      "distributionConfig.customOrigin",
+      "distributionConfig.s3Origin",
+      "distributionConfig.staging",
+      "distributionConfig.tenantConfig",
+      "distributionConfig.cacheBehaviors.allowedMethods",
+      "distributionConfig.cacheBehaviors.cachedMethods",
+      "distributionConfig.cacheBehaviors.cachePolicyId",
+      "distributionConfig.cacheBehaviors.compress",
+      "distributionConfig.cacheBehaviors.defaultTtl",
+      "distributionConfig.cacheBehaviors.fieldLevelEncryptionId",
+      "distributionConfig.cacheBehaviors.forwardedValues",
+      "distributionConfig.cacheBehaviors.functionAssociations",
+      "distributionConfig.cacheBehaviors.grpcConfig",
+      "distributionConfig.cacheBehaviors.lambdaFunctionAssociations",
+      "distributionConfig.cacheBehaviors.maxTtl",
+      "distributionConfig.cacheBehaviors.minTtl",
+      "distributionConfig.cacheBehaviors.originRequestPolicyId",
+      "distributionConfig.cacheBehaviors.pathPattern",
+      "distributionConfig.cacheBehaviors.realtimeLogConfigArn",
+      "distributionConfig.cacheBehaviors.responseHeadersPolicyId",
+      "distributionConfig.cacheBehaviors.smoothStreaming",
+      "distributionConfig.cacheBehaviors.targetOriginId",
+      "distributionConfig.cacheBehaviors.trustedKeyGroups",
+      "distributionConfig.cacheBehaviors.trustedSigners",
+      "distributionConfig.cacheBehaviors.viewerProtocolPolicy",
+      "distributionConfig.customErrorResponses.errorCachingMinTtl",
+      "distributionConfig.customErrorResponses.errorCode",
+      "distributionConfig.customErrorResponses.responseCode",
+      "distributionConfig.customErrorResponses.responsePagePath",
+      "distributionConfig.defaultCacheBehavior.allowedMethods",
+      "distributionConfig.defaultCacheBehavior.cachedMethods",
+      "distributionConfig.defaultCacheBehavior.cachePolicyId",
+      "distributionConfig.defaultCacheBehavior.compress",
+      "distributionConfig.defaultCacheBehavior.defaultTtl",
+      "distributionConfig.defaultCacheBehavior.fieldLevelEncryptionId",
+      "distributionConfig.defaultCacheBehavior.forwardedValues",
+      "distributionConfig.defaultCacheBehavior.functionAssociations",
+      "distributionConfig.defaultCacheBehavior.grpcConfig",
+      "distributionConfig.defaultCacheBehavior.lambdaFunctionAssociations",
+      "distributionConfig.defaultCacheBehavior.maxTtl",
+      "distributionConfig.defaultCacheBehavior.minTtl",
+      "distributionConfig.defaultCacheBehavior.originRequestPolicyId",
+      "distributionConfig.defaultCacheBehavior.realtimeLogConfigArn",
+      "distributionConfig.defaultCacheBehavior.responseHeadersPolicyId",
+      "distributionConfig.defaultCacheBehavior.smoothStreaming",
+      "distributionConfig.defaultCacheBehavior.targetOriginId",
+      "distributionConfig.defaultCacheBehavior.trustedKeyGroups",
+      "distributionConfig.defaultCacheBehavior.trustedSigners",
+      "distributionConfig.defaultCacheBehavior.viewerProtocolPolicy",
+      "distributionConfig.logging.bucket",
+      "distributionConfig.logging.enabled",
+      "distributionConfig.logging.prefix",
+      "distributionConfig.originGroups.items",
+      "distributionConfig.originGroups.quantity",
+      "distributionConfig.origins.connectionAttempts",
+      "distributionConfig.origins.connectionTimeout",
+      "distributionConfig.origins.customOriginConfig",
+      "distributionConfig.origins.domainName",
+      "distributionConfig.origins.id",
+      "distributionConfig.origins.originAccessControlId",
+      "distributionConfig.origins.originCustomHeaders",
+      "distributionConfig.origins.originPath",
+      "distributionConfig.origins.originShield",
+      "distributionConfig.origins.responseCompletionTimeout",
+      "distributionConfig.origins.s3OriginConfig",
+      "distributionConfig.origins.vpcOriginConfig",
+      "distributionConfig.restrictions.geoRestriction",
+      "distributionConfig.viewerCertificate.acmCertificateArn",
+      "distributionConfig.viewerCertificate.cloudFrontDefaultCertificate",
+      "distributionConfig.viewerCertificate.iamCertificateId",
+      "distributionConfig.viewerCertificate.minimumProtocolVersion",
+      "distributionConfig.viewerCertificate.sslSupportMethod"
     ]
   },
   {
     "module": "aws-cloudfront",
     "name": "CfnFunction",
     "missingProps": [
-      "functionMetadata"
+      "functionMetadata",
+      "functionConfig.keyValueStoreAssociations.keyValueStoreArn"
+    ]
+  },
+  {
+    "module": "aws-cloudfront",
+    "name": "CfnKeyValueStore",
+    "missingProps": [
+      "importSource.sourceArn",
+      "importSource.sourceType"
+    ]
+  },
+  {
+    "module": "aws-cloudfront",
+    "name": "CfnRealtimeLogConfig",
+    "missingProps": [
+      "endPoints.kinesisStreamConfig",
+      "endPoints.streamType"
+    ]
+  },
+  {
+    "module": "aws-cloudfront",
+    "name": "CfnResponseHeadersPolicy",
+    "missingProps": [
+      "responseHeadersPolicyConfig.corsConfig.accessControlAllowCredentials",
+      "responseHeadersPolicyConfig.corsConfig.accessControlAllowHeaders",
+      "responseHeadersPolicyConfig.corsConfig.accessControlAllowMethods",
+      "responseHeadersPolicyConfig.corsConfig.accessControlAllowOrigins",
+      "responseHeadersPolicyConfig.corsConfig.accessControlExposeHeaders",
+      "responseHeadersPolicyConfig.corsConfig.accessControlMaxAgeSec",
+      "responseHeadersPolicyConfig.corsConfig.originOverride",
+      "responseHeadersPolicyConfig.customHeadersConfig.items",
+      "responseHeadersPolicyConfig.removeHeadersConfig.items",
+      "responseHeadersPolicyConfig.securityHeadersConfig.contentSecurityPolicy",
+      "responseHeadersPolicyConfig.securityHeadersConfig.contentTypeOptions",
+      "responseHeadersPolicyConfig.securityHeadersConfig.frameOptions",
+      "responseHeadersPolicyConfig.securityHeadersConfig.referrerPolicy",
+      "responseHeadersPolicyConfig.securityHeadersConfig.strictTransportSecurity",
+      "responseHeadersPolicyConfig.securityHeadersConfig.xssProtection",
+      "responseHeadersPolicyConfig.serverTimingHeadersConfig.enabled",
+      "responseHeadersPolicyConfig.serverTimingHeadersConfig.samplingRate"
     ]
   },
   {
@@ -1463,7 +2781,13 @@
       "retryStrategy",
       "schedulingPriority",
       "tags",
-      "timeout"
+      "timeout",
+      "nodeProperties.nodeRangeProperties.consumableResourceProperties",
+      "nodeProperties.nodeRangeProperties.container",
+      "nodeProperties.nodeRangeProperties.ecsProperties",
+      "nodeProperties.nodeRangeProperties.eksProperties",
+      "nodeProperties.nodeRangeProperties.instanceTypes",
+      "nodeProperties.nodeRangeProperties.targetNodes"
     ]
   },
   {
@@ -1472,28 +2796,65 @@
     "missingProps": [
       "jobQueueType",
       "serviceEnvironmentOrder",
-      "tags"
+      "tags",
+      "computeEnvironmentOrder.computeEnvironment",
+      "computeEnvironmentOrder.order",
+      "jobStateTimeLimitActions.action",
+      "jobStateTimeLimitActions.maxTimeSeconds",
+      "jobStateTimeLimitActions.reason",
+      "jobStateTimeLimitActions.state"
     ]
   },
   {
     "module": "aws-batch",
     "name": "CfnSchedulingPolicy",
     "missingProps": [
-      "tags"
+      "tags",
+      "fairsharePolicy.shareDistribution.shareIdentifier",
+      "fairsharePolicy.shareDistribution.weightFactor"
     ]
   },
   {
     "module": "aws-backup",
     "name": "CfnBackupPlan",
     "missingProps": [
-      "backupPlanTags"
+      "backupPlanTags",
+      "backupPlan.advancedBackupSettings.backupOptions",
+      "backupPlan.advancedBackupSettings.resourceType",
+      "backupPlan.backupPlanRule.completionWindowMinutes",
+      "backupPlan.backupPlanRule.copyActions",
+      "backupPlan.backupPlanRule.enableContinuousBackup",
+      "backupPlan.backupPlanRule.indexActions",
+      "backupPlan.backupPlanRule.lifecycle",
+      "backupPlan.backupPlanRule.recoveryPointTags",
+      "backupPlan.backupPlanRule.ruleName",
+      "backupPlan.backupPlanRule.scheduleExpression",
+      "backupPlan.backupPlanRule.scheduleExpressionTimezone",
+      "backupPlan.backupPlanRule.startWindowMinutes",
+      "backupPlan.backupPlanRule.targetBackupVault"
+    ]
+  },
+  {
+    "module": "aws-backup",
+    "name": "CfnBackupSelection",
+    "missingProps": [
+      "backupSelection.conditions",
+      "backupSelection.notResources",
+      "backupSelection.listOfTags.conditionKey",
+      "backupSelection.listOfTags.conditionType",
+      "backupSelection.listOfTags.conditionValue"
     ]
   },
   {
     "module": "aws-backup",
     "name": "CfnBackupVault",
     "missingProps": [
-      "backupVaultTags"
+      "backupVaultTags",
+      "lockConfiguration.changeableForDays",
+      "lockConfiguration.maxRetentionDays",
+      "lockConfiguration.minRetentionDays",
+      "notifications.backupVaultEvents",
+      "notifications.snsTopicArn"
     ]
   },
   {
@@ -1505,21 +2866,46 @@
       "minAdjustmentMagnitude",
       "predictiveScalingConfiguration",
       "scalingAdjustment",
-      "stepAdjustments"
+      "stepAdjustments",
+      "targetTrackingConfiguration.customizedMetricSpecification.dimensions",
+      "targetTrackingConfiguration.customizedMetricSpecification.metricName",
+      "targetTrackingConfiguration.customizedMetricSpecification.metrics",
+      "targetTrackingConfiguration.customizedMetricSpecification.namespace",
+      "targetTrackingConfiguration.customizedMetricSpecification.period",
+      "targetTrackingConfiguration.customizedMetricSpecification.statistic",
+      "targetTrackingConfiguration.customizedMetricSpecification.unit",
+      "targetTrackingConfiguration.predefinedMetricSpecification.predefinedMetricType",
+      "targetTrackingConfiguration.predefinedMetricSpecification.resourceLabel"
+    ]
+  },
+  {
+    "module": "aws-autoscaling",
+    "name": "CfnWarmPool",
+    "missingProps": [
+      "instanceReusePolicy.reuseOnScaleIn"
     ]
   },
   {
     "module": "aws-appsync",
     "name": "CfnApi",
     "missingProps": [
-      "tags"
+      "tags",
+      "eventConfig.authProviders",
+      "eventConfig.connectionAuthModes",
+      "eventConfig.defaultPublishAuthModes",
+      "eventConfig.defaultSubscribeAuthModes",
+      "eventConfig.logConfig"
     ]
   },
   {
     "module": "aws-appsync",
     "name": "CfnChannelNamespace",
     "missingProps": [
-      "tags"
+      "tags",
+      "handlerConfigs.onPublish",
+      "handlerConfigs.onSubscribe",
+      "publishAuthModes.authType",
+      "subscribeAuthModes.authType"
     ]
   },
   {
@@ -1543,7 +2929,9 @@
     "missingProps": [
       "requestMappingTemplateS3Location",
       "responseMappingTemplateS3Location",
-      "syncConfig"
+      "syncConfig",
+      "runtime.name",
+      "runtime.runtimeVersion"
     ]
   },
   {
@@ -1551,7 +2939,25 @@
     "name": "CfnGraphQLApi",
     "missingProps": [
       "enhancedMetricsConfig",
-      "tags"
+      "tags",
+      "additionalAuthenticationProviders.authenticationType",
+      "additionalAuthenticationProviders.lambdaAuthorizerConfig",
+      "additionalAuthenticationProviders.openIdConnectConfig",
+      "additionalAuthenticationProviders.userPoolConfig",
+      "lambdaAuthorizerConfig.authorizerResultTtlInSeconds",
+      "lambdaAuthorizerConfig.authorizerUri",
+      "lambdaAuthorizerConfig.identityValidationExpression",
+      "logConfig.cloudWatchLogsRoleArn",
+      "logConfig.excludeVerboseContent",
+      "logConfig.fieldLogLevel",
+      "openIdConnectConfig.authTtl",
+      "openIdConnectConfig.clientId",
+      "openIdConnectConfig.iatTtl",
+      "openIdConnectConfig.issuer",
+      "userPoolConfig.appIdClientRegex",
+      "userPoolConfig.awsRegion",
+      "userPoolConfig.defaultAction",
+      "userPoolConfig.userPoolId"
     ]
   },
   {
@@ -1561,63 +2967,117 @@
       "metricsConfig",
       "requestMappingTemplateS3Location",
       "responseMappingTemplateS3Location",
-      "syncConfig"
+      "syncConfig",
+      "cachingConfig.cachingKeys",
+      "cachingConfig.ttl",
+      "pipelineConfig.functions",
+      "runtime.name",
+      "runtime.runtimeVersion"
     ]
   },
   {
     "module": "aws-appmesh",
     "name": "CfnGatewayRoute",
     "missingProps": [
-      "tags"
+      "tags",
+      "spec.grpcRoute.action",
+      "spec.grpcRoute.match",
+      "spec.http2Route.action",
+      "spec.http2Route.match",
+      "spec.httpRoute.action",
+      "spec.httpRoute.match"
     ]
   },
   {
     "module": "aws-appmesh",
     "name": "CfnMesh",
     "missingProps": [
-      "tags"
+      "tags",
+      "spec.egressFilter.type",
+      "spec.serviceDiscovery.ipPreference"
     ]
   },
   {
     "module": "aws-appmesh",
     "name": "CfnRoute",
     "missingProps": [
-      "tags"
+      "tags",
+      "spec.grpcRoute.action",
+      "spec.grpcRoute.match",
+      "spec.grpcRoute.retryPolicy",
+      "spec.grpcRoute.timeout",
+      "spec.http2Route.action",
+      "spec.http2Route.match",
+      "spec.http2Route.retryPolicy",
+      "spec.http2Route.timeout",
+      "spec.httpRoute.action",
+      "spec.httpRoute.match",
+      "spec.httpRoute.retryPolicy",
+      "spec.httpRoute.timeout",
+      "spec.tcpRoute.action",
+      "spec.tcpRoute.match",
+      "spec.tcpRoute.timeout"
     ]
   },
   {
     "module": "aws-appmesh",
     "name": "CfnVirtualGateway",
     "missingProps": [
-      "tags"
+      "tags",
+      "spec.backendDefaults.clientPolicy",
+      "spec.listeners.connectionPool",
+      "spec.listeners.healthCheck",
+      "spec.listeners.portMapping",
+      "spec.listeners.tls",
+      "spec.logging.accessLog"
     ]
   },
   {
     "module": "aws-appmesh",
     "name": "CfnVirtualNode",
     "missingProps": [
-      "tags"
+      "tags",
+      "spec.backendDefaults.clientPolicy",
+      "spec.backends.virtualService",
+      "spec.listeners.connectionPool",
+      "spec.listeners.healthCheck",
+      "spec.listeners.outlierDetection",
+      "spec.listeners.portMapping",
+      "spec.listeners.timeout",
+      "spec.listeners.tls",
+      "spec.logging.accessLog",
+      "spec.serviceDiscovery.awsCloudMap",
+      "spec.serviceDiscovery.dns"
     ]
   },
   {
     "module": "aws-appmesh",
     "name": "CfnVirtualRouter",
     "missingProps": [
-      "tags"
+      "tags",
+      "spec.listeners.portMapping"
     ]
   },
   {
     "module": "aws-appmesh",
     "name": "CfnVirtualService",
     "missingProps": [
-      "tags"
+      "tags",
+      "spec.provider.virtualNode",
+      "spec.provider.virtualRouter"
     ]
   },
   {
     "module": "aws-applicationautoscaling",
     "name": "CfnScalableTarget",
     "missingProps": [
-      "suspendedState"
+      "suspendedState",
+      "scheduledActions.endTime",
+      "scheduledActions.scalableTargetAction",
+      "scheduledActions.schedule",
+      "scheduledActions.scheduledActionName",
+      "scheduledActions.startTime",
+      "scheduledActions.timezone"
     ]
   },
   {
@@ -1628,7 +3088,15 @@
       "resourceId",
       "scalableDimension",
       "serviceNamespace",
-      "stepScalingPolicyConfiguration"
+      "stepScalingPolicyConfiguration",
+      "targetTrackingScalingPolicyConfiguration.customizedMetricSpecification.dimensions",
+      "targetTrackingScalingPolicyConfiguration.customizedMetricSpecification.metricName",
+      "targetTrackingScalingPolicyConfiguration.customizedMetricSpecification.metrics",
+      "targetTrackingScalingPolicyConfiguration.customizedMetricSpecification.namespace",
+      "targetTrackingScalingPolicyConfiguration.customizedMetricSpecification.statistic",
+      "targetTrackingScalingPolicyConfiguration.customizedMetricSpecification.unit",
+      "targetTrackingScalingPolicyConfiguration.predefinedMetricSpecification.predefinedMetricType",
+      "targetTrackingScalingPolicyConfiguration.predefinedMetricSpecification.resourceLabel"
     ]
   },
   {
@@ -1643,7 +3111,9 @@
     "name": "CfnConfigurationProfile",
     "missingProps": [
       "kmsKeyIdentifier",
-      "tags"
+      "tags",
+      "validators.content",
+      "validators.type"
     ]
   },
   {
@@ -1657,14 +3127,19 @@
     "module": "aws-appconfig",
     "name": "CfnEnvironment",
     "missingProps": [
-      "tags"
+      "tags",
+      "monitors.alarmArn",
+      "monitors.alarmRoleArn"
     ]
   },
   {
     "module": "aws-appconfig",
     "name": "CfnExtension",
     "missingProps": [
-      "tags"
+      "tags",
+      "parameters.description",
+      "parameters.dynamic",
+      "parameters.required"
     ]
   },
   {
@@ -1729,7 +3204,12 @@
       "clientCertificateId",
       "deploymentId",
       "routeSettings",
-      "tags"
+      "tags",
+      "defaultRouteSettings.dataTraceEnabled",
+      "defaultRouteSettings.detailedMetricsEnabled",
+      "defaultRouteSettings.loggingLevel",
+      "defaultRouteSettings.throttlingBurstLimit",
+      "defaultRouteSettings.throttlingRateLimit"
     ]
   },
   {
@@ -1743,7 +3223,9 @@
     "module": "aws-apigateway",
     "name": "CfnApiKey",
     "missingProps": [
-      "tags"
+      "tags",
+      "stageKeys.restApiId",
+      "stageKeys.stageName"
     ]
   },
   {
@@ -1759,7 +3241,10 @@
     "missingProps": [
       "ownershipVerificationCertificateArn",
       "routingMode",
-      "tags"
+      "tags",
+      "endpointConfiguration.ipAddressType",
+      "mutualTlsAuthentication.truststoreUri",
+      "mutualTlsAuthentication.truststoreVersion"
     ]
   },
   {
@@ -1771,7 +3256,13 @@
       "cloneFrom",
       "description",
       "securityPolicy",
-      "tags"
+      "tags",
+      "bodyS3Location.bucket",
+      "bodyS3Location.eTag",
+      "bodyS3Location.key",
+      "bodyS3Location.version",
+      "endpointConfiguration.ipAddressType",
+      "endpointConfiguration.types"
     ]
   },
   {
@@ -1779,14 +3270,34 @@
     "name": "CfnStage",
     "missingProps": [
       "canarySetting",
-      "tags"
+      "tags",
+      "accessLogSetting.destinationArn",
+      "accessLogSetting.format",
+      "methodSettings.cacheDataEncrypted",
+      "methodSettings.cacheTtlInSeconds",
+      "methodSettings.cachingEnabled",
+      "methodSettings.dataTraceEnabled",
+      "methodSettings.httpMethod",
+      "methodSettings.loggingLevel",
+      "methodSettings.metricsEnabled",
+      "methodSettings.resourcePath",
+      "methodSettings.throttlingBurstLimit",
+      "methodSettings.throttlingRateLimit"
     ]
   },
   {
     "module": "aws-apigateway",
     "name": "CfnUsagePlan",
     "missingProps": [
-      "tags"
+      "tags",
+      "apiStages.apiId",
+      "apiStages.stage",
+      "apiStages.throttle",
+      "quota.limit",
+      "quota.offset",
+      "quota.period",
+      "throttle.burstLimit",
+      "throttle.rateLimit"
     ]
   },
   {
