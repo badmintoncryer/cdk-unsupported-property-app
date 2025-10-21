@@ -107,12 +107,12 @@
       "logConfiguration.s3LogDestination",
       "sourceParameters.activeMqBrokerParameters",
       "sourceParameters.dynamoDbStreamParameters",
-      "sourceParameters.filterCriteria",
       "sourceParameters.kinesisStreamParameters",
       "sourceParameters.managedStreamingKafkaParameters",
       "sourceParameters.rabbitMqBrokerParameters",
       "sourceParameters.selfManagedKafkaParameters",
       "sourceParameters.sqsQueueParameters",
+      "sourceParameters.filterCriteria.filters",
       "targetParameters.batchJobParameters",
       "targetParameters.cloudWatchLogsParameters",
       "targetParameters.ecsTaskParameters",
@@ -191,9 +191,6 @@
       "configurationInfo.arn",
       "configurationInfo.revision",
       "encryptionInfo.encryptionAtRest.dataVolumeKmsKeyId",
-      "encryptionInfo.encryptionInTransit.clientBroker",
-      "encryptionInfo.encryptionInTransit.inCluster",
-      "loggingInfo.brokerLogs",
       "openMonitoring.prometheus"
     ]
   },
@@ -385,10 +382,8 @@
     "missingProps": [
       "databaseName",
       "databaseInput.createTableDefaultPermissions",
-      "databaseInput.description",
       "databaseInput.federatedDatabase",
       "databaseInput.locationUri",
-      "databaseInput.name",
       "databaseInput.parameters",
       "databaseInput.targetDatabase"
     ]
@@ -974,7 +969,8 @@
       "notificationConfiguration",
       "tags",
       "accelerateConfiguration.accelerationStatus",
-      "bucketEncryption.serverSideEncryptionConfiguration",
+      "bucketEncryption.serverSideEncryptionConfiguration.bucketKeyEnabled",
+      "bucketEncryption.serverSideEncryptionConfiguration.serverSideEncryptionByDefault",
       "corsConfiguration.corsRules",
       "intelligentTieringConfigurations.id",
       "intelligentTieringConfigurations.prefix",
@@ -1445,9 +1441,7 @@
     "name": "CfnStream",
     "missingProps": [
       "streamModeDetails",
-      "tags",
-      "streamEncryption.encryptionType",
-      "streamEncryption.keyId"
+      "tags"
     ]
   },
   {
@@ -2251,9 +2245,10 @@
       "emailAuthenticationSubject",
       "userPoolTags",
       "accountRecoverySetting.recoveryMechanisms",
-      "adminCreateUserConfig.allowAdminCreateUserOnly",
-      "adminCreateUserConfig.inviteMessageTemplate",
       "adminCreateUserConfig.unusedAccountValidityDays",
+      "adminCreateUserConfig.inviteMessageTemplate.emailMessage",
+      "adminCreateUserConfig.inviteMessageTemplate.emailSubject",
+      "adminCreateUserConfig.inviteMessageTemplate.smsMessage",
       "deviceConfiguration.challengeRequiredOnNewDevice",
       "deviceConfiguration.deviceOnlyRememberedOnUserPrompt",
       "emailConfiguration.configurationSet",
