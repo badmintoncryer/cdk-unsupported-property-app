@@ -683,6 +683,7 @@
       "visualReferences",
       "artifactConfig.s3Encryption",
       "browserConfigs.browserType",
+      "code.blueprintTypes",
       "code.dependencies",
       "code.handler",
       "code.s3Bucket",
@@ -1291,6 +1292,8 @@
     "module": "aws-logs",
     "name": "CfnMetricFilter",
     "missingProps": [
+      "emitSystemFieldDimensions",
+      "fieldSelectionCriteria",
       "metricTransformations.defaultValue",
       "metricTransformations.dimensions",
       "metricTransformations.metricName",
@@ -1310,7 +1313,9 @@
     "module": "aws-logs",
     "name": "CfnSubscriptionFilter",
     "missingProps": [
-      "applyOnTransformedLogs"
+      "applyOnTransformedLogs",
+      "emitSystemFields",
+      "fieldSelectionCriteria"
     ]
   },
   {
@@ -1624,6 +1629,7 @@
     "module": "aws-elasticloadbalancingv2",
     "name": "CfnListenerRule",
     "missingProps": [
+      "transforms",
       "actions.authenticateCognitoConfig",
       "actions.authenticateOidcConfig",
       "actions.fixedResponseConfig",
@@ -1638,6 +1644,7 @@
       "conditions.httpRequestMethodConfig",
       "conditions.pathPatternConfig",
       "conditions.queryStringConfig",
+      "conditions.regexValues",
       "conditions.sourceIpConfig",
       "conditions.values"
     ]
