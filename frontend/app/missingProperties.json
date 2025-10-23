@@ -161,6 +161,7 @@
       "dbSnapshotIdentifier",
       "dbSubnetGroupName",
       "preferredMaintenanceWindow",
+      "publiclyAccessible",
       "tags"
     ]
   },
@@ -1811,11 +1812,12 @@
     "module": "aws-ecr",
     "name": "CfnRepository",
     "missingProps": [
-      "imageTagMutabilityExclusionFilters",
       "tags",
       "encryptionConfiguration.encryptionType",
       "encryptionConfiguration.kmsKey",
       "imageScanningConfiguration.scanOnPush",
+      "imageTagMutabilityExclusionFilters.imageTagMutabilityExclusionFilterType",
+      "imageTagMutabilityExclusionFilters.imageTagMutabilityExclusionFilterValue",
       "lifecyclePolicy.lifecyclePolicyText",
       "lifecyclePolicy.registryId"
     ]
