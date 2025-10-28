@@ -187,11 +187,12 @@
       "tags",
       "brokerNodeGroupInfo.brokerAzDistribution",
       "brokerNodeGroupInfo.connectivityInfo",
-      "brokerNodeGroupInfo.storageInfo.ebsStorageInfo.provisionedThroughput",
+      "brokerNodeGroupInfo.storageInfo.ebsStorageInfo",
       "clientAuthentication.sasl",
       "configurationInfo.arn",
       "configurationInfo.revision",
       "encryptionInfo.encryptionAtRest.dataVolumeKmsKeyId",
+      "loggingInfo.brokerLogs",
       "openMonitoring.prometheus"
     ]
   },
