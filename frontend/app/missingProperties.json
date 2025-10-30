@@ -2152,6 +2152,7 @@
     "missingProps": [
       "globalTableSettingsReplicationMode",
       "onDemandThroughput",
+      "resourcePolicy",
       "tags",
       "attributeDefinitions.attributeName",
       "attributeDefinitions.attributeType",
@@ -2179,7 +2180,6 @@
       "pointInTimeRecoverySpecification.recoveryPeriodInDays",
       "provisionedThroughput.readCapacityUnits",
       "provisionedThroughput.writeCapacityUnits",
-      "resourcePolicy.policyDocument",
       "sseSpecification.kmsMasterKeyId",
       "sseSpecification.sseEnabled",
       "sseSpecification.sseType",
