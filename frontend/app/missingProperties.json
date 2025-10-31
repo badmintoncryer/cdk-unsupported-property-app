@@ -3257,7 +3257,6 @@
     "name": "CfnRestApi",
     "missingProps": [
       "apiKeySourceType",
-      "binaryMediaTypes",
       "cloneFrom",
       "description",
       "securityPolicy",
