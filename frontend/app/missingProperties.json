@@ -100,11 +100,12 @@
     "missingProps": [
       "enrichmentParameters.httpParameters",
       "enrichmentParameters.inputTemplate",
-      "logConfiguration.cloudwatchLogsLogDestination",
-      "logConfiguration.firehoseLogDestination",
-      "logConfiguration.includeExecutionData",
-      "logConfiguration.level",
-      "logConfiguration.s3LogDestination",
+      "logConfiguration.cloudwatchLogsLogDestination.logGroupArn",
+      "logConfiguration.firehoseLogDestination.deliveryStreamArn",
+      "logConfiguration.s3LogDestination.bucketName",
+      "logConfiguration.s3LogDestination.bucketOwner",
+      "logConfiguration.s3LogDestination.outputFormat",
+      "logConfiguration.s3LogDestination.prefix",
       "sourceParameters.activeMqBrokerParameters",
       "sourceParameters.dynamoDbStreamParameters",
       "sourceParameters.kinesisStreamParameters",
@@ -188,12 +189,10 @@
       "brokerNodeGroupInfo.brokerAzDistribution",
       "brokerNodeGroupInfo.connectivityInfo",
       "brokerNodeGroupInfo.storageInfo.ebsStorageInfo",
-      "clientAuthentication.sasl",
+      "clientAuthentication.sasl.iam",
       "configurationInfo.arn",
       "configurationInfo.revision",
-      "encryptionInfo.encryptionAtRest.dataVolumeKmsKeyId",
-      "loggingInfo.brokerLogs",
-      "openMonitoring.prometheus"
+      "encryptionInfo.encryptionAtRest.dataVolumeKmsKeyId"
     ]
   },
   {
@@ -869,13 +868,8 @@
     "missingProps": [
       "serviceAttributes",
       "tags",
-      "dnsConfig.dnsRecords",
-      "dnsConfig.namespaceId",
-      "dnsConfig.routingPolicy",
-      "healthCheckConfig.failureThreshold",
-      "healthCheckConfig.resourcePath",
-      "healthCheckConfig.type",
-      "healthCheckCustomConfig.failureThreshold"
+      "dnsConfig.dnsRecords.ttl",
+      "dnsConfig.dnsRecords.type"
     ]
   },
   {
@@ -920,10 +914,7 @@
       "hostedRotationLambda.superuserSecretArn",
       "hostedRotationLambda.superuserSecretKmsKeyArn",
       "hostedRotationLambda.vpcSecurityGroupIds",
-      "hostedRotationLambda.vpcSubnetIds",
-      "rotationRules.automaticallyAfterDays",
-      "rotationRules.duration",
-      "rotationRules.scheduleExpression"
+      "hostedRotationLambda.vpcSubnetIds"
     ]
   },
   {
@@ -995,20 +986,21 @@
       "metricsConfigurations.id",
       "metricsConfigurations.prefix",
       "metricsConfigurations.tagFilters",
-      "objectLockConfiguration.objectLockEnabled",
-      "objectLockConfiguration.rule",
+      "objectLockConfiguration.rule.defaultRetention",
       "ownershipControls.rules",
-      "publicAccessBlockConfiguration.blockPublicAcls",
-      "publicAccessBlockConfiguration.blockPublicPolicy",
-      "publicAccessBlockConfiguration.ignorePublicAcls",
-      "publicAccessBlockConfiguration.restrictPublicBuckets",
-      "replicationConfiguration.role",
-      "replicationConfiguration.rules",
+      "replicationConfiguration.rules.deleteMarkerReplication",
+      "replicationConfiguration.rules.destination",
+      "replicationConfiguration.rules.filter",
+      "replicationConfiguration.rules.id",
+      "replicationConfiguration.rules.prefix",
+      "replicationConfiguration.rules.priority",
+      "replicationConfiguration.rules.sourceSelectionCriteria",
+      "replicationConfiguration.rules.status",
       "versioningConfiguration.status",
-      "websiteConfiguration.errorDocument",
-      "websiteConfiguration.indexDocument",
-      "websiteConfiguration.redirectAllRequestsTo",
-      "websiteConfiguration.routingRules"
+      "websiteConfiguration.redirectAllRequestsTo.hostName",
+      "websiteConfiguration.redirectAllRequestsTo.protocol",
+      "websiteConfiguration.routingRules.redirectRule",
+      "websiteConfiguration.routingRules.routingRuleCondition"
     ]
   },
   {
@@ -1265,9 +1257,7 @@
       "offPeakWindowOptions.enabled",
       "offPeakWindowOptions.offPeakWindow",
       "snapshotOptions.automatedSnapshotStartHour",
-      "softwareUpdateOptions.autoSoftwareUpdateEnabled",
-      "vpcOptions.securityGroupIds",
-      "vpcOptions.subnetIds"
+      "softwareUpdateOptions.autoSoftwareUpdateEnabled"
     ]
   },
   {
@@ -1433,9 +1423,7 @@
       "s3DestinationConfiguration",
       "snowflakeDestinationConfiguration",
       "splunkDestinationConfiguration",
-      "tags",
-      "deliveryStreamEncryptionConfigurationInput.keyArn",
-      "deliveryStreamEncryptionConfigurationInput.keyType"
+      "tags"
     ]
   },
   {
@@ -1506,22 +1494,12 @@
       "openZfsConfiguration",
       "tags",
       "windowsConfiguration",
-      "lustreConfiguration.autoImportPolicy",
       "lustreConfiguration.automaticBackupRetentionDays",
-      "lustreConfiguration.copyTagsToBackups",
-      "lustreConfiguration.dailyAutomaticBackupStartTime",
-      "lustreConfiguration.dataCompressionType",
       "lustreConfiguration.dataReadCacheConfiguration",
-      "lustreConfiguration.deploymentType",
-      "lustreConfiguration.driveCacheType",
       "lustreConfiguration.efaEnabled",
-      "lustreConfiguration.exportPath",
       "lustreConfiguration.importedFileChunkSize",
-      "lustreConfiguration.importPath",
       "lustreConfiguration.metadataConfiguration",
-      "lustreConfiguration.perUnitStorageThroughput",
-      "lustreConfiguration.throughputCapacity",
-      "lustreConfiguration.weeklyMaintenanceStartTime"
+      "lustreConfiguration.throughputCapacity"
     ]
   },
   {
@@ -1586,9 +1564,7 @@
       "elasticsearchClusterConfig.zoneAwarenessConfig.availabilityZoneCount",
       "logPublishingOptions.cloudWatchLogsLogGroupArn",
       "logPublishingOptions.enabled",
-      "snapshotOptions.automatedSnapshotStartHour",
-      "vpcOptions.securityGroupIds",
-      "vpcOptions.subnetIds"
+      "snapshotOptions.automatedSnapshotStartHour"
     ]
   },
   {
@@ -1788,11 +1764,16 @@
       "bypassPolicyLockoutSafetyCheck",
       "fileSystemTags",
       "backupPolicy.status",
-      "fileSystemProtection.replicationOverwriteProtection",
       "lifecyclePolicies.transitionToArchive",
       "lifecyclePolicies.transitionToIa",
       "lifecyclePolicies.transitionToPrimaryStorageClass",
-      "replicationConfiguration.destinations"
+      "replicationConfiguration.destinations.availabilityZoneName",
+      "replicationConfiguration.destinations.fileSystemId",
+      "replicationConfiguration.destinations.kmsKeyId",
+      "replicationConfiguration.destinations.region",
+      "replicationConfiguration.destinations.roleArn",
+      "replicationConfiguration.destinations.status",
+      "replicationConfiguration.destinations.statusMessage"
     ]
   },
   {
@@ -2156,8 +2137,6 @@
       "tags",
       "attributeDefinitions.attributeName",
       "attributeDefinitions.attributeType",
-      "contributorInsightsSpecification.enabled",
-      "contributorInsightsSpecification.mode",
       "globalSecondaryIndexes.contributorInsightsSpecification",
       "globalSecondaryIndexes.indexName",
       "globalSecondaryIndexes.keySchema",
@@ -2171,20 +2150,15 @@
       "importSourceSpecification.s3BucketSource",
       "keySchema.attributeName",
       "keySchema.keyType",
-      "kinesisStreamSpecification.approximateCreationDateTimePrecision",
-      "kinesisStreamSpecification.streamArn",
       "localSecondaryIndexes.indexName",
       "localSecondaryIndexes.keySchema",
       "localSecondaryIndexes.projection",
-      "pointInTimeRecoverySpecification.pointInTimeRecoveryEnabled",
-      "pointInTimeRecoverySpecification.recoveryPeriodInDays",
       "provisionedThroughput.readCapacityUnits",
       "provisionedThroughput.writeCapacityUnits",
       "sseSpecification.kmsMasterKeyId",
       "sseSpecification.sseEnabled",
       "sseSpecification.sseType",
-      "streamSpecification.resourcePolicy",
-      "streamSpecification.streamViewType",
+      "streamSpecification.resourcePolicy.policyDocument",
       "timeToLiveSpecification.attributeName",
       "timeToLiveSpecification.enabled",
       "warmThroughput.readUnitsPerSecond",
@@ -2288,13 +2262,7 @@
       "userAttributeUpdateSettings.attributesRequireVerificationBeforeUpdate",
       "usernameConfiguration.caseSensitive",
       "userPoolAddOns.advancedSecurityAdditionalFlows",
-      "userPoolAddOns.advancedSecurityMode",
-      "verificationMessageTemplate.defaultEmailOption",
-      "verificationMessageTemplate.emailMessage",
-      "verificationMessageTemplate.emailMessageByLink",
-      "verificationMessageTemplate.emailSubject",
-      "verificationMessageTemplate.emailSubjectByLink",
-      "verificationMessageTemplate.smsMessage"
+      "userPoolAddOns.advancedSecurityMode"
     ]
   },
   {
@@ -2450,11 +2418,6 @@
       "imageId",
       "scalingConfiguration",
       "tags",
-      "computeConfiguration.disk",
-      "computeConfiguration.instanceType",
-      "computeConfiguration.machineType",
-      "computeConfiguration.memory",
-      "computeConfiguration.vCpu",
       "fleetVpcConfig.securityGroupIds",
       "fleetVpcConfig.subnets",
       "fleetVpcConfig.vpcId"
@@ -2857,9 +2820,7 @@
       "backupVaultTags",
       "lockConfiguration.changeableForDays",
       "lockConfiguration.maxRetentionDays",
-      "lockConfiguration.minRetentionDays",
-      "notifications.backupVaultEvents",
-      "notifications.snsTopicArn"
+      "lockConfiguration.minRetentionDays"
     ]
   },
   {
@@ -2975,7 +2936,6 @@
       "syncConfig",
       "cachingConfig.cachingKeys",
       "cachingConfig.ttl",
-      "pipelineConfig.functions",
       "runtime.name",
       "runtime.runtimeVersion"
     ]
@@ -3248,9 +3208,7 @@
       "ownershipVerificationCertificateArn",
       "routingMode",
       "tags",
-      "endpointConfiguration.ipAddressType",
-      "mutualTlsAuthentication.truststoreUri",
-      "mutualTlsAuthentication.truststoreVersion"
+      "endpointConfiguration.ipAddressType"
     ]
   },
   {
@@ -3276,8 +3234,6 @@
     "missingProps": [
       "canarySetting",
       "tags",
-      "accessLogSetting.destinationArn",
-      "accessLogSetting.format",
       "methodSettings.cacheDataEncrypted",
       "methodSettings.cacheTtlInSeconds",
       "methodSettings.cachingEnabled",
