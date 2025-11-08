@@ -1734,6 +1734,11 @@
       "launchTemplate.name",
       "launchTemplate.version",
       "nodeRepairConfig.enabled",
+      "nodeRepairConfig.maxParallelNodesRepairedCount",
+      "nodeRepairConfig.maxParallelNodesRepairedPercentage",
+      "nodeRepairConfig.maxUnhealthyNodeThresholdCount",
+      "nodeRepairConfig.maxUnhealthyNodeThresholdPercentage",
+      "nodeRepairConfig.nodeRepairConfigOverrides",
       "remoteAccess.ec2SshKey",
       "remoteAccess.sourceSecurityGroups",
       "taints.effect",
@@ -2017,7 +2022,9 @@
     "module": "aws-ec2",
     "name": "CfnVolume",
     "missingProps": [
+      "availabilityZoneId",
       "outpostArn",
+      "sourceVolumeId",
       "tags"
     ]
   },
@@ -2084,8 +2091,6 @@
     "module": "aws-dynamodb",
     "name": "CfnGlobalTable",
     "missingProps": [
-      "globalTableSettingsReplicationMode",
-      "globalTableSourceArn",
       "attributeDefinitions.attributeName",
       "attributeDefinitions.attributeType",
       "globalSecondaryIndexes.contributorInsightsSpecification",
@@ -2131,7 +2136,6 @@
     "module": "aws-dynamodb",
     "name": "CfnTable",
     "missingProps": [
-      "globalTableSettingsReplicationMode",
       "onDemandThroughput",
       "resourcePolicy",
       "tags",
@@ -2746,6 +2750,7 @@
       "ecsProperties",
       "eksProperties",
       "parameters",
+      "resourceRetentionPolicy",
       "retryStrategy",
       "schedulingPriority",
       "tags",
@@ -3129,23 +3134,21 @@
     "name": "CfnAuthorizer",
     "missingProps": [
       "authorizerCredentialsArn",
-      "authorizerPayloadFormatVersion",
-      "authorizerResultTtlInSeconds",
-      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration"
+      "jwtConfiguration.audience",
+      "jwtConfiguration.issuer"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "connectionId",
-      "connectionType",
+      "contentHandlingStrategy",
       "description",
-      "integrationSubtype",
-      "payloadFormatVersion",
+      "passthroughBehavior",
+      "requestTemplates",
       "responseParameters",
+      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
