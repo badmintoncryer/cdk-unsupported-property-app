@@ -363,6 +363,14 @@
     ]
   },
   {
+    "module": "aws-imagebuilder-alpha",
+    "name": "CfnInfrastructureConfiguration",
+    "missingProps": [
+      "logging",
+      "placement"
+    ]
+  },
+  {
     "module": "aws-glue-alpha",
     "name": "CfnConnection",
     "missingProps": [
