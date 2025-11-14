@@ -210,6 +210,8 @@
     "missingProps": [
       "tags",
       "restrictions.allowActions",
+      "restrictions.allowAndroidApps",
+      "restrictions.allowAppleApps",
       "restrictions.allowReferers",
       "restrictions.allowResources"
     ]
@@ -1438,6 +1440,7 @@
     "module": "aws-kinesis",
     "name": "CfnStream",
     "missingProps": [
+      "maxRecordSizeInKiB",
       "streamModeDetails",
       "tags"
     ]
