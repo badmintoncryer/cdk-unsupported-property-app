@@ -185,6 +185,7 @@
     "name": "CfnCluster",
     "missingProps": [
       "currentVersion",
+      "rebalancing",
       "tags",
       "brokerNodeGroupInfo.brokerAzDistribution",
       "brokerNodeGroupInfo.connectivityInfo",
@@ -362,6 +363,15 @@
       "topicRulePayload.errorAction.sqs",
       "topicRulePayload.errorAction.stepFunctions",
       "topicRulePayload.errorAction.timestream"
+    ]
+  },
+  {
+    "module": "aws-imagebuilder-alpha",
+    "name": "CfnComponent",
+    "missingProps": [
+      "data",
+      "supportedOsVersions",
+      "uri"
     ]
   },
   {
@@ -1442,7 +1452,8 @@
     "missingProps": [
       "maxRecordSizeInKiB",
       "streamModeDetails",
-      "tags"
+      "tags",
+      "warmThroughputMiBps"
     ]
   },
   {
@@ -1593,6 +1604,7 @@
       "defaultActions.authenticateOidcConfig",
       "defaultActions.fixedResponseConfig",
       "defaultActions.forwardConfig",
+      "defaultActions.jwtValidationConfig",
       "defaultActions.order",
       "defaultActions.redirectConfig",
       "defaultActions.targetGroupArn",
@@ -1617,6 +1629,7 @@
       "actions.authenticateOidcConfig",
       "actions.fixedResponseConfig",
       "actions.forwardConfig",
+      "actions.jwtValidationConfig",
       "actions.order",
       "actions.redirectConfig",
       "actions.targetGroupArn",
@@ -1668,7 +1681,8 @@
       "targetGroupAttributes.value",
       "targets.availabilityZone",
       "targets.id",
-      "targets.port"
+      "targets.port",
+      "targets.quicServerId"
     ]
   },
   {
@@ -3145,23 +3159,21 @@
     "name": "CfnAuthorizer",
     "missingProps": [
       "authorizerCredentialsArn",
-      "authorizerPayloadFormatVersion",
-      "authorizerResultTtlInSeconds",
-      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration"
+      "jwtConfiguration.audience",
+      "jwtConfiguration.issuer"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "connectionId",
-      "connectionType",
+      "contentHandlingStrategy",
       "description",
-      "integrationSubtype",
-      "payloadFormatVersion",
+      "passthroughBehavior",
+      "requestTemplates",
       "responseParameters",
+      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
@@ -3221,6 +3233,7 @@
     "module": "aws-apigateway",
     "name": "CfnDomainName",
     "missingProps": [
+      "endpointAccessMode",
       "ownershipVerificationCertificateArn",
       "routingMode",
       "tags",
@@ -3234,6 +3247,7 @@
       "apiKeySourceType",
       "cloneFrom",
       "description",
+      "endpointAccessMode",
       "securityPolicy",
       "tags",
       "bodyS3Location.bucket",
