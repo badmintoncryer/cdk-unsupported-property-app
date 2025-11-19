@@ -376,6 +376,19 @@
   },
   {
     "module": "aws-imagebuilder-alpha",
+    "name": "CfnDistributionConfiguration",
+    "missingProps": [
+      "distributions.amiDistributionConfiguration",
+      "distributions.containerDistributionConfiguration",
+      "distributions.fastLaunchConfigurations",
+      "distributions.launchTemplateConfigurations",
+      "distributions.licenseConfigurationArns",
+      "distributions.region",
+      "distributions.ssmParameterConfigurations"
+    ]
+  },
+  {
+    "module": "aws-imagebuilder-alpha",
     "name": "CfnInfrastructureConfiguration",
     "missingProps": [
       "logging",
@@ -3159,21 +3172,23 @@
     "name": "CfnAuthorizer",
     "missingProps": [
       "authorizerCredentialsArn",
+      "authorizerPayloadFormatVersion",
+      "authorizerResultTtlInSeconds",
+      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration.audience",
-      "jwtConfiguration.issuer"
+      "jwtConfiguration"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "contentHandlingStrategy",
+      "connectionId",
+      "connectionType",
       "description",
-      "passthroughBehavior",
-      "requestTemplates",
+      "integrationSubtype",
+      "payloadFormatVersion",
       "responseParameters",
-      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
