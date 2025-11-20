@@ -367,15 +367,6 @@
   },
   {
     "module": "aws-imagebuilder-alpha",
-    "name": "CfnComponent",
-    "missingProps": [
-      "data",
-      "supportedOsVersions",
-      "uri"
-    ]
-  },
-  {
-    "module": "aws-imagebuilder-alpha",
     "name": "CfnDistributionConfiguration",
     "missingProps": [
       "distributions.amiDistributionConfiguration",
