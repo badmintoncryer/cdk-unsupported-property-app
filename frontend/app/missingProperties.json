@@ -367,6 +367,26 @@
   },
   {
     "module": "aws-imagebuilder-alpha",
+    "name": "CfnComponent",
+    "missingProps": [
+      "data",
+      "supportedOsVersions",
+      "uri"
+    ]
+  },
+  {
+    "module": "aws-imagebuilder-alpha",
+    "name": "CfnContainerRecipe",
+    "missingProps": [
+      "components",
+      "dockerfileTemplateData",
+      "dockerfileTemplateUri",
+      "instanceConfiguration.blockDeviceMappings",
+      "instanceConfiguration.image"
+    ]
+  },
+  {
+    "module": "aws-imagebuilder-alpha",
     "name": "CfnDistributionConfiguration",
     "missingProps": [
       "distributions.amiDistributionConfiguration",
@@ -1253,6 +1273,7 @@
     "name": "CfnDomain",
     "missingProps": [
       "accessPolicies",
+      "aimlOptions",
       "domainArn",
       "identityCenterOptions",
       "skipShardMigrationWait",
@@ -1357,6 +1378,7 @@
     "name": "CfnEventSourceMapping",
     "missingProps": [
       "documentDbEventSourceConfig",
+      "loggingConfig",
       "queues",
       "tags",
       "amazonManagedKafkaEventSourceConfig.consumerGroupId",
@@ -1366,6 +1388,7 @@
       "metricsConfig.metrics",
       "provisionedPollerConfig.maximumPollers",
       "provisionedPollerConfig.minimumPollers",
+      "provisionedPollerConfig.pollerGroupName",
       "scalingConfig.maximumConcurrency",
       "selfManagedEventSource.endpoints",
       "selfManagedKafkaEventSourceConfig.consumerGroupId",
@@ -1395,6 +1418,7 @@
       "runtimeManagementConfig.runtimeVersionArn",
       "runtimeManagementConfig.updateRuntimeOn",
       "snapStart.applyOn",
+      "tenancyConfig.tenantIsolationMode",
       "vpcConfig.ipv6AllowedForDualStack",
       "vpcConfig.securityGroupIds",
       "vpcConfig.subnetIds"
@@ -1679,6 +1703,7 @@
       "protocol",
       "protocolVersion",
       "tags",
+      "targetControlPort",
       "matcher.grpcCode",
       "matcher.httpCode",
       "targetGroupAttributes.key",
@@ -2093,7 +2118,9 @@
       "tags",
       "transitGatewayId",
       "transportTransitGatewayAttachmentId",
+      "tunnelBandwidth",
       "tunnelInsideIpVersion",
+      "vpnConcentratorId",
       "vpnTunnelOptionsSpecifications.dpdTimeoutAction",
       "vpnTunnelOptionsSpecifications.dpdTimeoutSeconds",
       "vpnTunnelOptionsSpecifications.enableTunnelLifecycleControl",
@@ -2589,6 +2616,7 @@
       "eventSelectors.excludeManagementEventSources",
       "eventSelectors.includeManagementEvents",
       "eventSelectors.readWriteType",
+      "insightSelectors.eventCategories",
       "insightSelectors.insightType"
     ]
   },
