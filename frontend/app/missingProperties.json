@@ -400,10 +400,31 @@
   },
   {
     "module": "aws-imagebuilder-alpha",
+    "name": "CfnImageRecipe",
+    "missingProps": [
+      "components",
+      "additionalInstanceConfiguration.systemsManagerAgent",
+      "additionalInstanceConfiguration.userDataOverride",
+      "blockDeviceMappings.deviceName",
+      "blockDeviceMappings.ebs",
+      "blockDeviceMappings.noDevice",
+      "blockDeviceMappings.virtualName"
+    ]
+  },
+  {
+    "module": "aws-imagebuilder-alpha",
     "name": "CfnInfrastructureConfiguration",
     "missingProps": [
       "logging",
       "placement"
+    ]
+  },
+  {
+    "module": "aws-imagebuilder-alpha",
+    "name": "CfnWorkflow",
+    "missingProps": [
+      "data",
+      "uri"
     ]
   },
   {
