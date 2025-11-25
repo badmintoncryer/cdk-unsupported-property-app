@@ -1027,6 +1027,7 @@
       "notificationConfiguration",
       "tags",
       "accelerateConfiguration.accelerationStatus",
+      "bucketEncryption.serverSideEncryptionConfiguration.blockedEncryptionTypes",
       "bucketEncryption.serverSideEncryptionConfiguration.bucketKeyEnabled",
       "bucketEncryption.serverSideEncryptionConfiguration.serverSideEncryptionByDefault",
       "corsConfiguration.corsRules",
@@ -2632,6 +2633,7 @@
     "name": "CfnTrail",
     "missingProps": [
       "advancedEventSelectors",
+      "aggregationConfigurations",
       "tags",
       "eventSelectors.dataResources",
       "eventSelectors.excludeManagementEventSources",
@@ -2882,7 +2884,8 @@
       "backupPlan.backupPlanRule.scheduleExpression",
       "backupPlan.backupPlanRule.scheduleExpressionTimezone",
       "backupPlan.backupPlanRule.startWindowMinutes",
-      "backupPlan.backupPlanRule.targetBackupVault"
+      "backupPlan.backupPlanRule.targetBackupVault",
+      "backupPlan.backupPlanRule.targetLogicallyAirGappedBackupVaultArn"
     ]
   },
   {
