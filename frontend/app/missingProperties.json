@@ -400,6 +400,28 @@
   },
   {
     "module": "aws-imagebuilder-alpha",
+    "name": "CfnImagePipeline",
+    "missingProps": [
+      "containerRecipeArn",
+      "imageRecipeArn",
+      "status",
+      "imageScanningConfiguration.ecrConfiguration",
+      "imageScanningConfiguration.imageScanningEnabled",
+      "imageTestsConfiguration.imageTestsEnabled",
+      "imageTestsConfiguration.timeoutMinutes",
+      "loggingConfiguration.imageLogGroupName",
+      "loggingConfiguration.pipelineLogGroupName",
+      "schedule.autoDisablePolicy",
+      "schedule.pipelineExecutionStartCondition",
+      "schedule.scheduleExpression",
+      "workflows.onFailure",
+      "workflows.parallelGroup",
+      "workflows.parameters",
+      "workflows.workflowArn"
+    ]
+  },
+  {
+    "module": "aws-imagebuilder-alpha",
     "name": "CfnImageRecipe",
     "missingProps": [
       "components",
@@ -417,6 +439,16 @@
     "missingProps": [
       "logging",
       "placement"
+    ]
+  },
+  {
+    "module": "aws-imagebuilder-alpha",
+    "name": "CfnLifecyclePolicy",
+    "missingProps": [
+      "policyDetails.action",
+      "policyDetails.exclusionRules",
+      "policyDetails.filter",
+      "resourceSelection.recipes"
     ]
   },
   {
