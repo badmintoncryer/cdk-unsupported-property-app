@@ -400,6 +400,25 @@
   },
   {
     "module": "aws-imagebuilder-alpha",
+    "name": "CfnImage",
+    "missingProps": [
+      "containerRecipeArn",
+      "imagePipelineExecutionSettings",
+      "imageRecipeArn",
+      "deletionSettings.executionRole",
+      "imageScanningConfiguration.ecrConfiguration",
+      "imageScanningConfiguration.imageScanningEnabled",
+      "imageTestsConfiguration.imageTestsEnabled",
+      "imageTestsConfiguration.timeoutMinutes",
+      "loggingConfiguration.logGroupName",
+      "workflows.onFailure",
+      "workflows.parallelGroup",
+      "workflows.parameters",
+      "workflows.workflowArn"
+    ]
+  },
+  {
+    "module": "aws-imagebuilder-alpha",
     "name": "CfnImagePipeline",
     "missingProps": [
       "containerRecipeArn",
