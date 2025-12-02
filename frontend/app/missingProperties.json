@@ -1437,6 +1437,15 @@
   },
   {
     "module": "aws-lambda",
+    "name": "CfnCapacityProvider",
+    "missingProps": [
+      "tags",
+      "capacityProviderScalingConfig.scalingPolicies.predefinedMetricType",
+      "capacityProviderScalingConfig.scalingPolicies.targetValue"
+    ]
+  },
+  {
+    "module": "aws-lambda",
     "name": "CfnCodeSigningConfig",
     "missingProps": [
       "tags"
@@ -1477,6 +1486,9 @@
     "module": "aws-lambda",
     "name": "CfnFunction",
     "missingProps": [
+      "capacityProviderConfig",
+      "functionScalingConfig",
+      "publishToLatestPublished",
       "tags",
       "tracingConfig",
       "deadLetterConfig.targetArn",
@@ -1517,6 +1529,8 @@
     "name": "CfnVersion",
     "missingProps": [
       "runtimePolicy",
+      "functionScalingConfig.maxExecutionEnvironments",
+      "functionScalingConfig.minExecutionEnvironments",
       "provisionedConcurrencyConfig.provisionedConcurrentExecutions"
     ]
   },
