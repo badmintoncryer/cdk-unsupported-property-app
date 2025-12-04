@@ -1492,6 +1492,8 @@
       "tags",
       "tracingConfig",
       "deadLetterConfig.targetArn",
+      "durableConfig.executionTimeout",
+      "durableConfig.retentionPeriodInDays",
       "environment.variables",
       "ephemeralStorage.size",
       "fileSystemConfigs.arn",
