@@ -1147,7 +1147,6 @@
     "module": "aws-route53",
     "name": "CfnRecordSet",
     "missingProps": [
-      "failover",
       "geoProximityLocation",
       "hostedZoneName",
       "aliasTarget.dnsName",
