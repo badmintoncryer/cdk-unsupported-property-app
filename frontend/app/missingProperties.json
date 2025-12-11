@@ -1136,6 +1136,7 @@
     "module": "aws-route53",
     "name": "CfnHostedZone",
     "missingProps": [
+      "hostedZoneFeatures",
       "hostedZoneTags",
       "hostedZoneConfig.comment",
       "queryLoggingConfig.cloudWatchLogsLogGroupArn",
