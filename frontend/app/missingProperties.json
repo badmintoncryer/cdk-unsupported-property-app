@@ -3291,23 +3291,21 @@
     "name": "CfnAuthorizer",
     "missingProps": [
       "authorizerCredentialsArn",
-      "authorizerPayloadFormatVersion",
-      "authorizerResultTtlInSeconds",
-      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration"
+      "jwtConfiguration.audience",
+      "jwtConfiguration.issuer"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "connectionId",
-      "connectionType",
+      "contentHandlingStrategy",
       "description",
-      "integrationSubtype",
-      "payloadFormatVersion",
+      "passthroughBehavior",
+      "requestTemplates",
       "responseParameters",
+      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
