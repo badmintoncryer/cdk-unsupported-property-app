@@ -1392,6 +1392,7 @@
     "module": "aws-logs",
     "name": "CfnLogGroup",
     "missingProps": [
+      "deletionProtectionEnabled",
       "fieldIndexPolicies",
       "resourcePolicyDocument",
       "tags"
@@ -1959,7 +1960,9 @@
     "module": "aws-ec2",
     "name": "CfnClientVpnEndpoint",
     "missingProps": [
+      "endpointIpAddressType",
       "tagSpecifications",
+      "trafficIpAddressType",
       "authenticationOptions.activeDirectory",
       "authenticationOptions.federatedAuthentication",
       "authenticationOptions.mutualAuthentication",
