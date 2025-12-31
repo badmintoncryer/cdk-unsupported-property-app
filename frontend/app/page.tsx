@@ -96,11 +96,10 @@ export default function Home() {
             .
           </p>
           <p className="text-sm sm:text-base mb-4">
-            Currently, only support direct inline props properly, and cases
-            using the spread operator are{" "}
-            <span className="text-red-500">not</span> supported. Even if they
-            are actually supported in L2, they are still counted as unsupported
-            properties.
+            Now supports both direct inline props and cases using the spread operator.
+            Previously, cases using the spread operator were
+            erroneously counted as unsupported properties, but this issue has been
+            resolved.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-start gap-4">
             <div className="flex-1 p-4 bg-gray-800 rounded-lg">
@@ -117,8 +116,8 @@ export default function Home() {
               </pre>
             </div>
             <div className="flex-1 p-4 bg-gray-800 rounded-lg">
-              <h2 className="text-base sm:text-lg font-bold text-red-400 mb-2">
-                Spread operator Props (false positive)
+              <h2 className="text-base sm:text-lg font-bold text-green-400 mb-2">
+                Spread operator Props (now supported)
               </h2>
               <pre className="whitespace-pre-wrap">
                 <code>
