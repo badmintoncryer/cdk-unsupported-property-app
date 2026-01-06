@@ -1334,7 +1334,6 @@
     "module": "aws-rds",
     "name": "CfnOptionGroup",
     "missingProps": [
-      "optionGroupName",
       "tags",
       "optionConfigurations.dbSecurityGroupMemberships",
       "optionConfigurations.optionName",
