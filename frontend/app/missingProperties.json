@@ -1311,7 +1311,6 @@
     "module": "aws-rds",
     "name": "CfnDBProxy",
     "missingProps": [
-      "defaultAuthScheme",
       "endpointNetworkType",
       "tags",
       "targetConnectionNetworkType",
