@@ -898,7 +898,6 @@
       "reputationOptions.reputationMetricsEnabled",
       "sendingOptions.sendingEnabled",
       "suppressionOptions.suppressedReasons",
-      "suppressionOptions.validationOptions",
       "trackingOptions.customRedirectDomain",
       "trackingOptions.httpsPolicy",
       "vdmOptions.dashboardOptions",
@@ -1229,7 +1228,6 @@
     "module": "aws-rds",
     "name": "CfnDBInstance",
     "missingProps": [
-      "additionalStorageVolumes",
       "allocatedStorage",
       "allowMajorVersionUpgrade",
       "applyImmediately",
