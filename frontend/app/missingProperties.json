@@ -634,6 +634,7 @@
     "module": "aws-gamelift-alpha",
     "name": "CfnScript",
     "missingProps": [
+      "nodeJsVersion",
       "tags"
     ]
   },
@@ -898,6 +899,7 @@
       "reputationOptions.reputationMetricsEnabled",
       "sendingOptions.sendingEnabled",
       "suppressionOptions.suppressedReasons",
+      "suppressionOptions.validationOptions",
       "trackingOptions.customRedirectDomain",
       "trackingOptions.httpsPolicy",
       "vdmOptions.dashboardOptions",
@@ -1228,6 +1230,7 @@
     "module": "aws-rds",
     "name": "CfnDBInstance",
     "missingProps": [
+      "additionalStorageVolumes",
       "allocatedStorage",
       "allowMajorVersionUpgrade",
       "applyImmediately",
@@ -2826,6 +2829,7 @@
     "module": "aws-cloudfront",
     "name": "CfnKeyValueStore",
     "missingProps": [
+      "tags",
       "importSource.sourceArn",
       "importSource.sourceType"
     ]
