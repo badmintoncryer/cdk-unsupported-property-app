@@ -1393,7 +1393,6 @@
     "module": "aws-logs",
     "name": "CfnLogGroup",
     "missingProps": [
-      "deletionProtectionEnabled",
       "fieldIndexPolicies",
       "resourcePolicyDocument",
       "tags"
