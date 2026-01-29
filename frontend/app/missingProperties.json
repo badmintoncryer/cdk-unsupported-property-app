@@ -2952,6 +2952,7 @@
     "name": "CfnBackupPlan",
     "missingProps": [
       "backupPlanTags",
+      "backupPlan.scanSettings",
       "backupPlan.advancedBackupSettings.backupOptions",
       "backupPlan.advancedBackupSettings.resourceType",
       "backupPlan.backupPlanRule.completionWindowMinutes",
@@ -2961,6 +2962,7 @@
       "backupPlan.backupPlanRule.lifecycle",
       "backupPlan.backupPlanRule.recoveryPointTags",
       "backupPlan.backupPlanRule.ruleName",
+      "backupPlan.backupPlanRule.scanActions",
       "backupPlan.backupPlanRule.scheduleExpression",
       "backupPlan.backupPlanRule.scheduleExpressionTimezone",
       "backupPlan.backupPlanRule.startWindowMinutes",
