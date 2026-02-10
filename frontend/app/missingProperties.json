@@ -892,6 +892,7 @@
     "module": "aws-ses",
     "name": "CfnConfigurationSet",
     "missingProps": [
+      "archivingOptions",
       "tags",
       "deliveryOptions.maxDeliverySeconds",
       "deliveryOptions.sendingPoolName",
