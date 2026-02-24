@@ -1077,7 +1077,6 @@
     "module": "aws-s3",
     "name": "CfnBucket",
     "missingProps": [
-      "abacStatus",
       "analyticsConfigurations",
       "metadataConfiguration",
       "metadataTableConfiguration",
