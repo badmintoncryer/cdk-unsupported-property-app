@@ -3059,7 +3059,6 @@
       "eventBridgeConfig",
       "httpConfig",
       "lambdaConfig",
-      "metricsConfig",
       "openSearchServiceConfig",
       "relationalDatabaseConfig",
       "type"
@@ -3080,12 +3079,14 @@
     "module": "aws-appsync",
     "name": "CfnGraphQLApi",
     "missingProps": [
-      "enhancedMetricsConfig",
       "tags",
       "additionalAuthenticationProviders.authenticationType",
       "additionalAuthenticationProviders.lambdaAuthorizerConfig",
       "additionalAuthenticationProviders.openIdConnectConfig",
       "additionalAuthenticationProviders.userPoolConfig",
+      "enhancedMetricsConfig.dataSourceLevelMetricsBehavior",
+      "enhancedMetricsConfig.operationLevelMetricsConfig",
+      "enhancedMetricsConfig.resolverLevelMetricsBehavior",
       "lambdaAuthorizerConfig.authorizerResultTtlInSeconds",
       "lambdaAuthorizerConfig.authorizerUri",
       "lambdaAuthorizerConfig.identityValidationExpression",
@@ -3106,7 +3107,6 @@
     "module": "aws-appsync",
     "name": "CfnResolver",
     "missingProps": [
-      "metricsConfig",
       "requestMappingTemplateS3Location",
       "responseMappingTemplateS3Location",
       "syncConfig",
