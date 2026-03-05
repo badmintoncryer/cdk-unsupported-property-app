@@ -3381,7 +3381,6 @@
     "module": "aws-apigateway",
     "name": "CfnDomainName",
     "missingProps": [
-      "endpointAccessMode",
       "ownershipVerificationCertificateArn",
       "routingMode",
       "tags",
