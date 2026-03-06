@@ -1350,7 +1350,6 @@
     "name": "CfnDomain",
     "missingProps": [
       "accessPolicies",
-      "aimlOptions",
       "domainArn",
       "identityCenterOptions",
       "skipShardMigrationWait",
@@ -1363,6 +1362,8 @@
       "advancedSecurityOptions.jwtOptions",
       "advancedSecurityOptions.masterUserOptions",
       "advancedSecurityOptions.samlOptions",
+      "aimlOptions.s3VectorsEngine",
+      "aimlOptions.serverlessVectorAcceleration",
       "clusterConfig.coldStorageOptions.enabled",
       "clusterConfig.nodeOptions.nodeConfig",
       "clusterConfig.nodeOptions.nodeType",
