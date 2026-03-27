@@ -1081,6 +1081,8 @@
     "name": "CfnBucket",
     "missingProps": [
       "analyticsConfigurations",
+      "bucketNamePrefix",
+      "bucketNamespace",
       "metadataConfiguration",
       "metadataTableConfiguration",
       "notificationConfiguration",
@@ -1353,6 +1355,7 @@
     "name": "CfnDomain",
     "missingProps": [
       "accessPolicies",
+      "deploymentStrategyOptions",
       "domainArn",
       "identityCenterOptions",
       "skipShardMigrationWait",
@@ -2954,6 +2957,7 @@
     "module": "aws-batch",
     "name": "CfnSchedulingPolicy",
     "missingProps": [
+      "quotaSharePolicy",
       "tags",
       "fairsharePolicy.shareDistribution.shareIdentifier",
       "fairsharePolicy.shareDistribution.weightFactor"
