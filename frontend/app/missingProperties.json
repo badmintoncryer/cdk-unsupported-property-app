@@ -206,6 +206,76 @@
     ]
   },
   {
+    "module": "aws-mediapackagev2-alpha",
+    "name": "CfnChannel",
+    "missingProps": [
+      "inputSwitchConfiguration.mqcsInputSwitching",
+      "inputSwitchConfiguration.preferredInput",
+      "outputHeaderConfiguration.publishMqcs"
+    ]
+  },
+  {
+    "module": "aws-mediapackagev2-alpha",
+    "name": "CfnOriginEndpoint",
+    "missingProps": [
+      "dashManifests.baseUrls",
+      "dashManifests.compactness",
+      "dashManifests.drmSignaling",
+      "dashManifests.dvbSettings",
+      "dashManifests.filterConfiguration",
+      "dashManifests.manifestName",
+      "dashManifests.manifestWindowSeconds",
+      "dashManifests.minBufferTimeSeconds",
+      "dashManifests.minUpdatePeriodSeconds",
+      "dashManifests.periodTriggers",
+      "dashManifests.profiles",
+      "dashManifests.programInformation",
+      "dashManifests.scteDash",
+      "dashManifests.segmentTemplateFormat",
+      "dashManifests.subtitleConfiguration",
+      "dashManifests.suggestedPresentationDelaySeconds",
+      "dashManifests.utcTiming",
+      "forceEndpointErrorConfiguration.endpointErrorConditions",
+      "hlsManifests.childManifestName",
+      "hlsManifests.filterConfiguration",
+      "hlsManifests.manifestName",
+      "hlsManifests.manifestWindowSeconds",
+      "hlsManifests.programDateTimeIntervalSeconds",
+      "hlsManifests.scteHls",
+      "hlsManifests.startTag",
+      "hlsManifests.url",
+      "hlsManifests.urlEncodeChildManifest",
+      "lowLatencyHlsManifests.childManifestName",
+      "lowLatencyHlsManifests.filterConfiguration",
+      "lowLatencyHlsManifests.manifestName",
+      "lowLatencyHlsManifests.manifestWindowSeconds",
+      "lowLatencyHlsManifests.programDateTimeIntervalSeconds",
+      "lowLatencyHlsManifests.scteHls",
+      "lowLatencyHlsManifests.startTag",
+      "lowLatencyHlsManifests.url",
+      "lowLatencyHlsManifests.urlEncodeChildManifest",
+      "mssManifests.filterConfiguration",
+      "mssManifests.manifestLayout",
+      "mssManifests.manifestName",
+      "mssManifests.manifestWindowSeconds",
+      "segment.encryption",
+      "segment.includeIframeOnlyStreams",
+      "segment.scte",
+      "segment.segmentDurationSeconds",
+      "segment.segmentName",
+      "segment.tsIncludeDvbSubtitles",
+      "segment.tsUseAudioRenditionGroup"
+    ]
+  },
+  {
+    "module": "aws-mediapackagev2-alpha",
+    "name": "CfnOriginEndpointPolicy",
+    "missingProps": [
+      "cdnAuthConfiguration.cdnIdentifierSecretArns",
+      "cdnAuthConfiguration.secretsRoleArn"
+    ]
+  },
+  {
     "module": "aws-location-alpha",
     "name": "CfnAPIKey",
     "missingProps": [
@@ -3313,23 +3383,21 @@
     "name": "CfnAuthorizer",
     "missingProps": [
       "authorizerCredentialsArn",
-      "authorizerPayloadFormatVersion",
-      "authorizerResultTtlInSeconds",
-      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration"
+      "jwtConfiguration.audience",
+      "jwtConfiguration.issuer"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "connectionId",
-      "connectionType",
+      "contentHandlingStrategy",
       "description",
-      "integrationSubtype",
-      "payloadFormatVersion",
+      "passthroughBehavior",
+      "requestTemplates",
       "responseParameters",
+      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
