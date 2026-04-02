@@ -1470,6 +1470,7 @@
     "module": "aws-logs",
     "name": "CfnLogGroup",
     "missingProps": [
+      "bearerTokenAuthenticationEnabled",
       "fieldIndexPolicies",
       "resourcePolicyDocument",
       "tags"
@@ -3383,21 +3384,23 @@
     "name": "CfnAuthorizer",
     "missingProps": [
       "authorizerCredentialsArn",
+      "authorizerPayloadFormatVersion",
+      "authorizerResultTtlInSeconds",
+      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration.audience",
-      "jwtConfiguration.issuer"
+      "jwtConfiguration"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "contentHandlingStrategy",
+      "connectionId",
+      "connectionType",
       "description",
-      "passthroughBehavior",
-      "requestTemplates",
+      "integrationSubtype",
+      "payloadFormatVersion",
       "responseParameters",
-      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
