@@ -2619,26 +2619,24 @@
     "module": "aws-codedeploy",
     "name": "CfnDeploymentGroup",
     "missingProps": [
+      "autoScalingGroups",
       "blueGreenDeploymentConfiguration",
       "deployment",
       "ec2TagFilters",
+      "ec2TagSet",
       "ecsServices",
+      "loadBalancerInfo",
       "onPremisesInstanceTagFilters",
+      "onPremisesTagSet",
       "outdatedInstancesStrategy",
       "tags",
+      "terminationHookEnabled",
       "triggerConfigurations",
       "alarmConfiguration.alarms",
       "alarmConfiguration.enabled",
       "alarmConfiguration.ignorePollAlarmFailure",
       "autoRollbackConfiguration.enabled",
-      "autoRollbackConfiguration.events",
-      "deploymentStyle.deploymentOption",
-      "deploymentStyle.deploymentType",
-      "ec2TagSet.ec2TagSetList",
-      "loadBalancerInfo.elbInfoList",
-      "loadBalancerInfo.targetGroupInfoList",
-      "loadBalancerInfo.targetGroupPairInfoList",
-      "onPremisesTagSet.onPremisesTagSetList"
+      "autoRollbackConfiguration.events"
     ]
   },
   {
