@@ -1494,6 +1494,7 @@
     "module": "aws-logs",
     "name": "CfnQueryDefinition",
     "missingProps": [
+      "parameters",
       "queryLanguage"
     ]
   },
@@ -1573,6 +1574,7 @@
       "publishToLatestPublished",
       "tags",
       "tracingConfig",
+      "code.s3ObjectStorageMode",
       "deadLetterConfig.targetArn",
       "durableConfig.executionTimeout",
       "durableConfig.retentionPeriodInDays",
@@ -1958,6 +1960,7 @@
     "name": "CfnNodegroup",
     "missingProps": [
       "version",
+      "warmPoolConfig",
       "launchTemplate.id",
       "launchTemplate.name",
       "launchTemplate.version",
@@ -2619,24 +2622,26 @@
     "module": "aws-codedeploy",
     "name": "CfnDeploymentGroup",
     "missingProps": [
-      "autoScalingGroups",
       "blueGreenDeploymentConfiguration",
       "deployment",
       "ec2TagFilters",
-      "ec2TagSet",
       "ecsServices",
-      "loadBalancerInfo",
       "onPremisesInstanceTagFilters",
-      "onPremisesTagSet",
       "outdatedInstancesStrategy",
       "tags",
-      "terminationHookEnabled",
       "triggerConfigurations",
       "alarmConfiguration.alarms",
       "alarmConfiguration.enabled",
       "alarmConfiguration.ignorePollAlarmFailure",
       "autoRollbackConfiguration.enabled",
-      "autoRollbackConfiguration.events"
+      "autoRollbackConfiguration.events",
+      "deploymentStyle.deploymentOption",
+      "deploymentStyle.deploymentType",
+      "ec2TagSet.ec2TagSetList",
+      "loadBalancerInfo.elbInfoList",
+      "loadBalancerInfo.targetGroupInfoList",
+      "loadBalancerInfo.targetGroupPairInfoList",
+      "onPremisesTagSet.onPremisesTagSetList"
     ]
   },
   {
