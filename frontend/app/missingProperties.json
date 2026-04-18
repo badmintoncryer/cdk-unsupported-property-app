@@ -744,6 +744,16 @@
     ]
   },
   {
+    "module": "aws-dsql-alpha",
+    "name": "CfnCluster",
+    "missingProps": [
+      "kmsEncryptionKey",
+      "multiRegionProperties",
+      "policyDocument",
+      "tags"
+    ]
+  },
+  {
     "module": "aws-cloud9-alpha",
     "name": "CfnEnvironmentEC2",
     "missingProps": [
