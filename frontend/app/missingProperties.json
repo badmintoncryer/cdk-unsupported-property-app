@@ -902,6 +902,13 @@
     ]
   },
   {
+    "module": "aws-synthetics",
+    "name": "CfnGroup",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
     "module": "aws-stepfunctions",
     "name": "CfnActivity",
     "missingProps": [
