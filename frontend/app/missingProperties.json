@@ -1038,9 +1038,11 @@
       "rule.unless",
       "rule.actions.addHeader",
       "rule.actions.archive",
+      "rule.actions.bounce",
       "rule.actions.deliverToMailbox",
       "rule.actions.deliverToQBusiness",
       "rule.actions.drop",
+      "rule.actions.invokeLambda",
       "rule.actions.publishToSns",
       "rule.actions.relay",
       "rule.actions.replaceRecipient",
@@ -2794,6 +2796,8 @@
     "name": "CfnAlarm",
     "missingProps": [
       "dimensions",
+      "evaluationCriteria",
+      "evaluationInterval",
       "extendedStatistic",
       "metricName",
       "metrics",
@@ -2927,6 +2931,7 @@
     "name": "CfnFunction",
     "missingProps": [
       "functionMetadata",
+      "tags",
       "functionConfig.keyValueStoreAssociations.keyValueStoreArn"
     ]
   },
