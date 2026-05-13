@@ -2796,9 +2796,11 @@
     "module": "aws-cloudwatch",
     "name": "CfnAlarm",
     "missingProps": [
+      "comparisonOperator",
+      "datapointsToAlarm",
       "dimensions",
-      "evaluationCriteria",
-      "evaluationInterval",
+      "evaluateLowSampleCountPercentile",
+      "evaluationPeriods",
       "extendedStatistic",
       "metricName",
       "metrics",
@@ -2806,6 +2808,9 @@
       "period",
       "statistic",
       "tags",
+      "threshold",
+      "thresholdMetricId",
+      "treatMissingData",
       "unit"
     ]
   },
