@@ -1169,8 +1169,6 @@
     "name": "CfnBucket",
     "missingProps": [
       "analyticsConfigurations",
-      "bucketNamePrefix",
-      "bucketNamespace",
       "metadataConfiguration",
       "metadataTableConfiguration",
       "notificationConfiguration",
