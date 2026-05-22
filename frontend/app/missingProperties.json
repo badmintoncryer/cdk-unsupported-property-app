@@ -34,6 +34,7 @@
       "firewallRules.dnsThreatProtection",
       "firewallRules.firewallDomainListId",
       "firewallRules.firewallDomainRedirectionAction",
+      "firewallRules.firewallRuleType",
       "firewallRules.firewallThreatProtectionId",
       "firewallRules.priority",
       "firewallRules.qtype"
@@ -2815,6 +2816,13 @@
   {
     "module": "aws-cloudwatch",
     "name": "CfnCompositeAlarm",
+    "missingProps": [
+      "tags"
+    ]
+  },
+  {
+    "module": "aws-cloudwatch",
+    "name": "CfnDashboard",
     "missingProps": [
       "tags"
     ]
