@@ -220,6 +220,8 @@
     "module": "aws-mediapackagev2-alpha",
     "name": "CfnOriginEndpoint",
     "missingProps": [
+      "uriSeparator",
+      "dashManifests.availabilityStartTimeConfiguration",
       "dashManifests.baseUrls",
       "dashManifests.compactness",
       "dashManifests.drmSignaling",
@@ -236,6 +238,7 @@
       "dashManifests.segmentTemplateFormat",
       "dashManifests.subtitleConfiguration",
       "dashManifests.suggestedPresentationDelaySeconds",
+      "dashManifests.uriPathType",
       "dashManifests.utcTiming",
       "forceEndpointErrorConfiguration.endpointErrorConditions",
       "hlsManifests.childManifestName",
@@ -245,6 +248,7 @@
       "hlsManifests.programDateTimeIntervalSeconds",
       "hlsManifests.scteHls",
       "hlsManifests.startTag",
+      "hlsManifests.uriPathType",
       "hlsManifests.url",
       "hlsManifests.urlEncodeChildManifest",
       "lowLatencyHlsManifests.childManifestName",
@@ -254,6 +258,7 @@
       "lowLatencyHlsManifests.programDateTimeIntervalSeconds",
       "lowLatencyHlsManifests.scteHls",
       "lowLatencyHlsManifests.startTag",
+      "lowLatencyHlsManifests.uriPathType",
       "lowLatencyHlsManifests.url",
       "lowLatencyHlsManifests.urlEncodeChildManifest",
       "mssManifests.filterConfiguration",
@@ -718,6 +723,7 @@
     "name": "CfnServerlessCache",
     "missingProps": [
       "endpoint",
+      "networkType",
       "readerEndpoint",
       "tags",
       "cacheUsageLimits.dataStorage",
@@ -1442,6 +1448,7 @@
     "name": "CfnDomain",
     "missingProps": [
       "accessPolicies",
+      "automatedSnapshotPauseOptions",
       "deploymentStrategyOptions",
       "domainArn",
       "identityCenterOptions",
@@ -1536,6 +1543,7 @@
     "module": "aws-lambda",
     "name": "CfnCapacityProvider",
     "missingProps": [
+      "propagateTags",
       "tags",
       "capacityProviderScalingConfig.scalingPolicies.predefinedMetricType",
       "capacityProviderScalingConfig.scalingPolicies.targetValue"
