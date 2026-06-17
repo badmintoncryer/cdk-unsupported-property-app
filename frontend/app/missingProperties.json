@@ -136,6 +136,8 @@
     "missingProps": [
       "availabilityZones",
       "dbInstanceParameterGroupName",
+      "globalClusterIdentifier",
+      "networkType",
       "restoreToTime",
       "restoreType",
       "snapshotIdentifier",
@@ -221,6 +223,7 @@
     "name": "CfnOriginEndpoint",
     "missingProps": [
       "uriSeparator",
+      "dashManifests.audioTimelinePattern",
       "dashManifests.availabilityStartTimeConfiguration",
       "dashManifests.baseUrls",
       "dashManifests.compactness",
@@ -1545,6 +1548,7 @@
     "missingProps": [
       "propagateTags",
       "tags",
+      "telemetryConfig",
       "capacityProviderScalingConfig.scalingPolicies.predefinedMetricType",
       "capacityProviderScalingConfig.scalingPolicies.targetValue"
     ]
@@ -1599,7 +1603,6 @@
       "publishToLatestPublished",
       "tags",
       "tracingConfig",
-      "code.s3ObjectStorageMode",
       "deadLetterConfig.targetArn",
       "durableConfig.executionTimeout",
       "durableConfig.retentionPeriodInDays",
