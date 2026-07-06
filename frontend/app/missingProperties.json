@@ -654,9 +654,12 @@
       "anywhereConfiguration",
       "applyCapacity",
       "computeType",
+      "desiredEc2Instances",
       "instanceRoleCredentialsProvider",
       "logPaths",
+      "maxSize",
       "metricGroups",
+      "minSize",
       "playerGatewayConfiguration",
       "playerGatewayMode",
       "scalingPolicies",
@@ -1627,6 +1630,13 @@
   },
   {
     "module": "aws-lambda",
+    "name": "CfnLayerVersion",
+    "missingProps": [
+      "content.s3ObjectStorageMode"
+    ]
+  },
+  {
+    "module": "aws-lambda",
     "name": "CfnUrl",
     "missingProps": [
       "cors.allowCredentials",
@@ -2563,6 +2573,7 @@
     "module": "aws-cognito",
     "name": "CfnUserPoolDomain",
     "missingProps": [
+      "routing",
       "customDomainConfig.certificateArn"
     ]
   },
@@ -3431,21 +3442,24 @@
     "module": "aws-apigatewayv2",
     "name": "CfnAuthorizer",
     "missingProps": [
+      "authorizerCredentialsArn",
+      "authorizerPayloadFormatVersion",
+      "authorizerResultTtlInSeconds",
+      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration.audience",
-      "jwtConfiguration.issuer"
+      "jwtConfiguration"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "contentHandlingStrategy",
+      "connectionId",
+      "connectionType",
       "description",
-      "passthroughBehavior",
-      "requestTemplates",
+      "integrationSubtype",
+      "payloadFormatVersion",
       "responseParameters",
-      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
