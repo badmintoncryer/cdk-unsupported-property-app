@@ -37,7 +37,8 @@
       "firewallRules.firewallRuleType",
       "firewallRules.firewallThreatProtectionId",
       "firewallRules.priority",
-      "firewallRules.qtype"
+      "firewallRules.qtype",
+      "firewallRules.status"
     ]
   },
   {
@@ -503,6 +504,7 @@
     "missingProps": [
       "containerRecipeArn",
       "imageRecipeArn",
+      "imageTags",
       "status",
       "imageScanningConfiguration.ecrConfiguration",
       "imageScanningConfiguration.imageScanningEnabled",
@@ -523,6 +525,7 @@
     "module": "aws-imagebuilder-alpha",
     "name": "CfnImageRecipe",
     "missingProps": [
+      "amiWatermarks",
       "components",
       "additionalInstanceConfiguration.systemsManagerAgent",
       "additionalInstanceConfiguration.userDataOverride",
@@ -1605,8 +1608,10 @@
       "publishToLatestPublished",
       "tags",
       "tracingConfig",
+      "code.s3ObjectStorageMode",
       "deadLetterConfig.targetArn",
       "durableConfig.executionTimeout",
+      "durableConfig.kmsKeyArn",
       "durableConfig.retentionPeriodInDays",
       "environment.variables",
       "ephemeralStorage.size",
@@ -1865,6 +1870,7 @@
     "module": "aws-elasticloadbalancingv2",
     "name": "CfnListenerRule",
     "missingProps": [
+      "tags",
       "transforms",
       "actions.authenticateCognitoConfig",
       "actions.authenticateOidcConfig",
@@ -2505,6 +2511,8 @@
     "missingProps": [
       "emailAuthenticationMessage",
       "emailAuthenticationSubject",
+      "issuerConfiguration",
+      "keyConfiguration",
       "userPoolTags",
       "webAuthnFactorConfiguration",
       "accountRecoverySetting.recoveryMechanisms",
@@ -2740,6 +2748,7 @@
       "environment.dockerServer",
       "environment.environmentVariables",
       "environment.fleet",
+      "environment.hostKernel",
       "environment.image",
       "environment.imagePullCredentialsType",
       "environment.privilegedMode",
