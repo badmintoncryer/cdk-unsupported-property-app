@@ -287,6 +287,202 @@
     ]
   },
   {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnBridge",
+    "missingProps": [
+      "egressGatewayBridge.maxBitrate",
+      "ingressGatewayBridge.maxBitrate",
+      "ingressGatewayBridge.maxOutputs",
+      "outputs.networkOutput",
+      "sourceFailoverConfig.failoverMode",
+      "sourceFailoverConfig.recoveryWindow",
+      "sourceFailoverConfig.sourcePriority",
+      "sourceFailoverConfig.state",
+      "sources.flowSource",
+      "sources.networkSource"
+    ]
+  },
+  {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnBridgeOutput",
+    "missingProps": [
+      "networkOutput.ipAddress",
+      "networkOutput.networkName",
+      "networkOutput.port",
+      "networkOutput.protocol",
+      "networkOutput.ttl"
+    ]
+  },
+  {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnFlow",
+    "missingProps": [
+      "tags",
+      "encodingConfig.encodingProfile",
+      "encodingConfig.videoMaxBitrate",
+      "maintenance.maintenanceDay",
+      "maintenance.maintenanceStartHour",
+      "mediaStreams.attributes",
+      "mediaStreams.clockRate",
+      "mediaStreams.description",
+      "mediaStreams.fmt",
+      "mediaStreams.mediaStreamId",
+      "mediaStreams.mediaStreamName",
+      "mediaStreams.mediaStreamType",
+      "mediaStreams.tags",
+      "mediaStreams.videoFormat",
+      "ndiConfig.machineName",
+      "ndiConfig.ndiDiscoveryServers",
+      "ndiConfig.ndiState",
+      "source.decryption.algorithm",
+      "source.decryption.constantInitializationVector",
+      "source.decryption.deviceId",
+      "source.decryption.keyType",
+      "source.decryption.region",
+      "source.decryption.resourceId",
+      "source.decryption.roleArn",
+      "source.decryption.secretArn",
+      "source.decryption.url",
+      "source.gatewayBridgeSource.bridgeArn",
+      "source.gatewayBridgeSource.vpcInterfaceAttachment",
+      "source.mediaStreamSourceConfigurations.encodingName",
+      "source.mediaStreamSourceConfigurations.inputConfigurations",
+      "source.mediaStreamSourceConfigurations.mediaStreamName",
+      "source.ndiSourceSettings.sourceName",
+      "source.routerIntegrationTransitDecryption.encryptionKeyConfiguration",
+      "source.routerIntegrationTransitDecryption.encryptionKeyType",
+      "sourceFailoverConfig.failoverMode",
+      "sourceFailoverConfig.recoveryWindow",
+      "sourceFailoverConfig.sourcePriority",
+      "sourceFailoverConfig.state",
+      "sourceMonitoringConfig.audioMonitoringSettings",
+      "sourceMonitoringConfig.contentQualityAnalysisState",
+      "sourceMonitoringConfig.thumbnailState",
+      "sourceMonitoringConfig.videoMonitoringSettings",
+      "vpcInterfaces.name",
+      "vpcInterfaces.networkInterfaceIds",
+      "vpcInterfaces.networkInterfaceType",
+      "vpcInterfaces.roleArn",
+      "vpcInterfaces.securityGroupIds",
+      "vpcInterfaces.subnetId",
+      "vpcInterfaces.tags"
+    ]
+  },
+  {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnFlowEntitlement",
+    "missingProps": [
+      "tags",
+      "encryption.algorithm",
+      "encryption.constantInitializationVector",
+      "encryption.deviceId",
+      "encryption.keyType",
+      "encryption.region",
+      "encryption.resourceId",
+      "encryption.roleArn",
+      "encryption.secretArn",
+      "encryption.url"
+    ]
+  },
+  {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnFlowOutput",
+    "missingProps": [
+      "cidrAllowList",
+      "destination",
+      "maxLatency",
+      "mediaStreamOutputConfigurations",
+      "minLatency",
+      "ndiOutputTimecodeSource",
+      "ndiProgramName",
+      "ndiSpeedHqQuality",
+      "port",
+      "protocol",
+      "remoteId",
+      "routerIntegrationState",
+      "smoothingLatency",
+      "streamId",
+      "tags",
+      "vpcInterfaceAttachment",
+      "encryption.algorithm",
+      "encryption.constantInitializationVector",
+      "encryption.deviceId",
+      "encryption.keyType",
+      "encryption.region",
+      "encryption.resourceId",
+      "encryption.roleArn",
+      "encryption.secretArn",
+      "encryption.url",
+      "routerIntegrationTransitEncryption.encryptionKeyConfiguration",
+      "routerIntegrationTransitEncryption.encryptionKeyType"
+    ]
+  },
+  {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnFlowSource",
+    "missingProps": [
+      "decryption",
+      "entitlementArn",
+      "gatewayBridgeSource",
+      "ingestPort",
+      "maxBitrate",
+      "maxLatency",
+      "minLatency",
+      "protocol",
+      "senderControlPort",
+      "senderIpAddress",
+      "sourceListenerAddress",
+      "sourceListenerPort",
+      "streamId",
+      "tags",
+      "vpcInterfaceName",
+      "whitelistCidr"
+    ]
+  },
+  {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnGateway",
+    "missingProps": [
+      "networks.cidrBlock",
+      "networks.name"
+    ]
+  },
+  {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnRouterInput",
+    "missingProps": [
+      "contentQualityAnalysisConfiguration",
+      "configuration.failover",
+      "configuration.mediaConnectFlow",
+      "configuration.mediaLiveChannel",
+      "configuration.merge",
+      "configuration.standard",
+      "maintenanceConfiguration.default",
+      "maintenanceConfiguration.preferredDayTime",
+      "transitEncryption.encryptionKeyConfiguration",
+      "transitEncryption.encryptionKeyType"
+    ]
+  },
+  {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnRouterNetworkInterface",
+    "missingProps": [
+      "configuration.public",
+      "configuration.vpc"
+    ]
+  },
+  {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnRouterOutput",
+    "missingProps": [
+      "configuration.mediaConnectFlow",
+      "configuration.mediaLiveInput",
+      "configuration.standard",
+      "maintenanceConfiguration.default",
+      "maintenanceConfiguration.preferredDayTime"
+    ]
+  },
+  {
     "module": "aws-location-alpha",
     "name": "CfnAPIKey",
     "missingProps": [
@@ -3451,24 +3647,21 @@
     "module": "aws-apigatewayv2",
     "name": "CfnAuthorizer",
     "missingProps": [
-      "authorizerCredentialsArn",
-      "authorizerPayloadFormatVersion",
-      "authorizerResultTtlInSeconds",
-      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration"
+      "jwtConfiguration.audience",
+      "jwtConfiguration.issuer"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "connectionId",
-      "connectionType",
+      "contentHandlingStrategy",
       "description",
-      "integrationSubtype",
-      "payloadFormatVersion",
+      "passthroughBehavior",
+      "requestTemplates",
       "responseParameters",
+      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
