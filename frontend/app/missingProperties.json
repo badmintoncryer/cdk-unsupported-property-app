@@ -711,6 +711,7 @@
       "schedule.autoDisablePolicy",
       "schedule.pipelineExecutionStartCondition",
       "schedule.scheduleExpression",
+      "schedule.timezone",
       "workflows.onFailure",
       "workflows.parallelGroup",
       "workflows.parameters",
@@ -953,7 +954,8 @@
     "module": "aws-ec2-alpha",
     "name": "CfnVPC",
     "missingProps": [
-      "tags"
+      "tags",
+      "vpcEncryptionControl"
     ]
   },
   {
@@ -1655,9 +1657,11 @@
       "automatedSnapshotPauseOptions",
       "deploymentStrategyOptions",
       "domainArn",
+      "engineMode",
       "identityCenterOptions",
       "skipShardMigrationWait",
       "tags",
+      "useCase",
       "advancedSecurityOptions.anonymousAuthDisableDate",
       "advancedSecurityOptions.anonymousAuthEnabled",
       "advancedSecurityOptions.enabled",
@@ -1747,11 +1751,12 @@
     "module": "aws-lambda",
     "name": "CfnCapacityProvider",
     "missingProps": [
-      "propagateTags",
       "tags",
-      "telemetryConfig",
       "capacityProviderScalingConfig.scalingPolicies.predefinedMetricType",
-      "capacityProviderScalingConfig.scalingPolicies.targetValue"
+      "capacityProviderScalingConfig.scalingPolicies.targetValue",
+      "propagateTags.explicitTags",
+      "propagateTags.mode",
+      "telemetryConfig.loggingConfig"
     ]
   },
   {
@@ -2042,6 +2047,7 @@
       "port",
       "protocol",
       "sslPolicy",
+      "tags",
       "defaultActions.authenticateCognitoConfig",
       "defaultActions.authenticateOidcConfig",
       "defaultActions.fixedResponseConfig",
@@ -2458,6 +2464,7 @@
     "module": "aws-ec2",
     "name": "CfnPlacementGroup",
     "missingProps": [
+      "parentGroupId",
       "tags"
     ]
   },
@@ -2509,7 +2516,8 @@
     "module": "aws-ec2",
     "name": "CfnVPC",
     "missingProps": [
-      "tags"
+      "tags",
+      "vpcEncryptionControl"
     ]
   },
   {
@@ -2747,6 +2755,7 @@
       "schema.numberAttributeConstraints",
       "schema.required",
       "schema.stringAttributeConstraints",
+      "smsConfiguration.eumsSms",
       "smsConfiguration.externalId",
       "smsConfiguration.snsCallerArn",
       "smsConfiguration.snsRegion",
@@ -2778,7 +2787,8 @@
     "name": "CfnUserPoolDomain",
     "missingProps": [
       "routing",
-      "customDomainConfig.certificateArn"
+      "customDomainConfig.certificateArn",
+      "customDomainConfig.securityPolicy"
     ]
   },
   {
@@ -3026,6 +3036,7 @@
       "dimensions",
       "evaluateLowSampleCountPercentile",
       "evaluationPeriods",
+      "evaluationWindow",
       "extendedStatistic",
       "metricName",
       "metrics",
@@ -3218,7 +3229,8 @@
     "module": "aws-cloudfront",
     "name": "CfnVpcOrigin",
     "missingProps": [
-      "tags"
+      "tags",
+      "vpcOriginEndpointConfig.ipAddressType"
     ]
   },
   {
@@ -3647,21 +3659,24 @@
     "module": "aws-apigatewayv2",
     "name": "CfnAuthorizer",
     "missingProps": [
+      "authorizerCredentialsArn",
+      "authorizerPayloadFormatVersion",
+      "authorizerResultTtlInSeconds",
+      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration.audience",
-      "jwtConfiguration.issuer"
+      "jwtConfiguration"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "contentHandlingStrategy",
+      "connectionId",
+      "connectionType",
       "description",
-      "passthroughBehavior",
-      "requestTemplates",
+      "integrationSubtype",
+      "payloadFormatVersion",
       "responseParameters",
-      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
