@@ -760,6 +760,21 @@
   },
   {
     "module": "aws-glue-alpha",
+    "name": "CfnCatalog",
+    "missingProps": [
+      "allowFullTableExternalDataAccess",
+      "catalogProperties",
+      "createDatabaseDefaultPermissions",
+      "createTableDefaultPermissions",
+      "federatedCatalog",
+      "overwriteChildResourcePermissionsWithDefault",
+      "parameters",
+      "tags",
+      "targetRedshiftCatalog"
+    ]
+  },
+  {
+    "module": "aws-glue-alpha",
     "name": "CfnConnection",
     "missingProps": [
       "connectionInput.athenaProperties",
