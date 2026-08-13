@@ -2539,15 +2539,15 @@
     "module": "aws-ec2",
     "name": "CfnVPCEndpoint",
     "missingProps": [
-      "dnsOptions",
-      "ipAddressType",
       "privateDnsEnabled",
       "resourceConfigurationArn",
       "securityGroupIds",
       "serviceNetworkArn",
       "serviceRegion",
       "subnetIds",
-      "tags"
+      "tags",
+      "dnsOptions.privateDnsPreference",
+      "dnsOptions.privateDnsSpecifiedDomains"
     ]
   },
   {
@@ -2681,8 +2681,6 @@
     "missingProps": [
       "availabilityZones",
       "globalClusterIdentifier",
-      "manageMasterUserPassword",
-      "masterUserSecretKmsKeyId",
       "networkType",
       "restoreToTime",
       "restoreType",
@@ -3063,6 +3061,13 @@
       "thresholdMetricId",
       "treatMissingData",
       "unit"
+    ]
+  },
+  {
+    "module": "aws-cloudwatch",
+    "name": "CfnAlarmMuteRule",
+    "missingProps": [
+      "muteTargets.alarmNames"
     ]
   },
   {
@@ -3674,24 +3679,21 @@
     "module": "aws-apigatewayv2",
     "name": "CfnAuthorizer",
     "missingProps": [
-      "authorizerCredentialsArn",
-      "authorizerPayloadFormatVersion",
-      "authorizerResultTtlInSeconds",
-      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration"
+      "jwtConfiguration.audience",
+      "jwtConfiguration.issuer"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "connectionId",
-      "connectionType",
+      "contentHandlingStrategy",
       "description",
-      "integrationSubtype",
-      "payloadFormatVersion",
+      "passthroughBehavior",
+      "requestTemplates",
       "responseParameters",
+      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
