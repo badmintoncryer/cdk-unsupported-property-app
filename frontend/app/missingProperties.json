@@ -198,7 +198,8 @@
       "clientAuthentication.sasl.iam",
       "configurationInfo.arn",
       "configurationInfo.revision",
-      "encryptionInfo.encryptionAtRest.dataVolumeKmsKeyId"
+      "encryptionInfo.encryptionAtRest.dataVolumeKmsKeyId",
+      "loggingInfo.authorizerLogs"
     ]
   },
   {
@@ -214,6 +215,7 @@
     "module": "aws-mediapackagev2-alpha",
     "name": "CfnChannel",
     "missingProps": [
+      "outputLockingMode",
       "inputSwitchConfiguration.mqcsInputSwitching",
       "inputSwitchConfiguration.preferredInput",
       "outputHeaderConfiguration.publishMqcs"
@@ -271,6 +273,7 @@
       "mssManifests.manifestWindowSeconds",
       "segment.encryption",
       "segment.includeIframeOnlyStreams",
+      "segment.outputTimestampMode",
       "segment.scte",
       "segment.segmentDurationSeconds",
       "segment.segmentName",
@@ -1104,6 +1107,8 @@
     "name": "CfnCanary",
     "missingProps": [
       "deleteLambdaResourcesOnCanaryDeletion",
+      "kmsKeyArn",
+      "replicas",
       "tags",
       "visualReference",
       "visualReferences",
@@ -1703,7 +1708,8 @@
       "offPeakWindowOptions.enabled",
       "offPeakWindowOptions.offPeakWindow",
       "snapshotOptions.automatedSnapshotStartHour",
-      "softwareUpdateOptions.autoSoftwareUpdateEnabled"
+      "softwareUpdateOptions.autoSoftwareUpdateEnabled",
+      "softwareUpdateOptions.useLatestServiceSoftwareForBlueGreen"
     ]
   },
   {
@@ -1982,6 +1988,7 @@
       "lustreConfiguration.dataReadCacheConfiguration",
       "lustreConfiguration.efaEnabled",
       "lustreConfiguration.importedFileChunkSize",
+      "lustreConfiguration.logConfiguration",
       "lustreConfiguration.metadataConfiguration",
       "lustreConfiguration.throughputCapacity"
     ]
@@ -2630,6 +2637,7 @@
       "sseSpecification.sseType",
       "streamSpecification.resourcePolicy",
       "streamSpecification.streamViewType",
+      "streamSpecification.tags",
       "timeToLiveSpecification.attributeName",
       "timeToLiveSpecification.enabled",
       "warmThroughput.readUnitsPerSecond",
@@ -3060,7 +3068,8 @@
       "threshold",
       "thresholdMetricId",
       "treatMissingData",
-      "unit"
+      "unit",
+      "warmUpConfiguration"
     ]
   },
   {
@@ -3277,6 +3286,7 @@
     "missingProps": [
       "computeResources",
       "context",
+      "ecsSettings",
       "eksConfiguration",
       "replaceComputeEnvironment",
       "tags",
@@ -3679,21 +3689,24 @@
     "module": "aws-apigatewayv2",
     "name": "CfnAuthorizer",
     "missingProps": [
+      "authorizerCredentialsArn",
+      "authorizerPayloadFormatVersion",
+      "authorizerResultTtlInSeconds",
+      "enableSimpleResponses",
       "identityValidationExpression",
-      "jwtConfiguration.audience",
-      "jwtConfiguration.issuer"
+      "jwtConfiguration"
     ]
   },
   {
     "module": "aws-apigatewayv2",
     "name": "CfnIntegration",
     "missingProps": [
-      "contentHandlingStrategy",
+      "connectionId",
+      "connectionType",
       "description",
-      "passthroughBehavior",
-      "requestTemplates",
+      "integrationSubtype",
+      "payloadFormatVersion",
       "responseParameters",
-      "templateSelectionExpression",
       "tlsConfig"
     ]
   },
@@ -3769,6 +3782,7 @@
       "endpointAccessMode",
       "securityPolicy",
       "tags",
+      "version",
       "bodyS3Location.bucket",
       "bodyS3Location.eTag",
       "bodyS3Location.key",
