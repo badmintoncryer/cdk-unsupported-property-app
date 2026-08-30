@@ -155,7 +155,8 @@
     "missingProps": [
       "bodyS3Location.eTag",
       "endpointAccessMode",
-      "securityPolicy"
+      "securityPolicy",
+      "version"
     ],
     "missingPropsDetailed": [
       {
@@ -172,6 +173,11 @@
         "path": "securityPolicy",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-securitypolicy"
+      },
+      {
+        "path": "version",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-version"
       }
     ],
     "excludedProps": [
@@ -697,6 +703,7 @@
       "desiredCapacityType",
       "instanceId",
       "lifecycleHookSpecificationList",
+      "mixedInstancesPolicy.instancesDistribution.distributionSegments",
       "mixedInstancesPolicy.launchTemplate.overrides.imageId",
       "placementGroup",
       "serviceLinkedRoleArn",
@@ -743,6 +750,11 @@
         "path": "lifecycleHookSpecificationList",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist"
+      },
+      {
+        "path": "mixedInstancesPolicy.instancesDistribution.distributionSegments",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-distributionsegments"
       },
       {
         "path": "mixedInstancesPolicy.launchTemplate.overrides.imageId",
@@ -953,8 +965,10 @@
       "computeResources.launchTemplate.launchTemplateName",
       "computeResources.launchTemplate.overrides",
       "computeResources.launchTemplate.version",
+      "computeResources.managedInstancesProvider",
       "computeResources.scalingPolicy",
-      "context"
+      "context",
+      "ecsSettings"
     ],
     "missingPropsDetailed": [
       {
@@ -998,6 +1012,11 @@
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-version"
       },
       {
+        "path": "computeResources.managedInstancesProvider",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-managedinstancesprovider"
+      },
+      {
         "path": "computeResources.scalingPolicy",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-scalingpolicy"
@@ -1006,9 +1025,18 @@
         "path": "context",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-context"
+      },
+      {
+        "path": "ecsSettings",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-ecssettings"
       }
     ],
     "excludedProps": [
+      {
+        "prop": "computeResources.capacityTags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      },
       {
         "prop": "tags",
         "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
@@ -1354,6 +1382,7 @@
     "name": "CfnRuntime",
     "missingProps": [
       "agentRuntimeArtifact.codeConfiguration.code.s3",
+      "capacityProviderConfiguration",
       "filesystemConfigurations"
     ],
     "missingPropsDetailed": [
@@ -1361,6 +1390,11 @@
         "path": "agentRuntimeArtifact.codeConfiguration.code.s3",
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-runtime-code.html#cfn-bedrockagentcore-runtime-code-s3"
+      },
+      {
+        "path": "capacityProviderConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-capacityproviderconfiguration"
       },
       {
         "path": "filesystemConfigurations",
@@ -1590,7 +1624,8 @@
       "metrics",
       "namespace",
       "statistic",
-      "unit"
+      "unit",
+      "warmUpConfiguration"
     ],
     "missingPropsDetailed": [
       {
@@ -1632,6 +1667,11 @@
         "path": "unit",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-unit"
+      },
+      {
+        "path": "warmUpConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-warmupconfiguration"
       }
     ],
     "excludedProps": [
@@ -2389,6 +2429,12 @@
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-writeprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-writeprovisionedthroughputsettings-writecapacityautoscalingsettings"
       }
+    ],
+    "excludedProps": [
+      {
+        "prop": "replicas.replicaStreamSpecification.tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
     ]
   },
   {
@@ -2417,6 +2463,10 @@
       }
     ],
     "excludedProps": [
+      {
+        "prop": "streamSpecification.tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      },
       {
         "prop": "tags",
         "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
@@ -3096,7 +3146,9 @@
     "name": "CfnVPCEndpointService",
     "missingProps": [
       "gatewayLoadBalancerArns",
-      "payerResponsibility"
+      "payerResponsibility",
+      "privateDnsName",
+      "privateDnsNameConfiguration"
     ],
     "missingPropsDetailed": [
       {
@@ -3108,6 +3160,16 @@
         "path": "payerResponsibility",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-payerresponsibility"
+      },
+      {
+        "path": "privateDnsName",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-privatednsname"
+      },
+      {
+        "path": "privateDnsNameConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-privatednsnameconfiguration"
       }
     ],
     "excludedProps": [
@@ -4645,6 +4707,7 @@
     "missingProps": [
       "lustreConfiguration.dataReadCacheConfiguration",
       "lustreConfiguration.efaEnabled",
+      "lustreConfiguration.logConfiguration",
       "lustreConfiguration.metadataConfiguration",
       "lustreConfiguration.throughputCapacity",
       "networkType",
@@ -4662,6 +4725,11 @@
         "path": "lustreConfiguration.efaEnabled",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-efaenabled"
+      },
+      {
+        "path": "lustreConfiguration.logConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-logconfiguration"
       },
       {
         "path": "lustreConfiguration.metadataConfiguration",
@@ -6011,6 +6079,20 @@
   },
   {
     "module": "aws-mediapackagev2-alpha",
+    "name": "CfnChannel",
+    "missingProps": [
+      "outputLockingMode"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "outputLockingMode",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-outputlockingmode"
+      }
+    ]
+  },
+  {
+    "module": "aws-mediapackagev2-alpha",
     "name": "CfnOriginEndpoint",
     "missingProps": [
       "dashManifests.audioTimelinePattern",
@@ -6057,6 +6139,7 @@
       "mssManifests.manifestLayout",
       "mssManifests.manifestName",
       "mssManifests.manifestWindowSeconds",
+      "segment.outputTimestampMode",
       "segment.scte.customAdTypes",
       "uriSeparator"
     ],
@@ -6282,6 +6365,11 @@
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-mssmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-mssmanifestconfiguration-manifestwindowseconds"
       },
       {
+        "path": "segment.outputTimestampMode",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-outputtimestampmode"
+      },
+      {
         "path": "segment.scte.customAdTypes",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-scte.html#cfn-mediapackagev2-originendpoint-scte-customadtypes"
@@ -6303,6 +6391,7 @@
       "clientAuthentication.tls.enabled",
       "clientAuthentication.unauthenticated",
       "currentVersion",
+      "loggingInfo.authorizerLogs",
       "rebalancing",
       "zookeeperAccess"
     ],
@@ -6336,6 +6425,11 @@
         "path": "currentVersion",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-currentversion"
+      },
+      {
+        "path": "loggingInfo.authorizerLogs",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-logginginfo.html#cfn-msk-cluster-logginginfo-authorizerlogs"
       },
       {
         "path": "rebalancing",
@@ -6485,6 +6579,7 @@
       "logPublishingOptions.cloudWatchLogsLogGroupArn",
       "logPublishingOptions.enabled",
       "skipShardMigrationWait",
+      "softwareUpdateOptions.useLatestServiceSoftwareForBlueGreen",
       "useCase",
       "vpcOptions.egressEnabled"
     ],
@@ -6558,6 +6653,11 @@
         "path": "skipShardMigrationWait",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-skipshardmigrationwait"
+      },
+      {
+        "path": "softwareUpdateOptions.useLatestServiceSoftwareForBlueGreen",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html#cfn-opensearchservice-domain-softwareupdateoptions-uselatestservicesoftwareforbluegreen"
       },
       {
         "path": "useCase",
@@ -7404,7 +7504,9 @@
       "enableNetworkIsolation",
       "executionRoleArn",
       "explainerConfig",
+      "metricsConfig",
       "productionVariants.capacityReservationConfig",
+      "productionVariants.coreDumpConfig",
       "productionVariants.enableSsmAccess",
       "productionVariants.inferenceAmiVersion",
       "productionVariants.instancePools",
@@ -7443,9 +7545,19 @@
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-explainerconfig"
       },
       {
+        "path": "metricsConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-metricsconfig"
+      },
+      {
         "path": "productionVariants.capacityReservationConfig",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-capacityreservationconfig"
+      },
+      {
+        "path": "productionVariants.coreDumpConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-coredumpconfig"
       },
       {
         "path": "productionVariants.enableSsmAccess",
@@ -7930,6 +8042,8 @@
       "code.blueprintTypes",
       "code.dependencies",
       "code.sourceLocationArn",
+      "kmsKeyArn",
+      "replicas",
       "runConfig.ephemeralStorage",
       "visualReferences",
       "vpcConfig.ipv6AllowedForDualStack"
@@ -7949,6 +8063,16 @@
         "path": "code.sourceLocationArn",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-sourcelocationarn"
+      },
+      {
+        "path": "kmsKeyArn",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-kmskeyarn"
+      },
+      {
+        "path": "replicas",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-replicas"
       },
       {
         "path": "runConfig.ephemeralStorage",
