@@ -2771,7 +2771,6 @@
     "missingProps": [
       "launchTemplateData.blockDeviceMappings.ebs.ebsCardIndex",
       "launchTemplateData.capacityReservationSpecification",
-      "launchTemplateData.cpuOptions",
       "launchTemplateData.disableApiStop",
       "launchTemplateData.elasticGpuSpecifications",
       "launchTemplateData.elasticInferenceAccelerators",
@@ -2823,11 +2822,6 @@
         "path": "launchTemplateData.capacityReservationSpecification",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification"
-      },
-      {
-        "path": "launchTemplateData.cpuOptions",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions"
       },
       {
         "path": "launchTemplateData.disableApiStop",
@@ -6074,6 +6068,26 @@
         "path": "contentQualityAnalysisConfiguration",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-routerinput.html#cfn-mediaconnect-routerinput-contentqualityanalysisconfiguration"
+      }
+    ]
+  },
+  {
+    "module": "aws-medialive-alpha",
+    "name": "CfnChannel",
+    "missingProps": [
+      "dryRun",
+      "inferenceSettings.audioFeedInputs"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "dryRun",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-dryrun"
+      },
+      {
+        "path": "inferenceSettings.audioFeedInputs",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inferencesettings.html#cfn-medialive-channel-inferencesettings-audiofeedinputs"
       }
     ]
   },
