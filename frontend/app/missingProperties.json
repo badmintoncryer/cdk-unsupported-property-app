@@ -1276,7 +1276,8 @@
       "interceptorConfigurations.interceptionPoints",
       "interceptorConfigurations.interceptor",
       "policyEngineConfiguration",
-      "protocolConfiguration.mcp"
+      "protocolConfiguration.mcp",
+      "wafConfiguration"
     ],
     "missingPropsDetailed": [
       {
@@ -1308,6 +1309,11 @@
         "path": "protocolConfiguration.mcp",
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gateway-gatewayprotocolconfiguration.html#cfn-bedrockagentcore-gateway-gatewayprotocolconfiguration-mcp"
+      },
+      {
+        "path": "wafConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-wafconfiguration"
       }
     ]
   },
@@ -4282,6 +4288,266 @@
     ]
   },
   {
+    "module": "aws-eks-v2",
+    "name": "CfnAccessEntry",
+    "missingProps": [
+      "kubernetesGroups",
+      "username"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "kubernetesGroups",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-accessentry.html#cfn-eks-accessentry-kubernetesgroups"
+      },
+      {
+        "path": "username",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-accessentry.html#cfn-eks-accessentry-username"
+      }
+    ],
+    "excludedProps": [
+      {
+        "prop": "tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
+    ]
+  },
+  {
+    "module": "aws-eks-v2",
+    "name": "CfnAddon",
+    "missingProps": [
+      "namespaceConfig",
+      "podIdentityAssociations",
+      "resolveConflicts",
+      "serviceAccountRoleArn"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "namespaceConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-namespaceconfig"
+      },
+      {
+        "path": "podIdentityAssociations",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-podidentityassociations"
+      },
+      {
+        "path": "resolveConflicts",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-resolveconflicts"
+      },
+      {
+        "path": "serviceAccountRoleArn",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-serviceaccountrolearn"
+      }
+    ],
+    "excludedProps": [
+      {
+        "prop": "tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
+    ]
+  },
+  {
+    "module": "aws-eks-v2",
+    "name": "CfnCluster",
+    "missingProps": [
+      "activeCertificateAuthorityId",
+      "certificateAuthority",
+      "deletionProtection",
+      "force",
+      "kubeApiServerConfig",
+      "kubeControllerManagerConfig",
+      "kubernetesNetworkConfig.serviceIpv6Cidr",
+      "kubeSchedulerConfig",
+      "outpostConfig",
+      "resourcesVpcConfig.controlPlaneEgressMode",
+      "rollbackConfig",
+      "upgradePolicy",
+      "zonalShiftConfig"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "activeCertificateAuthorityId",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-activecertificateauthorityid"
+      },
+      {
+        "path": "certificateAuthority",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-certificateauthority"
+      },
+      {
+        "path": "deletionProtection",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-deletionprotection"
+      },
+      {
+        "path": "force",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-force"
+      },
+      {
+        "path": "kubeApiServerConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubeapiserverconfig"
+      },
+      {
+        "path": "kubeControllerManagerConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubecontrollermanagerconfig"
+      },
+      {
+        "path": "kubernetesNetworkConfig.serviceIpv6Cidr",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv6cidr"
+      },
+      {
+        "path": "kubeSchedulerConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubeschedulerconfig"
+      },
+      {
+        "path": "outpostConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-outpostconfig"
+      },
+      {
+        "path": "resourcesVpcConfig.controlPlaneEgressMode",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-controlplaneegressmode"
+      },
+      {
+        "path": "rollbackConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rollbackconfig"
+      },
+      {
+        "path": "upgradePolicy",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy"
+      },
+      {
+        "path": "zonalShiftConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-zonalshiftconfig"
+      }
+    ]
+  },
+  {
+    "module": "aws-eks-v2",
+    "name": "CfnFargateProfile",
+    "missingProps": [
+      "tags.key",
+      "tags.value"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "tags.key",
+        "confidence": "low"
+      },
+      {
+        "path": "tags.value",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "module": "aws-eks-v2",
+    "name": "CfnNodegroup",
+    "missingProps": [
+      "launchTemplate.name",
+      "nodeRepairConfig.maxParallelNodesRepairedCount",
+      "nodeRepairConfig.maxParallelNodesRepairedPercentage",
+      "nodeRepairConfig.maxUnhealthyNodeThresholdCount",
+      "nodeRepairConfig.maxUnhealthyNodeThresholdPercentage",
+      "nodeRepairConfig.nodeRepairConfigOverrides",
+      "updateConfig.updateStrategy",
+      "version",
+      "warmPoolConfig"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "launchTemplate.name",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-launchtemplatespecification.html#cfn-eks-nodegroup-launchtemplatespecification-name"
+      },
+      {
+        "path": "nodeRepairConfig.maxParallelNodesRepairedCount",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-maxparallelnodesrepairedcount"
+      },
+      {
+        "path": "nodeRepairConfig.maxParallelNodesRepairedPercentage",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-maxparallelnodesrepairedpercentage"
+      },
+      {
+        "path": "nodeRepairConfig.maxUnhealthyNodeThresholdCount",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-maxunhealthynodethresholdcount"
+      },
+      {
+        "path": "nodeRepairConfig.maxUnhealthyNodeThresholdPercentage",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-maxunhealthynodethresholdpercentage"
+      },
+      {
+        "path": "nodeRepairConfig.nodeRepairConfigOverrides",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-noderepairconfigoverrides"
+      },
+      {
+        "path": "updateConfig.updateStrategy",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-updatestrategy"
+      },
+      {
+        "path": "version",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-version"
+      },
+      {
+        "path": "warmPoolConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-warmpoolconfig"
+      }
+    ]
+  },
+  {
+    "module": "aws-eks-v2",
+    "name": "CfnPodIdentityAssociation",
+    "missingProps": [
+      "policy",
+      "targetRoleArn"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "policy",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-policy"
+      },
+      {
+        "path": "targetRoleArn",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-targetrolearn"
+      }
+    ],
+    "excludedProps": [
+      {
+        "prop": "disableSessionTags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      },
+      {
+        "prop": "tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
+    ]
+  },
+  {
     "module": "aws-elasticache-alpha",
     "name": "CfnServerlessCache",
     "missingProps": [
@@ -5063,6 +5329,12 @@
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-connectioninput.html#cfn-glue-connection-connectioninput-validateforcomputeenvironments"
       }
+    ],
+    "excludedProps": [
+      {
+        "prop": "tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
     ]
   },
   {
@@ -5107,10 +5379,16 @@
     "module": "aws-glue-alpha",
     "name": "CfnDataQualityRuleset",
     "missingProps": [
+      "clientToken",
       "targetTable.databaseName",
       "targetTable.tableName"
     ],
     "missingPropsDetailed": [
+      {
+        "path": "clientToken",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-dataqualityruleset.html#cfn-glue-dataqualityruleset-clienttoken"
+      },
       {
         "path": "targetTable.databaseName",
         "confidence": "low",
@@ -5589,6 +5867,7 @@
     "missingProps": [
       "code.s3ObjectStorageMode",
       "durableConfig.kmsKeyArn",
+      "fileSystemConfigs.s3FilesConfig",
       "snapStart.applyOn"
     ],
     "missingPropsDetailed": [
@@ -5601,6 +5880,11 @@
         "path": "durableConfig.kmsKeyArn",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-durableconfig.html#cfn-lambda-function-durableconfig-kmskeyarn"
+      },
+      {
+        "path": "fileSystemConfigs.s3FilesConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-s3filesconfig"
       },
       {
         "path": "snapStart.applyOn",
@@ -7245,7 +7529,6 @@
     "missingProps": [
       "cidrRoutingConfig.collectionId",
       "cidrRoutingConfig.locationName",
-      "geoProximityLocation",
       "hostedZoneName"
     ],
     "missingPropsDetailed": [
@@ -7258,11 +7541,6 @@
         "path": "cidrRoutingConfig.locationName",
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-cidrroutingconfig.html#cfn-route53-recordset-cidrroutingconfig-locationname"
-      },
-      {
-        "path": "geoProximityLocation",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-geoproximitylocation"
       },
       {
         "path": "hostedZoneName",
