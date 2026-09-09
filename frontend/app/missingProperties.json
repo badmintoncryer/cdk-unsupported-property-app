@@ -7606,32 +7606,6 @@
     ]
   },
   {
-    "module": "aws-route53resolver-alpha",
-    "name": "CfnFirewallRuleGroupAssociation",
-    "missingProps": [
-      "mutationProtection",
-      "name"
-    ],
-    "missingPropsDetailed": [
-      {
-        "path": "mutationProtection",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-mutationprotection"
-      },
-      {
-        "path": "name",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-name"
-      }
-    ],
-    "excludedProps": [
-      {
-        "prop": "tags",
-        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
-      }
-    ]
-  },
-  {
     "module": "aws-s3",
     "name": "CfnBucket",
     "missingProps": [
