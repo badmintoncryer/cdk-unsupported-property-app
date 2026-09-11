@@ -1275,7 +1275,6 @@
       "interceptorConfigurations.inputConfiguration",
       "interceptorConfigurations.interceptionPoints",
       "interceptorConfigurations.interceptor",
-      "policyEngineConfiguration",
       "protocolConfiguration.mcp",
       "wafConfiguration"
     ],
@@ -1299,11 +1298,6 @@
         "path": "interceptorConfigurations.interceptor",
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gateway-gatewayinterceptorconfiguration.html#cfn-bedrockagentcore-gateway-gatewayinterceptorconfiguration-interceptor"
-      },
-      {
-        "path": "policyEngineConfiguration",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-policyengineconfiguration"
       },
       {
         "path": "protocolConfiguration.mcp",
@@ -1380,6 +1374,26 @@
         "path": "insights",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-onlineevaluationconfig.html#cfn-bedrockagentcore-onlineevaluationconfig-insights"
+      }
+    ]
+  },
+  {
+    "module": "aws-bedrockagentcore",
+    "name": "CfnPolicy",
+    "missingProps": [
+      "definition.policy",
+      "enforcementMode"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "definition.policy",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-policy-policydefinition.html#cfn-bedrockagentcore-policy-policydefinition-policy"
+      },
+      {
+        "path": "enforcementMode",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-policy.html#cfn-bedrockagentcore-policy-enforcementmode"
       }
     ]
   },
@@ -6356,6 +6370,20 @@
     ]
   },
   {
+    "module": "aws-mediaconnect-alpha",
+    "name": "CfnRouterOutput",
+    "missingProps": [
+      "fabricConfiguration"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "fabricConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-routeroutput.html#cfn-mediaconnect-routeroutput-fabricconfiguration"
+      }
+    ]
+  },
+  {
     "module": "aws-medialive-alpha",
     "name": "CfnChannel",
     "missingProps": [
@@ -6439,6 +6467,7 @@
       "mssManifests.manifestWindowSeconds",
       "segment.outputTimestampMode",
       "segment.scte.customAdTypes",
+      "streamNameOutputMode",
       "uriSeparator"
     ],
     "missingPropsDetailed": [
@@ -6671,6 +6700,11 @@
         "path": "segment.scte.customAdTypes",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-scte.html#cfn-mediapackagev2-originendpoint-scte-customadtypes"
+      },
+      {
+        "path": "streamNameOutputMode",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-streamnameoutputmode"
       },
       {
         "path": "uriSeparator",
