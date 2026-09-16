@@ -5881,7 +5881,6 @@
     "missingProps": [
       "code.s3ObjectStorageMode",
       "durableConfig.kmsKeyArn",
-      "fileSystemConfigs.s3FilesConfig",
       "snapStart.applyOn"
     ],
     "missingPropsDetailed": [
@@ -5894,11 +5893,6 @@
         "path": "durableConfig.kmsKeyArn",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-durableconfig.html#cfn-lambda-function-durableconfig-kmskeyarn"
-      },
-      {
-        "path": "fileSystemConfigs.s3FilesConfig",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-s3filesconfig"
       },
       {
         "path": "snapStart.applyOn",
