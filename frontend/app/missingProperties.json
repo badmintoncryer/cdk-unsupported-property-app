@@ -1741,7 +1741,6 @@
       "buildBatchConfig.combineArtifacts",
       "buildBatchConfig.restrictions",
       "buildBatchConfig.timeoutInMins",
-      "environment.hostKernel",
       "resourceAccessRole"
     ],
     "missingPropsDetailed": [
@@ -1764,11 +1763,6 @@
         "path": "buildBatchConfig.timeoutInMins",
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-timeoutinmins"
-      },
-      {
-        "path": "environment.hostKernel",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-hostkernel"
       },
       {
         "path": "resourceAccessRole",
@@ -5879,16 +5873,10 @@
     "module": "aws-lambda",
     "name": "CfnFunction",
     "missingProps": [
-      "code.s3ObjectStorageMode",
       "durableConfig.kmsKeyArn",
       "snapStart.applyOn"
     ],
     "missingPropsDetailed": [
-      {
-        "path": "code.s3ObjectStorageMode",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3objectstoragemode"
-      },
       {
         "path": "durableConfig.kmsKeyArn",
         "confidence": "high",
@@ -5904,20 +5892,6 @@
       {
         "prop": "tags",
         "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
-      }
-    ]
-  },
-  {
-    "module": "aws-lambda",
-    "name": "CfnLayerVersion",
-    "missingProps": [
-      "content.s3ObjectStorageMode"
-    ],
-    "missingPropsDetailed": [
-      {
-        "path": "content.s3ObjectStorageMode",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-layerversion-content.html#cfn-lambda-layerversion-content-s3objectstoragemode"
       }
     ]
   },
