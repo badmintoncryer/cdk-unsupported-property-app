@@ -3569,38 +3569,6 @@
   },
   {
     "module": "aws-ec2-alpha",
-    "name": "CfnNatGateway",
-    "missingProps": [
-      "availabilityMode",
-      "availabilityZoneAddresses",
-      "vpcId"
-    ],
-    "missingPropsDetailed": [
-      {
-        "path": "availabilityMode",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-availabilitymode"
-      },
-      {
-        "path": "availabilityZoneAddresses",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-availabilityzoneaddresses"
-      },
-      {
-        "path": "vpcId",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-vpcid"
-      }
-    ],
-    "excludedProps": [
-      {
-        "prop": "tags",
-        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
-      }
-    ]
-  },
-  {
-    "module": "aws-ec2-alpha",
     "name": "CfnRoute",
     "missingProps": [
       "carrierGatewayId",
@@ -8310,7 +8278,6 @@
       "code.blueprintTypes",
       "code.dependencies",
       "code.sourceLocationArn",
-      "kmsKeyArn",
       "replicas",
       "runConfig.ephemeralStorage",
       "visualReferences",
@@ -8331,11 +8298,6 @@
         "path": "code.sourceLocationArn",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-sourcelocationarn"
-      },
-      {
-        "path": "kmsKeyArn",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-kmskeyarn"
       },
       {
         "path": "replicas",
