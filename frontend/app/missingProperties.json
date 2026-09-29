@@ -489,6 +489,12 @@
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-suspendedstate"
       }
+    ],
+    "excludedProps": [
+      {
+        "prop": "tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
     ]
   },
   {
@@ -968,7 +974,8 @@
       "computeResources.managedInstancesProvider",
       "computeResources.scalingPolicy",
       "context",
-      "ecsSettings"
+      "ecsSettings",
+      "eksConfiguration.accessEntry"
     ],
     "missingPropsDetailed": [
       {
@@ -1030,6 +1037,11 @@
         "path": "ecsSettings",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-ecssettings"
+      },
+      {
+        "path": "eksConfiguration.accessEntry",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html#cfn-batch-computeenvironment-eksconfiguration-accessentry"
       }
     ],
     "excludedProps": [
@@ -1347,13 +1359,19 @@
     "module": "aws-bedrockagentcore",
     "name": "CfnMemory",
     "missingProps": [
-      "indexedKeys"
+      "indexedKeys",
+      "namespaceKeys"
     ],
     "missingPropsDetailed": [
       {
         "path": "indexedKeys",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-memory.html#cfn-bedrockagentcore-memory-indexedkeys"
+      },
+      {
+        "path": "namespaceKeys",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-memory.html#cfn-bedrockagentcore-memory-namespacekeys"
       }
     ]
   },
@@ -1403,7 +1421,8 @@
     "missingProps": [
       "agentRuntimeArtifact.codeConfiguration.code.s3",
       "capacityProviderConfiguration",
-      "filesystemConfigurations"
+      "filesystemConfigurations",
+      "platformVersion"
     ],
     "missingPropsDetailed": [
       {
@@ -1420,6 +1439,11 @@
         "path": "filesystemConfigurations",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-filesystemconfigurations"
+      },
+      {
+        "path": "platformVersion",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-platformversion"
       }
     ]
   },
@@ -2385,6 +2409,7 @@
       "replicas.sseSpecification.kmsMasterKeyId",
       "sseSpecification.sseEnabled",
       "sseSpecification.sseType",
+      "vectorIndexes",
       "writeProvisionedThroughputSettings.writeCapacityAutoScalingSettings"
     ],
     "missingPropsDetailed": [
@@ -2439,6 +2464,11 @@
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-ssespecification.html#cfn-dynamodb-globaltable-ssespecification-ssetype"
       },
       {
+        "path": "vectorIndexes",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-vectorindexes"
+      },
+      {
         "path": "writeProvisionedThroughputSettings.writeCapacityAutoScalingSettings",
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-writeprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-writeprovisionedthroughputsettings-writecapacityautoscalingsettings"
@@ -2457,7 +2487,8 @@
     "missingProps": [
       "importSourceSpecification.inputFormat",
       "importSourceSpecification.inputFormatOptions",
-      "streamSpecification.resourcePolicy"
+      "streamSpecification.resourcePolicy",
+      "vectorIndexes"
     ],
     "missingPropsDetailed": [
       {
@@ -2474,6 +2505,11 @@
         "path": "streamSpecification.resourcePolicy",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-streamspecification.html#cfn-dynamodb-table-streamspecification-resourcepolicy"
+      },
+      {
+        "path": "vectorIndexes",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-vectorindexes"
       }
     ],
     "excludedProps": [
@@ -3901,6 +3937,7 @@
     "missingProps": [
       "deploymentConfiguration.deploymentCircuitBreaker.resetOnHealthyTask",
       "deploymentConfiguration.deploymentCircuitBreaker.thresholdConfiguration",
+      "deploymentConfiguration.earlySuccessCriteria",
       "deploymentConfiguration.lifecycleHooks.hookDetails",
       "deploymentConfiguration.lifecycleHooks.targetType",
       "deploymentConfiguration.lifecycleHooks.timeoutConfiguration",
@@ -3923,6 +3960,11 @@
         "path": "deploymentConfiguration.deploymentCircuitBreaker.thresholdConfiguration",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-thresholdconfiguration"
+      },
+      {
+        "path": "deploymentConfiguration.earlySuccessCriteria",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-earlysuccesscriteria"
       },
       {
         "path": "deploymentConfiguration.lifecycleHooks.hookDetails",
@@ -5811,7 +5853,8 @@
     "missingProps": [
       "documentDbEventSourceConfig",
       "filterCriteria.filters.pattern",
-      "queues"
+      "queues",
+      "selfManagedKafkaEventSourceConfig.consumptionMode"
     ],
     "missingPropsDetailed": [
       {
@@ -5828,6 +5871,11 @@
         "path": "queues",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-queues"
+      },
+      {
+        "path": "selfManagedKafkaEventSourceConfig.consumptionMode",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumptionmode"
       }
     ],
     "excludedProps": [
@@ -6324,7 +6372,8 @@
     "name": "CfnChannel",
     "missingProps": [
       "dryRun",
-      "inferenceSettings.audioFeedInputs"
+      "inferenceSettings.audioFeedInputs",
+      "inferenceSettings.enrichmentMethods"
     ],
     "missingPropsDetailed": [
       {
@@ -6336,6 +6385,11 @@
         "path": "inferenceSettings.audioFeedInputs",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inferencesettings.html#cfn-medialive-channel-inferencesettings-audiofeedinputs"
+      },
+      {
+        "path": "inferenceSettings.enrichmentMethods",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inferencesettings.html#cfn-medialive-channel-inferencesettings-enrichmentmethods"
       }
     ]
   },
@@ -6343,9 +6397,15 @@
     "module": "aws-mediapackagev2-alpha",
     "name": "CfnChannel",
     "missingProps": [
+      "multiviewConfiguration",
       "outputLockingMode"
     ],
     "missingPropsDetailed": [
+      {
+        "path": "multiviewConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-multiviewconfiguration"
+      },
       {
         "path": "outputLockingMode",
         "confidence": "high",
@@ -7586,6 +7646,7 @@
       "metadataConfiguration",
       "metadataTableConfiguration",
       "metricsConfigurations.accessPointArn",
+      "objectLockConfiguration.rule.defaultRetention.defaultEventHold",
       "objectLockConfiguration.rule.defaultRetention.years",
       "replicationConfiguration.rules.filter.tagFilter",
       "replicationConfiguration.rules.prefix"
@@ -7625,6 +7686,11 @@
         "path": "metricsConfigurations.accessPointArn",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html#cfn-s3-bucket-metricsconfiguration-accesspointarn"
+      },
+      {
+        "path": "objectLockConfiguration.rule.defaultRetention.defaultEventHold",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-defaultretention.html#cfn-s3-bucket-defaultretention-defaulteventhold"
       },
       {
         "path": "objectLockConfiguration.rule.defaultRetention.years",
@@ -8198,6 +8264,7 @@
     "name": "CfnTopic",
     "missingProps": [
       "dataProtectionPolicy",
+      "maximumMessageSize",
       "subscription"
     ],
     "missingPropsDetailed": [
@@ -8205,6 +8272,11 @@
         "path": "dataProtectionPolicy",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-dataprotectionpolicy"
+      },
+      {
+        "path": "maximumMessageSize",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-maximummessagesize"
       },
       {
         "path": "subscription",
