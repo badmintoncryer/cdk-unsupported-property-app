@@ -7374,8 +7374,6 @@
       "endpoint",
       "hsmClientCertificateIdentifier",
       "hsmConfigurationIdentifier",
-      "loggingProperties.logDestinationType",
-      "loggingProperties.logExports",
       "manageMasterPassword",
       "manualSnapshotRetentionPeriod",
       "masterPasswordSecretKmsKeyId",
@@ -7454,16 +7452,6 @@
         "path": "hsmConfigurationIdentifier",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-hsmconfigurationidentifier"
-      },
-      {
-        "path": "loggingProperties.logDestinationType",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-logdestinationtype"
-      },
-      {
-        "path": "loggingProperties.logExports",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-logexports"
       },
       {
         "path": "manageMasterPassword",
