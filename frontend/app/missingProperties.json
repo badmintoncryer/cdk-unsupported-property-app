@@ -1421,8 +1421,7 @@
     "missingProps": [
       "agentRuntimeArtifact.codeConfiguration.code.s3",
       "capacityProviderConfiguration",
-      "filesystemConfigurations",
-      "platformVersion"
+      "filesystemConfigurations"
     ],
     "missingPropsDetailed": [
       {
@@ -1439,11 +1438,6 @@
         "path": "filesystemConfigurations",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-filesystemconfigurations"
-      },
-      {
-        "path": "platformVersion",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-platformversion"
       }
     ]
   },
@@ -6907,7 +6901,6 @@
       "logPublishingOptions.cloudWatchLogsLogGroupArn",
       "logPublishingOptions.enabled",
       "skipShardMigrationWait",
-      "softwareUpdateOptions.useLatestServiceSoftwareForBlueGreen",
       "useCase",
       "vpcOptions.egressEnabled"
     ],
@@ -6981,11 +6974,6 @@
         "path": "skipShardMigrationWait",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-skipshardmigrationwait"
-      },
-      {
-        "path": "softwareUpdateOptions.useLatestServiceSoftwareForBlueGreen",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html#cfn-opensearchservice-domain-softwareupdateoptions-uselatestservicesoftwareforbluegreen"
       },
       {
         "path": "useCase",
