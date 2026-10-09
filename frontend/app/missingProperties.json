@@ -1380,7 +1380,9 @@
     "name": "CfnOnlineEvaluationConfig",
     "missingProps": [
       "clusteringConfig",
-      "insights"
+      "dataSourceConfig.cloudWatchLogs.logGroupNamePrefixes",
+      "insights",
+      "outputConfig"
     ],
     "missingPropsDetailed": [
       {
@@ -1389,9 +1391,19 @@
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-onlineevaluationconfig.html#cfn-bedrockagentcore-onlineevaluationconfig-clusteringconfig"
       },
       {
+        "path": "dataSourceConfig.cloudWatchLogs.logGroupNamePrefixes",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-onlineevaluationconfig-cloudwatchlogsinputconfig.html#cfn-bedrockagentcore-onlineevaluationconfig-cloudwatchlogsinputconfig-loggroupnameprefixes"
+      },
+      {
         "path": "insights",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-onlineevaluationconfig.html#cfn-bedrockagentcore-onlineevaluationconfig-insights"
+      },
+      {
+        "path": "outputConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-onlineevaluationconfig.html#cfn-bedrockagentcore-onlineevaluationconfig-outputconfig"
       }
     ]
   },
@@ -4563,11 +4575,17 @@
     "module": "aws-elasticache-alpha",
     "name": "CfnServerlessCache",
     "missingProps": [
+      "connectionType",
       "endpoint",
       "networkType",
       "readerEndpoint"
     ],
     "missingPropsDetailed": [
+      {
+        "path": "connectionType",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-connectiontype"
+      },
       {
         "path": "endpoint",
         "confidence": "high",
@@ -5720,6 +5738,7 @@
     "name": "CfnStream",
     "missingProps": [
       "maxRecordSizeInKiB",
+      "recordDistributionStrategy",
       "warmThroughputMiBps"
     ],
     "missingPropsDetailed": [
@@ -5727,6 +5746,11 @@
         "path": "maxRecordSizeInKiB",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-maxrecordsizeinkib"
+      },
+      {
+        "path": "recordDistributionStrategy",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-recorddistributionstrategy"
       },
       {
         "path": "warmThroughputMiBps",
