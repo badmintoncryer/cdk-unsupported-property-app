@@ -1667,6 +1667,7 @@
     "module": "aws-cloudwatch",
     "name": "CfnAlarm",
     "missingProps": [
+      "actionConfiguration",
       "dimensions",
       "evaluationWindow",
       "extendedStatistic",
@@ -1678,6 +1679,11 @@
       "warmUpConfiguration"
     ],
     "missingPropsDetailed": [
+      {
+        "path": "actionConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-actionconfiguration"
+      },
       {
         "path": "dimensions",
         "confidence": "high",
@@ -1722,6 +1728,26 @@
         "path": "warmUpConfiguration",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-warmupconfiguration"
+      }
+    ],
+    "excludedProps": [
+      {
+        "prop": "tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
+    ]
+  },
+  {
+    "module": "aws-cloudwatch",
+    "name": "CfnCompositeAlarm",
+    "missingProps": [
+      "actionConfiguration"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "actionConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-actionconfiguration"
       }
     ],
     "excludedProps": [
@@ -2535,6 +2561,9 @@
     "missingProps": [
       "authenticationOptions.activeDirectory",
       "authenticationOptions.federatedAuthentication",
+      "authorizationPolicy",
+      "connectionLogOptions.includeAuthorizationPolicyContext",
+      "devicePostureOptions",
       "endpointIpAddressType",
       "tagSpecifications",
       "trafficIpAddressType",
@@ -2550,6 +2579,21 @@
         "path": "authenticationOptions.federatedAuthentication",
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.html#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-federatedauthentication"
+      },
+      {
+        "path": "authorizationPolicy",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-authorizationpolicy"
+      },
+      {
+        "path": "connectionLogOptions.includeAuthorizationPolicyContext",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-connectionlogoptions.html#cfn-ec2-clientvpnendpoint-connectionlogoptions-includeauthorizationpolicycontext"
+      },
+      {
+        "path": "devicePostureOptions",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-devicepostureoptions"
       },
       {
         "path": "endpointIpAddressType",
@@ -5256,7 +5300,7 @@
     ]
   },
   {
-    "module": "aws-glue-alpha",
+    "module": "aws-glue",
     "name": "CfnCatalog",
     "missingProps": [
       "allowFullTableExternalDataAccess",
@@ -5318,7 +5362,7 @@
     ]
   },
   {
-    "module": "aws-glue-alpha",
+    "module": "aws-glue",
     "name": "CfnConnection",
     "missingProps": [
       "connectionInput.athenaProperties",
@@ -5368,7 +5412,7 @@
     ]
   },
   {
-    "module": "aws-glue-alpha",
+    "module": "aws-glue",
     "name": "CfnDatabase",
     "missingProps": [
       "databaseInput.createTableDefaultPermissions",
@@ -5406,7 +5450,7 @@
     ]
   },
   {
-    "module": "aws-glue-alpha",
+    "module": "aws-glue",
     "name": "CfnDataQualityRuleset",
     "missingProps": [
       "clientToken",
@@ -5432,10 +5476,11 @@
     ]
   },
   {
-    "module": "aws-glue-alpha",
+    "module": "aws-glue",
     "name": "CfnJob",
     "missingProps": [
       "allocatedCapacity",
+      "command.runtime",
       "jobMode",
       "logUri",
       "maintenanceWindow",
@@ -5446,6 +5491,11 @@
         "path": "allocatedCapacity",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-allocatedcapacity"
+      },
+      {
+        "path": "command.runtime",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-runtime"
       },
       {
         "path": "jobMode",
@@ -5470,7 +5520,7 @@
     ]
   },
   {
-    "module": "aws-glue-alpha",
+    "module": "aws-glue",
     "name": "CfnTable",
     "missingProps": [
       "name",
@@ -6316,6 +6366,7 @@
     "name": "CfnFlowOutput",
     "missingProps": [
       "mediaStreamOutputConfigurations",
+      "ndiAudioReferenceLevel",
       "ndiOutputTimecodeSource"
     ],
     "missingPropsDetailed": [
@@ -6323,6 +6374,11 @@
         "path": "mediaStreamOutputConfigurations",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-mediastreamoutputconfigurations"
+      },
+      {
+        "path": "ndiAudioReferenceLevel",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-ndiaudioreferencelevel"
       },
       {
         "path": "ndiOutputTimecodeSource",
@@ -7549,6 +7605,26 @@
     "excludedProps": [
       {
         "prop": "tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
+    ]
+  },
+  {
+    "module": "aws-route53",
+    "name": "CfnHostedZone",
+    "missingProps": [
+      "delegationSetId"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "delegationSetId",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-delegationsetid"
+      }
+    ],
+    "excludedProps": [
+      {
+        "prop": "hostedZoneTags",
         "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
       }
     ]
