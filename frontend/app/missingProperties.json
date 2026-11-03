@@ -1327,12 +1327,18 @@
     "module": "aws-bedrockagentcore",
     "name": "CfnGatewayTarget",
     "missingProps": [
+      "certificateConfigurations",
       "privateEndpoint",
       "targetConfiguration.http",
       "targetConfiguration.inference",
       "targetConfiguration.mcp"
     ],
     "missingPropsDetailed": [
+      {
+        "path": "certificateConfigurations",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gatewaytarget.html#cfn-bedrockagentcore-gatewaytarget-certificateconfigurations"
+      },
       {
         "path": "privateEndpoint",
         "confidence": "high",
@@ -1865,6 +1871,7 @@
     "missingProps": [
       "blueGreenDeploymentConfiguration.greenFleetProvisioningOption",
       "deployment",
+      "ec2DeploymentOptions",
       "ec2TagFilters",
       "onPremisesInstanceTagFilters",
       "outdatedInstancesStrategy",
@@ -1880,6 +1887,11 @@
         "path": "deployment",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deployment"
+      },
+      {
+        "path": "ec2DeploymentOptions",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-ec2deploymentoptions"
       },
       {
         "path": "ec2TagFilters",
@@ -2433,6 +2445,7 @@
     "missingProps": [
       "readOnDemandThroughputSettings",
       "readProvisionedThroughputSettings",
+      "replicas.disassociationProtectionEnabled",
       "replicas.globalSecondaryIndexes.readProvisionedThroughputSettings.readCapacityAutoScalingSettings",
       "replicas.globalSecondaryIndexes.readProvisionedThroughputSettings.readCapacityUnits",
       "replicas.kinesisStreamSpecification.approximateCreationDateTimePrecision",
@@ -2441,6 +2454,7 @@
       "replicas.sseSpecification.kmsMasterKeyId",
       "sseSpecification.sseEnabled",
       "sseSpecification.sseType",
+      "tableType",
       "vectorIndexes",
       "writeProvisionedThroughputSettings.writeCapacityAutoScalingSettings"
     ],
@@ -2454,6 +2468,11 @@
         "path": "readProvisionedThroughputSettings",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings"
+      },
+      {
+        "path": "replicas.disassociationProtectionEnabled",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-disassociationprotectionenabled"
       },
       {
         "path": "replicas.globalSecondaryIndexes.readProvisionedThroughputSettings.readCapacityAutoScalingSettings",
@@ -2494,6 +2513,11 @@
         "path": "sseSpecification.sseType",
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-ssespecification.html#cfn-dynamodb-globaltable-ssespecification-ssetype"
+      },
+      {
+        "path": "tableType",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-tabletype"
       },
       {
         "path": "vectorIndexes",
@@ -3991,12 +4015,14 @@
       "deploymentConfiguration.lifecycleHooks.hookDetails",
       "deploymentConfiguration.lifecycleHooks.targetType",
       "deploymentConfiguration.lifecycleHooks.timeoutConfiguration",
+      "gatewayConnectors",
       "monitoring",
       "placementConstraints.expression",
       "placementConstraints.type",
       "placementStrategies.field",
       "placementStrategies.type",
       "role",
+      "serviceConnectConfiguration.containerConfigurations",
       "serviceConnectConfiguration.services.clientAliases.testTrafficRules",
       "vpcLatticeConfigurations"
     ],
@@ -4032,6 +4058,11 @@
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-timeoutconfiguration"
       },
       {
+        "path": "gatewayConnectors",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-gatewayconnectors"
+      },
+      {
         "path": "monitoring",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-monitoring"
@@ -4062,6 +4093,11 @@
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-role"
       },
       {
+        "path": "serviceConnectConfiguration.containerConfigurations",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-containerconfigurations"
+      },
+      {
         "path": "serviceConnectConfiguration.services.clientAliases.testTrafficRules",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectclientalias.html#cfn-ecs-service-serviceconnectclientalias-testtrafficrules"
@@ -4088,6 +4124,7 @@
       "containerDefinitions.extraHosts.hostname",
       "containerDefinitions.extraHosts.ipAddress",
       "containerDefinitions.firelensConfiguration",
+      "containerDefinitions.resourceRequirements.sharingStrategy",
       "volumes.fSxWindowsFileServerVolumeConfiguration",
       "volumes.s3FilesVolumeConfiguration"
     ],
@@ -4116,6 +4153,11 @@
         "path": "containerDefinitions.firelensConfiguration",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-firelensconfiguration"
+      },
+      {
+        "path": "containerDefinitions.resourceRequirements.sharingStrategy",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-resourcerequirement.html#cfn-ecs-taskdefinition-resourcerequirement-sharingstrategy"
       },
       {
         "path": "volumes.fSxWindowsFileServerVolumeConfiguration",
@@ -4429,6 +4471,7 @@
       "force",
       "kubeApiServerConfig",
       "kubeControllerManagerConfig",
+      "kubernetesNetworkConfig.elasticLoadBalancing.gatewayApi",
       "kubernetesNetworkConfig.serviceIpv6Cidr",
       "kubeSchedulerConfig",
       "outpostConfig",
@@ -4467,6 +4510,11 @@
         "path": "kubeControllerManagerConfig",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubecontrollermanagerconfig"
+      },
+      {
+        "path": "kubernetesNetworkConfig.elasticLoadBalancing.gatewayApi",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-elasticloadbalancing.html#cfn-eks-cluster-elasticloadbalancing-gatewayapi"
       },
       {
         "path": "kubernetesNetworkConfig.serviceIpv6Cidr",
@@ -5750,6 +5798,26 @@
     ]
   },
   {
+    "module": "aws-imagebuilder-alpha",
+    "name": "CfnInfrastructureConfiguration",
+    "missingProps": [
+      "parentInstance",
+      "terminateInstanceOnCompletion"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "parentInstance",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-parentinstance"
+      },
+      {
+        "path": "terminateInstanceOnCompletion",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-terminateinstanceoncompletion"
+      }
+    ]
+  },
+  {
     "module": "aws-iot-alpha",
     "name": "CfnLogging",
     "missingProps": [
@@ -6967,6 +7035,7 @@
     "module": "aws-opensearchservice",
     "name": "CfnDomain",
     "missingProps": [
+      "acceptedWarnings",
       "accessPolicies",
       "advancedSecurityOptions.anonymousAuthDisableDate",
       "advancedSecurityOptions.anonymousAuthEnabled",
@@ -6976,6 +7045,7 @@
       "automatedSnapshotPauseOptions",
       "deploymentStrategyOptions",
       "domainArn",
+      "encryptionAtRestOptions.encryptionMode",
       "engineMode",
       "identityCenterOptions",
       "logPublishingOptions.cloudWatchLogsLogGroupArn",
@@ -6985,6 +7055,11 @@
       "vpcOptions.egressEnabled"
     ],
     "missingPropsDetailed": [
+      {
+        "path": "acceptedWarnings",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-acceptedwarnings"
+      },
       {
         "path": "accessPolicies",
         "confidence": "high",
@@ -7029,6 +7104,11 @@
         "path": "domainArn",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-domainarn"
+      },
+      {
+        "path": "encryptionAtRestOptions.encryptionMode",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-encryptionmode"
       },
       {
         "path": "engineMode",
@@ -7093,7 +7173,8 @@
       "sourceDbClusterIdentifier",
       "sourceDbClusterResourceId",
       "sourceRegion",
-      "useLatestRestorableTime"
+      "useLatestRestorableTime",
+      "withExpressConfiguration"
     ],
     "missingPropsDetailed": [
       {
@@ -7180,6 +7261,11 @@
         "path": "useLatestRestorableTime",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-uselatestrestorabletime"
+      },
+      {
+        "path": "withExpressConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-withexpressconfiguration"
       }
     ],
     "excludedProps": [
