@@ -3938,7 +3938,8 @@
       "managedInstancesProvider.instanceLaunchTemplate.capacityReservations",
       "managedInstancesProvider.instanceLaunchTemplate.fipsEnabled",
       "managedInstancesProvider.instanceLaunchTemplate.instanceMetadataTagsPropagation",
-      "managedInstancesProvider.instanceLaunchTemplate.localStorageConfiguration"
+      "managedInstancesProvider.instanceLaunchTemplate.localStorageConfiguration",
+      "managedInstancesProvider.instanceLaunchTemplate.nitroEnclavesEnabled"
     ],
     "missingPropsDetailed": [
       {
@@ -3970,6 +3971,11 @@
         "path": "managedInstancesProvider.instanceLaunchTemplate.localStorageConfiguration",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html#cfn-ecs-capacityprovider-instancelaunchtemplate-localstorageconfiguration"
+      },
+      {
+        "path": "managedInstancesProvider.instanceLaunchTemplate.nitroEnclavesEnabled",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html#cfn-ecs-capacityprovider-instancelaunchtemplate-nitroenclavesenabled"
       }
     ],
     "excludedProps": [
@@ -5742,6 +5748,8 @@
     "name": "CfnImage",
     "missingProps": [
       "imagePipelineExecutionSettings",
+      "imageScanningConfiguration.imageScanningTypes",
+      "imageScanningConfiguration.scanResultCondition",
       "imageTestsConfiguration.timeoutMinutes"
     ],
     "missingPropsDetailed": [
@@ -5749,6 +5757,16 @@
         "path": "imagePipelineExecutionSettings",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagepipelineexecutionsettings"
+      },
+      {
+        "path": "imageScanningConfiguration.imageScanningTypes",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagescanningconfiguration.html#cfn-imagebuilder-image-imagescanningconfiguration-imagescanningtypes"
+      },
+      {
+        "path": "imageScanningConfiguration.scanResultCondition",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagescanningconfiguration.html#cfn-imagebuilder-image-imagescanningconfiguration-scanresultcondition"
       },
       {
         "path": "imageTestsConfiguration.timeoutMinutes",
@@ -5761,10 +5779,22 @@
     "module": "aws-imagebuilder-alpha",
     "name": "CfnImagePipeline",
     "missingProps": [
+      "imageScanningConfiguration.imageScanningTypes",
+      "imageScanningConfiguration.scanResultCondition",
       "imageTestsConfiguration.timeoutMinutes",
       "schedule.timezone"
     ],
     "missingPropsDetailed": [
+      {
+        "path": "imageScanningConfiguration.imageScanningTypes",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-imagescanningtypes"
+      },
+      {
+        "path": "imageScanningConfiguration.scanResultCondition",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-scanresultcondition"
+      },
       {
         "path": "imageTestsConfiguration.timeoutMinutes",
         "confidence": "high",
