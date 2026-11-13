@@ -1062,10 +1062,13 @@
       "consumableResourceProperties",
       "ecsProperties",
       "eksProperties.podProperties.containers.securityContext.allowPrivilegeEscalation",
+      "eksProperties.podProperties.containers.securityContext.capabilities",
+      "eksProperties.podProperties.containers.securityContext.seccompProfile",
       "eksProperties.podProperties.containers.volumeMounts.subPath",
       "eksProperties.podProperties.imagePullSecrets",
       "eksProperties.podProperties.initContainers",
       "eksProperties.podProperties.metadata",
+      "eksProperties.podProperties.securityContext",
       "eksProperties.podProperties.shareProcessNamespace",
       "eksProperties.podProperties.volumes.persistentVolumeClaim",
       "nodeProperties.nodeRangeProperties.consumableResourceProperties",
@@ -1093,6 +1096,16 @@
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html#cfn-batch-jobdefinition-securitycontext-allowprivilegeescalation"
       },
       {
+        "path": "eksProperties.podProperties.containers.securityContext.capabilities",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html#cfn-batch-jobdefinition-securitycontext-capabilities"
+      },
+      {
+        "path": "eksProperties.podProperties.containers.securityContext.seccompProfile",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html#cfn-batch-jobdefinition-securitycontext-seccompprofile"
+      },
+      {
         "path": "eksProperties.podProperties.containers.volumeMounts.subPath",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekscontainervolumemount.html#cfn-batch-jobdefinition-ekscontainervolumemount-subpath"
@@ -1111,6 +1124,11 @@
         "path": "eksProperties.podProperties.metadata",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-metadata"
+      },
+      {
+        "path": "eksProperties.podProperties.securityContext",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-securitycontext"
       },
       {
         "path": "eksProperties.podProperties.shareProcessNamespace",
@@ -1643,7 +1661,8 @@
     "missingProps": [
       "advancedEventSelectors",
       "aggregationConfigurations",
-      "insightSelectors.eventCategories"
+      "insightSelectors.eventCategories",
+      "recursiveLogging"
     ],
     "missingPropsDetailed": [
       {
@@ -1660,6 +1679,11 @@
         "path": "insightSelectors.eventCategories",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-insightselector.html#cfn-cloudtrail-trail-insightselector-eventcategories"
+      },
+      {
+        "path": "recursiveLogging",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-recursivelogging"
       }
     ],
     "excludedProps": [
@@ -5245,6 +5269,26 @@
   },
   {
     "module": "aws-gamelift-alpha",
+    "name": "CfnGameSessionQueue",
+    "missingProps": [
+      "logConfiguration"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "logConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-logconfiguration"
+      }
+    ],
+    "excludedProps": [
+      {
+        "prop": "tags",
+        "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
+    ]
+  },
+  {
+    "module": "aws-gamelift-alpha",
     "name": "CfnMatchmakingConfiguration",
     "missingProps": [
       "creationTime",
@@ -6019,8 +6063,7 @@
     "missingProps": [
       "documentDbEventSourceConfig",
       "filterCriteria.filters.pattern",
-      "queues",
-      "selfManagedKafkaEventSourceConfig.consumptionMode"
+      "queues"
     ],
     "missingPropsDetailed": [
       {
@@ -6037,11 +6080,6 @@
         "path": "queues",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-queues"
-      },
-      {
-        "path": "selfManagedKafkaEventSourceConfig.consumptionMode",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumptionmode"
       }
     ],
     "excludedProps": [
@@ -7935,9 +7973,15 @@
     "module": "aws-s3tables-alpha",
     "name": "CfnTableBucket",
     "missingProps": [
+      "loggingConfiguration",
       "replicationConfiguration"
     ],
     "missingPropsDetailed": [
+      {
+        "path": "loggingConfiguration",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-tablebucket.html#cfn-s3tables-tablebucket-loggingconfiguration"
+      },
       {
         "path": "replicationConfiguration",
         "confidence": "high",
