@@ -3788,8 +3788,6 @@
       "availabilityZoneId",
       "enableDns64",
       "enableLniAtDeviceIndex",
-      "ipv4IpamPoolId",
-      "ipv4NetmaskLength",
       "ipv6IpamPoolId",
       "ipv6Native",
       "ipv6NetmaskLength",
@@ -3811,16 +3809,6 @@
         "path": "enableLniAtDeviceIndex",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enablelniatdeviceindex"
-      },
-      {
-        "path": "ipv4IpamPoolId",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv4ipampoolid"
-      },
-      {
-        "path": "ipv4NetmaskLength",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv4netmasklength"
       },
       {
         "path": "ipv6IpamPoolId",
