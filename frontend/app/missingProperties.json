@@ -1302,6 +1302,7 @@
     "name": "CfnGateway",
     "missingProps": [
       "authorizerConfiguration.customJwtAuthorizer",
+      "domainOverride",
       "interceptorConfigurations.inputConfiguration",
       "interceptorConfigurations.interceptionPoints",
       "interceptorConfigurations.interceptor",
@@ -1313,6 +1314,11 @@
         "path": "authorizerConfiguration.customJwtAuthorizer",
         "confidence": "low",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gateway-authorizerconfiguration.html#cfn-bedrockagentcore-gateway-authorizerconfiguration-customjwtauthorizer"
+      },
+      {
+        "path": "domainOverride",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-domainoverride"
       },
       {
         "path": "interceptorConfigurations.inputConfiguration",
@@ -4143,6 +4149,7 @@
       "containerDefinitions.extraHosts.ipAddress",
       "containerDefinitions.firelensConfiguration",
       "containerDefinitions.resourceRequirements.sharingStrategy",
+      "trustedExecutionConfiguration",
       "volumes.fSxWindowsFileServerVolumeConfiguration",
       "volumes.s3FilesVolumeConfiguration"
     ],
@@ -4176,6 +4183,11 @@
         "path": "containerDefinitions.resourceRequirements.sharingStrategy",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-resourcerequirement.html#cfn-ecs-taskdefinition-resourcerequirement-sharingstrategy"
+      },
+      {
+        "path": "trustedExecutionConfiguration",
+        "confidence": "low",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-trustedexecutionconfiguration"
       },
       {
         "path": "volumes.fSxWindowsFileServerVolumeConfiguration",
@@ -4390,7 +4402,8 @@
     "name": "CfnPodIdentityAssociation",
     "missingProps": [
       "policy",
-      "targetRoleArn"
+      "targetRoleArn",
+      "workloadIdentityConfig"
     ],
     "missingPropsDetailed": [
       {
@@ -4402,6 +4415,11 @@
         "path": "targetRoleArn",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-targetrolearn"
+      },
+      {
+        "path": "workloadIdentityConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-workloadidentityconfig"
       }
     ],
     "excludedProps": [
@@ -4656,7 +4674,8 @@
     "name": "CfnPodIdentityAssociation",
     "missingProps": [
       "policy",
-      "targetRoleArn"
+      "targetRoleArn",
+      "workloadIdentityConfig"
     ],
     "missingPropsDetailed": [
       {
@@ -4668,6 +4687,11 @@
         "path": "targetRoleArn",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-targetrolearn"
+      },
+      {
+        "path": "workloadIdentityConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-workloadidentityconfig"
       }
     ],
     "excludedProps": [
@@ -6081,14 +6105,26 @@
     "module": "aws-lambda",
     "name": "CfnFunction",
     "missingProps": [
+      "acceleratorConfig",
       "durableConfig.kmsKeyArn",
+      "runtimeConfig",
       "snapStart.applyOn"
     ],
     "missingPropsDetailed": [
       {
+        "path": "acceleratorConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-acceleratorconfig"
+      },
+      {
         "path": "durableConfig.kmsKeyArn",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-durableconfig.html#cfn-lambda-function-durableconfig-kmskeyarn"
+      },
+      {
+        "path": "runtimeConfig",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtimeconfig"
       },
       {
         "path": "snapStart.applyOn",
@@ -6491,7 +6527,8 @@
     "missingProps": [
       "mediaStreamOutputConfigurations",
       "ndiAudioReferenceLevel",
-      "ndiOutputTimecodeSource"
+      "ndiOutputTimecodeSource",
+      "rtmpPushSettings"
     ],
     "missingPropsDetailed": [
       {
@@ -6508,6 +6545,11 @@
         "path": "ndiOutputTimecodeSource",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-ndioutputtimecodesource"
+      },
+      {
+        "path": "rtmpPushSettings",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-rtmppushsettings"
       }
     ],
     "excludedProps": [
@@ -6914,6 +6956,7 @@
       "brokerNodeGroupInfo.brokerAzDistribution",
       "brokerNodeGroupInfo.connectivityInfo",
       "brokerNodeGroupInfo.storageInfo.ebsStorageInfo.provisionedThroughput",
+      "brokerNodeGroupInfo.topicReassignment",
       "clientAuthentication.tls.enabled",
       "clientAuthentication.unauthenticated",
       "currentVersion",
@@ -6936,6 +6979,11 @@
         "path": "brokerNodeGroupInfo.storageInfo.ebsStorageInfo.provisionedThroughput",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-ebsstorageinfo.html#cfn-msk-cluster-ebsstorageinfo-provisionedthroughput"
+      },
+      {
+        "path": "brokerNodeGroupInfo.topicReassignment",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-topicreassignment"
       },
       {
         "path": "clientAuthentication.tls.enabled",
