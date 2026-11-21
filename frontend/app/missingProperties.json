@@ -2442,6 +2442,7 @@
     "name": "CfnCluster",
     "missingProps": [
       "kmsEncryptionKey",
+      "metricGroups",
       "multiRegionProperties",
       "policyDocument"
     ],
@@ -2450,6 +2451,11 @@
         "path": "kmsEncryptionKey",
         "confidence": "high",
         "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dsql-cluster.html#cfn-dsql-cluster-kmsencryptionkey"
+      },
+      {
+        "path": "metricGroups",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dsql-cluster.html#cfn-dsql-cluster-metricgroups"
       },
       {
         "path": "multiRegionProperties",
@@ -3324,6 +3330,20 @@
       {
         "prop": "tags",
         "reason": "Taggable resources are configured via Tags.of(scope) / TagManager, not constructor props"
+      }
+    ]
+  },
+  {
+    "module": "aws-ec2",
+    "name": "CfnVPCEndpointServicePermissions",
+    "missingProps": [
+      "transitGatewayAttachmentAllowedPrincipals"
+    ],
+    "missingPropsDetailed": [
+      {
+        "path": "transitGatewayAttachmentAllowedPrincipals",
+        "confidence": "high",
+        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html#cfn-ec2-vpcendpointservicepermissions-transitgatewayattachmentallowedprincipals"
       }
     ]
   },
@@ -6105,17 +6125,11 @@
     "module": "aws-lambda",
     "name": "CfnFunction",
     "missingProps": [
-      "acceleratorConfig",
       "durableConfig.kmsKeyArn",
       "runtimeConfig",
       "snapStart.applyOn"
     ],
     "missingPropsDetailed": [
-      {
-        "path": "acceleratorConfig",
-        "confidence": "high",
-        "docLink": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-acceleratorconfig"
-      },
       {
         "path": "durableConfig.kmsKeyArn",
         "confidence": "high",
